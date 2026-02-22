@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zad/features/splash/presentation/view/splash_view.dart';
+import 'package:zad/core/helper_functions/on_generate_routes.dart';
 
 void main() {
   runApp(const ZadApp());
@@ -10,6 +10,9 @@ class ZadApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: SplashView(), debugShowCheckedModeBanner: false);
+    return MaterialApp(
+      onGenerateRoute: onGenerateRoute,
+      debugShowCheckedModeBanner: false,
+    );
   }
 }
