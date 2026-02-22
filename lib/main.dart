@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:zad/app_restart.dart';
 import 'package:zad/core/cubit/locale_cubit.dart';
 import 'package:zad/core/helper/hive_helper.dart';
 import 'package:zad/core/helper_functions/on_generate_routes.dart';
@@ -11,7 +12,7 @@ void main() async {
   setupServiceLocator();
   await NotificationService.init();
   await HiveHelper.init();
-  runApp(const ZadApp());
+  runApp(RestartWidget(child: const ZadApp()));
 }
 
 class ZadApp extends StatelessWidget {
