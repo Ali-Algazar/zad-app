@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "994937515348",
+    "project_id": "zaad-37498",
+    "storage_bucket": "zaad-37498.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994937515348:android:909c2d897278538d9e6cc1",
+        "android_client_info": {
+          "package_name": "com.example.zad"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEmGofq4sn77mGePUujjxiHZQaB0VsTVY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
