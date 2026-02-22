@@ -14,4 +14,9 @@ class AppColors {
   static const Color info = Color(0xFFE3F2FD);
   static const Color warning = Color(0xFFFFF8E1);
   static const Color success = Color(0xFFE8F5E9);
+  static const LinearGradient primaryGradient = LinearGradient(
+    colors: [Color(0xFF006D5B), Color(0xFF004D42)],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
 }
