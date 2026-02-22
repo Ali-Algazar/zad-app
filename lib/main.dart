@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:zad/core/helper_functions/on_generate_routes.dart';
+import 'package:zad/core/services/get_it_service.dart';
 
-void main() {
+void main() async {
+  setupServiceLocator();
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const ZadApp());
 }
 
