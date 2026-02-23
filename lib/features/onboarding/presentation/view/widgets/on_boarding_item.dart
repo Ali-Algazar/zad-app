@@ -4,6 +4,7 @@ import 'package:zad/core/constants.dart';
 import 'package:zad/core/extensions/extensions.dart';
 import 'package:zad/core/utils/app_text_styles.dart';
 import 'package:zad/core/widgets/custom_button.dart';
+import 'package:zad/features/auth/presentation/view/login_view.dart';
 import 'package:zad/features/onboarding/presentation/cubit/onboarding_cubit.dart';
 import 'package:zad/features/onboarding/presentation/model/onboarding_model.dart';
 import 'package:zad/features/onboarding/presentation/view/widgets/custom_dots.dart';
@@ -45,7 +46,7 @@ class OnBoardingItim extends StatelessWidget {
           CustomBoton(
             onTap: () {
               if (index == 3) {
-                Navigator.pushReplacementNamed(context, '/signIn');
+                Navigator.pushReplacementNamed(context, LoginView.routeName);
               } else {
                 context.read<OnboardingCubit>().nextPage();
               }

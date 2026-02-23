@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zad/core/utils/app_text_styles.dart';
+import 'package:zad/features/auth/presentation/view/login_view.dart';
 import 'package:zad/features/onboarding/presentation/cubit/onboarding_cubit.dart';
 import 'package:zad/generated/l10n.dart';
 
@@ -26,7 +27,10 @@ class CustomOnboardingAppBar extends StatelessWidget {
         index == 3
             ? SizedBox()
             : InkWell(
-                onTap: () => Navigator.pushReplacementNamed(context, '/signIn'),
+                onTap: () => Navigator.pushReplacementNamed(
+                  context,
+                  LoginView.routeName,
+                ),
                 child: Text(
                   S.of(context).skip,
                   style: AppTextStyles.textStyle16,

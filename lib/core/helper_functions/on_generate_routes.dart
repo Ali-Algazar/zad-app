@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zad/features/auth/presentation/view/login_view.dart';
 import 'package:zad/features/splash/presentation/view/splash_view.dart';
 import 'package:zad/features/onboarding/presentation/view/onboarding_view.dart';
 
@@ -9,6 +10,9 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
 
     case OnboardingView.routeName:
       return MaterialPageRoute(builder: (_) => const OnboardingView());
+
+    case LoginView.routeName:
+      return MaterialPageRoute(builder: (_) => const LoginView());
 
     default:
       return MaterialPageRoute(
