@@ -22,8 +22,33 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "bePartOfChange": MessageLookupByLibrary.simpleMessage(
+      "Be Part of the Change",
+    ),
+    "contributeToReducingWaste": MessageLookupByLibrary.simpleMessage(
+      "Contribute to reducing food waste and protecting the environment while helping families in need",
+    ),
+    "donateEasily": MessageLookupByLibrary.simpleMessage("Donate Easily"),
+    "getInstantNotifications": MessageLookupByLibrary.simpleMessage(
+      "Get instant notifications for nearby donations and distribute them to the needy",
+    ),
+    "joinThousandsOfVolunteers": MessageLookupByLibrary.simpleMessage(
+      "Join thousands of volunteers and donors across Egypt",
+    ),
+    "next": MessageLookupByLibrary.simpleMessage("Next"),
+    "receiveAndDistribute": MessageLookupByLibrary.simpleMessage(
+      "Receive and Distribute",
+    ),
     "reduceWasteSlogan": MessageLookupByLibrary.simpleMessage(
       "Together, we reduce waste and save food",
+    ),
+    "shareSurplusFood": MessageLookupByLibrary.simpleMessage(
+      "Share surplus food with those in need in your community with a single click",
+    ),
+    "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+    "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
+    "startYourJourneyNow": MessageLookupByLibrary.simpleMessage(
+      "Start Your Journey Now",
     ),
     "zadElKheirPlatform": MessageLookupByLibrary.simpleMessage(
       "Zad El Kheir Platform",

@@ -1,4 +1,15 @@
 {
  "zadElKheirPlatform": "Zad El Kheir Platform",
- "reduceWasteSlogan": "Together, we reduce waste and save food"  
+ "reduceWasteSlogan": "Together, we reduce waste and save food"  ,
+ "skip": "Skip",
+"donateEasily": "Donate Easily",
+"shareSurplusFood": "Share surplus food with those in need in your community with a single click",
+"receiveAndDistribute": "Receive and Distribute",
+"getInstantNotifications": "Get instant notifications for nearby donations and distribute them to the needy",
+"bePartOfChange": "Be Part of the Change",
+"contributeToReducingWaste": "Contribute to reducing food waste and protecting the environment while helping families in need",
+"startYourJourneyNow": "Start Your Journey Now",
+"joinThousandsOfVolunteers": "Join thousands of volunteers and donors across Egypt",
+"startNow": "Start Now",
+"next": "Next"
 }

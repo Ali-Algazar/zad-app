@@ -22,8 +22,31 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "bePartOfChange": MessageLookupByLibrary.simpleMessage(
+      "كن جزءاً من التغيير",
+    ),
+    "contributeToReducingWaste": MessageLookupByLibrary.simpleMessage(
+      "ساهم في تقليل هدر الطعام وحماية البيئة مع مساعدة الأسر المحتاجة",
+    ),
+    "donateEasily": MessageLookupByLibrary.simpleMessage("تبرع بسهولة"),
+    "getInstantNotifications": MessageLookupByLibrary.simpleMessage(
+      "احصل على إشعارات فورية للتبرعات القريبة منك ووزعها على المحتاجين",
+    ),
+    "joinThousandsOfVolunteers": MessageLookupByLibrary.simpleMessage(
+      "انضم إلى آلاف المتطوعين والمتبرعين في جميع أنحاء مصر",
+    ),
+    "next": MessageLookupByLibrary.simpleMessage("التالي"),
+    "receiveAndDistribute": MessageLookupByLibrary.simpleMessage("استلم ووزع"),
     "reduceWasteSlogan": MessageLookupByLibrary.simpleMessage(
       "معاً نقلل الهدر وننقذ الطعام",
+    ),
+    "shareSurplusFood": MessageLookupByLibrary.simpleMessage(
+      "شارك الطعام الفائض مع من يحتاجه في مجتمعك بضغطة زر واحدة",
+    ),
+    "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+    "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
+    "startYourJourneyNow": MessageLookupByLibrary.simpleMessage(
+      "ابدأ رحلتك الآن",
     ),
     "zadElKheirPlatform": MessageLookupByLibrary.simpleMessage(
       "منصة زاد الخير",

@@ -73,6 +73,101 @@ class S {
       args: [],
     );
   }
+
+  /// `تخطي`
+  String get skip {
+    return Intl.message('تخطي', name: 'skip', desc: '', args: []);
+  }
+
+  /// `تبرع بسهولة`
+  String get donateEasily {
+    return Intl.message(
+      'تبرع بسهولة',
+      name: 'donateEasily',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `شارك الطعام الفائض مع من يحتاجه في مجتمعك بضغطة زر واحدة`
+  String get shareSurplusFood {
+    return Intl.message(
+      'شارك الطعام الفائض مع من يحتاجه في مجتمعك بضغطة زر واحدة',
+      name: 'shareSurplusFood',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `استلم ووزع`
+  String get receiveAndDistribute {
+    return Intl.message(
+      'استلم ووزع',
+      name: 'receiveAndDistribute',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `احصل على إشعارات فورية للتبرعات القريبة منك ووزعها على المحتاجين`
+  String get getInstantNotifications {
+    return Intl.message(
+      'احصل على إشعارات فورية للتبرعات القريبة منك ووزعها على المحتاجين',
+      name: 'getInstantNotifications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `كن جزءاً من التغيير`
+  String get bePartOfChange {
+    return Intl.message(
+      'كن جزءاً من التغيير',
+      name: 'bePartOfChange',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ساهم في تقليل هدر الطعام وحماية البيئة مع مساعدة الأسر المحتاجة`
+  String get contributeToReducingWaste {
+    return Intl.message(
+      'ساهم في تقليل هدر الطعام وحماية البيئة مع مساعدة الأسر المحتاجة',
+      name: 'contributeToReducingWaste',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ابدأ رحلتك الآن`
+  String get startYourJourneyNow {
+    return Intl.message(
+      'ابدأ رحلتك الآن',
+      name: 'startYourJourneyNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `انضم إلى آلاف المتطوعين والمتبرعين في جميع أنحاء مصر`
+  String get joinThousandsOfVolunteers {
+    return Intl.message(
+      'انضم إلى آلاف المتطوعين والمتبرعين في جميع أنحاء مصر',
+      name: 'joinThousandsOfVolunteers',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ابدأ الآن`
+  String get startNow {
+    return Intl.message('ابدأ الآن', name: 'startNow', desc: '', args: []);
+  }
+
+  /// `التالي`
+  String get next {
+    return Intl.message('التالي', name: 'next', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
