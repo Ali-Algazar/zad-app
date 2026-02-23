@@ -53,6 +53,26 @@ class S {
   static S? maybeOf(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
+
+  /// `منصة زاد الخير`
+  String get zadElKheirPlatform {
+    return Intl.message(
+      'منصة زاد الخير',
+      name: 'zadElKheirPlatform',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `معاً نقلل الهدر وننقذ الطعام`
+  String get reduceWasteSlogan {
+    return Intl.message(
+      'معاً نقلل الهدر وننقذ الطعام',
+      name: 'reduceWasteSlogan',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -39,15 +39,14 @@ extension SnackbarExtension on BuildContext {
 extension StringExtension on String {
   String get capitalize =>
       isEmpty ? this : this[0].toUpperCase() + substring(1);
-  bool get isEmail =>
-      RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w]{2,4}$').hasMatch(this);
+  bool get isEmail => RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w]{2,4}$').hasMatch(this);
   bool get isPhone => RegExp(r'^(01)[0-9]{9}$').hasMatch(this); // أرقام مصر 😎
 }
 
 /// 🕐 6. DateTime Formatter
 extension DateTimeExtension on DateTime {
   String get formatted =>
-      "${day.toString().padLeft(2, '0')}/${month.toString().padLeft(2, '0')}/${year}";
+      "${day.toString().padLeft(2, '0')}/${month.toString().padLeft(2, '0')}/$year";
   String get time =>
       "${hour.toString().padLeft(2, '0')}:${minute.toString().padLeft(2, '0')}";
 }
@@ -70,13 +69,12 @@ extension WidgetPadding on Widget {
       Padding(padding: EdgeInsets.all(value), child: this);
 
   Padding paddingSym({double h = 0, double v = 0}) => Padding(
-        padding: EdgeInsets.symmetric(horizontal: h, vertical: v),
-        child: this,
-      );
+    padding: EdgeInsets.symmetric(horizontal: h, vertical: v),
+    child: this,
+  );
 }
 
 /// ⚙️ 10. Widget Visibility Shortcut
 extension VisibilityExtension on Widget {
-  Widget visible(bool isVisible) =>
-      isVisible ? this : const SizedBox.shrink();
+  Widget visible(bool isVisible) => isVisible ? this : const SizedBox.shrink();
 }
