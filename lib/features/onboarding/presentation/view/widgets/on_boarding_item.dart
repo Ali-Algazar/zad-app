@@ -43,7 +43,7 @@ class OnBoardingItim extends StatelessWidget {
           Spacer(),
           CustomDots(aIndex: index),
           24.h,
-          CustomBoton(
+          CustomButton(
             onTap: () {
               if (index == 3) {
                 Navigator.pushReplacementNamed(context, LoginView.routeName);
