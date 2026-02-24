@@ -16,22 +16,23 @@ class AppTheme {
 
     // Text form field theme
     inputDecorationTheme: InputDecorationTheme(
-      filled: true, // Enable filled background
-      fillColor: AppColors.background, // Background color for text fields
+      filled: true,
+      fillColor: AppColors.background,
+
+      // Background color for text fields
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(
           Constants.ktextFieldRadius.toDouble(),
         ),
-        borderSide: BorderSide(color: AppColors.info, width: 1),
+        borderSide: BorderSide(color: Color(0xffD5D7DA), width: 1),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(
           Constants.ktextFieldRadius.toDouble(),
         ),
-        borderSide: BorderSide(color: AppColors.info, width: 1),
+        borderSide: BorderSide(color: Color(0xffD5D7DA), width: 1),
       ),
 
-      // Padding inside the text fields
       contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
     ),
   );
