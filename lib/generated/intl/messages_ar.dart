@@ -22,17 +22,30 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "agreeToTermsAndPrivacy": MessageLookupByLibrary.simpleMessage(
-      "أوافق على الشروط والأحكام وسياسة الخصوصية",
-    ),
+    "agreeTo": MessageLookupByLibrary.simpleMessage("أوافق على"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "لديك حساب بالفعل؟",
+    ),
+    "and": MessageLookupByLibrary.simpleMessage("و"),
+    "atLeast8Characters": MessageLookupByLibrary.simpleMessage(
+      "8 أحرف على الأقل",
+    ),
+    "atLeastOneSpecialChar": MessageLookupByLibrary.simpleMessage(
+      "استخدم رمز واحد على الأقل من الرموز",
+    ),
+    "atLeastOneUppercase": MessageLookupByLibrary.simpleMessage(
+      "حرف كبير واحد على الأقل",
     ),
     "bePartOfChange": MessageLookupByLibrary.simpleMessage(
       "كن جزءاً من التغيير",
     ),
+    "changePassword": MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
     "chooseRole": MessageLookupByLibrary.simpleMessage("اختر الدور"),
+    "chooseStrongPassword": MessageLookupByLibrary.simpleMessage(
+      "اختر كلمة مرور جديدة وقوية لحسابك",
+    ),
     "city": MessageLookupByLibrary.simpleMessage("المدينة"),
+    "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
     "contributeToReducingWaste": MessageLookupByLibrary.simpleMessage(
       "ساهم في تقليل هدر الطعام وحماية البيئة مع مساعدة الأسر المحتاجة",
     ),
@@ -43,15 +56,24 @@ class MessageLookup extends MessageLookupByLibrary {
       "متبرع - لديّ طعام فائض للتبرع",
     ),
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
+    "dontWorryResetInstructions": MessageLookupByLibrary.simpleMessage(
+      "لا تقلق، سنرسل لك تعليمات إعادة تعيين كلمة المرور",
+    ),
     "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
     "enterCity": MessageLookupByLibrary.simpleMessage("أدخل المدينة"),
     "enterEmail": MessageLookupByLibrary.simpleMessage(
       "أدخل البريد الإلكتروني",
     ),
     "enterFullName": MessageLookupByLibrary.simpleMessage("أدخل اسمك الكامل"),
+    "enterNewPassword": MessageLookupByLibrary.simpleMessage(
+      "أدخل كلمة المرور الجديدة",
+    ),
     "enterPassword": MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
-    "fullNameRequired": MessageLookupByLibrary.simpleMessage("الاسم بالكامل *"),
+    "forgotPasswordTitle": MessageLookupByLibrary.simpleMessage(
+      "نسيت كلمة المرور؟",
+    ),
+    "fullNameRequired": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
     "getInstantNotifications": MessageLookupByLibrary.simpleMessage(
       "احصل على إشعارات فورية للتبرعات القريبة منك ووزعها على المحتاجين",
     ),
@@ -62,10 +84,14 @@ class MessageLookup extends MessageLookupByLibrary {
       "انضم إلينا وابدأ في إحداث فرق",
     ),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "newPasswordRequired": MessageLookupByLibrary.simpleMessage(
+      "كلمة المرور الجديدة *",
+    ),
     "next": MessageLookupByLibrary.simpleMessage("التالي"),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
     "phoneExample": MessageLookupByLibrary.simpleMessage("مثال: 01234567890"),
-    "phoneNumberRequired": MessageLookupByLibrary.simpleMessage("رقم الهاتف *"),
+    "phoneNumberRequired": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+    "privacy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
     "receiveAndDistribute": MessageLookupByLibrary.simpleMessage("استلم ووزع"),
     "recipientRoleDesc": MessageLookupByLibrary.simpleMessage(
       "مستلم - أبحث عن مساعدات غذائية",
@@ -73,6 +99,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "reduceWasteSlogan": MessageLookupByLibrary.simpleMessage(
       "معاً نقلل الهدر وننقذ الطعام",
     ),
+    "resendCodeAfter": MessageLookupByLibrary.simpleMessage(
+      "إعادة إرسال الرمز بعد ",
+    ),
+    "resetPassword": MessageLookupByLibrary.simpleMessage(
+      "إعادة تعيين كلمة المرور",
+    ),
+    "sendCode": MessageLookupByLibrary.simpleMessage("إرسال الكود"),
     "shareSurplusFood": MessageLookupByLibrary.simpleMessage(
       "شارك الطعام الفائض مع من يحتاجه في مجتمعك بضغطة زر واحدة",
     ),
@@ -80,6 +113,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
     "startYourJourneyNow": MessageLookupByLibrary.simpleMessage(
       "ابدأ رحلتك الآن",
+    ),
+    "terms": MessageLookupByLibrary.simpleMessage("الشروط والأحكام"),
+    "verificationCodeSentTo": MessageLookupByLibrary.simpleMessage(
+      "تم إرسال رمز التحقق إلى",
+    ),
+    "verifyPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "تأكيد رقم الهاتف",
     ),
     "volunteerRoleDesc": MessageLookupByLibrary.simpleMessage(
       "متطوع - أريد المساعدة في توزيع الطعام",

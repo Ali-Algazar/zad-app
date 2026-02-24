@@ -264,10 +264,10 @@ class S {
     );
   }
 
-  /// `رقم الهاتف *`
+  /// `رقم الهاتف`
   String get phoneNumberRequired {
     return Intl.message(
-      'رقم الهاتف *',
+      'رقم الهاتف',
       name: 'phoneNumberRequired',
       desc: '',
       args: [],
@@ -284,10 +284,10 @@ class S {
     );
   }
 
-  /// `الاسم بالكامل *`
+  /// `الاسم بالكامل`
   String get fullNameRequired {
     return Intl.message(
-      'الاسم بالكامل *',
+      'الاسم بالكامل',
       name: 'fullNameRequired',
       desc: '',
       args: [],
@@ -349,14 +349,24 @@ class S {
     );
   }
 
-  /// `أوافق على الشروط والأحكام وسياسة الخصوصية`
-  String get agreeToTermsAndPrivacy {
-    return Intl.message(
-      'أوافق على الشروط والأحكام وسياسة الخصوصية',
-      name: 'agreeToTermsAndPrivacy',
-      desc: '',
-      args: [],
-    );
+  /// `أوافق على`
+  String get agreeTo {
+    return Intl.message('أوافق على', name: 'agreeTo', desc: '', args: []);
+  }
+
+  /// `الشروط والأحكام`
+  String get terms {
+    return Intl.message('الشروط والأحكام', name: 'terms', desc: '', args: []);
+  }
+
+  /// `و`
+  String get and {
+    return Intl.message('و', name: 'and', desc: '', args: []);
+  }
+
+  /// `سياسة الخصوصية`
+  String get privacy {
+    return Intl.message('سياسة الخصوصية', name: 'privacy', desc: '', args: []);
   }
 
   /// `لديك حساب بالفعل؟`
@@ -364,6 +374,146 @@ class S {
     return Intl.message(
       'لديك حساب بالفعل؟',
       name: 'alreadyHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `نسيت كلمة المرور؟`
+  String get forgotPasswordTitle {
+    return Intl.message(
+      'نسيت كلمة المرور؟',
+      name: 'forgotPasswordTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لا تقلق، سنرسل لك تعليمات إعادة تعيين كلمة المرور`
+  String get dontWorryResetInstructions {
+    return Intl.message(
+      'لا تقلق، سنرسل لك تعليمات إعادة تعيين كلمة المرور',
+      name: 'dontWorryResetInstructions',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `إرسال الكود`
+  String get sendCode {
+    return Intl.message('إرسال الكود', name: 'sendCode', desc: '', args: []);
+  }
+
+  /// `تأكيد رقم الهاتف`
+  String get verifyPhoneNumber {
+    return Intl.message(
+      'تأكيد رقم الهاتف',
+      name: 'verifyPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تم إرسال رمز التحقق إلى`
+  String get verificationCodeSentTo {
+    return Intl.message(
+      'تم إرسال رمز التحقق إلى',
+      name: 'verificationCodeSentTo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `إعادة إرسال الرمز بعد `
+  String get resendCodeAfter {
+    return Intl.message(
+      'إعادة إرسال الرمز بعد ',
+      name: 'resendCodeAfter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تأكيد`
+  String get confirm {
+    return Intl.message('تأكيد', name: 'confirm', desc: '', args: []);
+  }
+
+  /// `إعادة تعيين كلمة المرور`
+  String get resetPassword {
+    return Intl.message(
+      'إعادة تعيين كلمة المرور',
+      name: 'resetPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `اختر كلمة مرور جديدة وقوية لحسابك`
+  String get chooseStrongPassword {
+    return Intl.message(
+      'اختر كلمة مرور جديدة وقوية لحسابك',
+      name: 'chooseStrongPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `كلمة المرور الجديدة *`
+  String get newPasswordRequired {
+    return Intl.message(
+      'كلمة المرور الجديدة *',
+      name: 'newPasswordRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أدخل كلمة المرور الجديدة`
+  String get enterNewPassword {
+    return Intl.message(
+      'أدخل كلمة المرور الجديدة',
+      name: 'enterNewPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `8 أحرف على الأقل`
+  String get atLeast8Characters {
+    return Intl.message(
+      '8 أحرف على الأقل',
+      name: 'atLeast8Characters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `حرف كبير واحد على الأقل`
+  String get atLeastOneUppercase {
+    return Intl.message(
+      'حرف كبير واحد على الأقل',
+      name: 'atLeastOneUppercase',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `استخدم رمز واحد على الأقل من الرموز`
+  String get atLeastOneSpecialChar {
+    return Intl.message(
+      'استخدم رمز واحد على الأقل من الرموز',
+      name: 'atLeastOneSpecialChar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تغيير كلمة المرور`
+  String get changePassword {
+    return Intl.message(
+      'تغيير كلمة المرور',
+      name: 'changePassword',
       desc: '',
       args: [],
     );

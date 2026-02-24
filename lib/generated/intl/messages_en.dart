@@ -22,17 +22,30 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "agreeToTermsAndPrivacy": MessageLookupByLibrary.simpleMessage(
-      "I agree to the Terms and Conditions and Privacy Policy",
-    ),
+    "agreeTo": MessageLookupByLibrary.simpleMessage("I agree to"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Already have an account?",
+    ),
+    "and": MessageLookupByLibrary.simpleMessage("and"),
+    "atLeast8Characters": MessageLookupByLibrary.simpleMessage(
+      "At least 8 characters",
+    ),
+    "atLeastOneSpecialChar": MessageLookupByLibrary.simpleMessage(
+      "Use at least one special character",
+    ),
+    "atLeastOneUppercase": MessageLookupByLibrary.simpleMessage(
+      "At least one uppercase letter",
     ),
     "bePartOfChange": MessageLookupByLibrary.simpleMessage(
       "Be Part of the Change",
     ),
+    "changePassword": MessageLookupByLibrary.simpleMessage("Change Password"),
     "chooseRole": MessageLookupByLibrary.simpleMessage("Choose Role"),
+    "chooseStrongPassword": MessageLookupByLibrary.simpleMessage(
+      "Choose a new, strong password for your account",
+    ),
     "city": MessageLookupByLibrary.simpleMessage("City"),
+    "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
     "contributeToReducingWaste": MessageLookupByLibrary.simpleMessage(
       "Contribute to reducing food waste and protecting the environment while helping families in need",
     ),
@@ -47,17 +60,26 @@ class MessageLookup extends MessageLookupByLibrary {
     "dontHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Don\'t have an account?",
     ),
+    "dontWorryResetInstructions": MessageLookupByLibrary.simpleMessage(
+      "Don\'t worry, we will send you password reset instructions",
+    ),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "enterCity": MessageLookupByLibrary.simpleMessage("Enter your city"),
     "enterEmail": MessageLookupByLibrary.simpleMessage("Enter your email"),
     "enterFullName": MessageLookupByLibrary.simpleMessage(
       "Enter your full name",
     ),
+    "enterNewPassword": MessageLookupByLibrary.simpleMessage(
+      "Enter new password",
+    ),
     "enterPassword": MessageLookupByLibrary.simpleMessage(
       "Enter your password",
     ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
-    "fullNameRequired": MessageLookupByLibrary.simpleMessage("Full Name *"),
+    "forgotPasswordTitle": MessageLookupByLibrary.simpleMessage(
+      "Forgot Password?",
+    ),
+    "fullNameRequired": MessageLookupByLibrary.simpleMessage("Full Name"),
     "getInstantNotifications": MessageLookupByLibrary.simpleMessage(
       "Get instant notifications for nearby donations and distribute them to the needy",
     ),
@@ -68,14 +90,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Join us and start making a difference",
     ),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
+    "newPasswordRequired": MessageLookupByLibrary.simpleMessage(
+      "New Password *",
+    ),
     "next": MessageLookupByLibrary.simpleMessage("Next"),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "phoneExample": MessageLookupByLibrary.simpleMessage(
       "Example: 01234567890",
     ),
-    "phoneNumberRequired": MessageLookupByLibrary.simpleMessage(
-      "Phone Number *",
-    ),
+    "phoneNumberRequired": MessageLookupByLibrary.simpleMessage("Phone Number"),
+    "privacy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
     "receiveAndDistribute": MessageLookupByLibrary.simpleMessage(
       "Receive and Distribute",
     ),
@@ -85,6 +109,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "reduceWasteSlogan": MessageLookupByLibrary.simpleMessage(
       "Together, we reduce waste and save food",
     ),
+    "resendCodeAfter": MessageLookupByLibrary.simpleMessage(
+      "Resend code after ",
+    ),
+    "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
+    "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
     "shareSurplusFood": MessageLookupByLibrary.simpleMessage(
       "Share surplus food with those in need in your community with a single click",
     ),
@@ -92,6 +121,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
     "startYourJourneyNow": MessageLookupByLibrary.simpleMessage(
       "Start Your Journey Now",
+    ),
+    "terms": MessageLookupByLibrary.simpleMessage("the Terms and Conditions"),
+    "verificationCodeSentTo": MessageLookupByLibrary.simpleMessage(
+      "Verification code sent to",
+    ),
+    "verifyPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "Verify Phone Number",
     ),
     "volunteerRoleDesc": MessageLookupByLibrary.simpleMessage(
       "Volunteer - I want to help distribute food",
