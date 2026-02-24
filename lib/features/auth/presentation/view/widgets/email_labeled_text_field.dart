@@ -1,0 +1,24 @@
+import 'package:flutter/material.dart';
+import 'package:zad/core/utils/validators.dart';
+import 'package:zad/features/auth/presentation/view/widgets/labeled_text_field.dart';
+import 'package:zad/generated/l10n.dart';
+
+class EmailLabeledTextField extends StatelessWidget {
+  const EmailLabeledTextField({super.key, required this.emailController});
+
+  final TextEditingController emailController;
+
+  @override
+  Widget build(BuildContext context) {
+    return LabeledTextField(
+      controller: emailController,
+      labelText: S.of(context).email,
+      hintText: S.of(context).enterEmail,
+      keyboardType: TextInputType.emailAddress,
+      prefixIcon: Icon(Icons.email_outlined),
+      validator: (value) {
+        return MyValidators.emailValidator(value);
+      },
+    );
+  }
+}
