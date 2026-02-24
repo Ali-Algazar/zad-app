@@ -22,21 +22,54 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "agreeToTermsAndPrivacy": MessageLookupByLibrary.simpleMessage(
+      "أوافق على الشروط والأحكام وسياسة الخصوصية",
+    ),
+    "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
+      "لديك حساب بالفعل؟",
+    ),
     "bePartOfChange": MessageLookupByLibrary.simpleMessage(
       "كن جزءاً من التغيير",
     ),
+    "chooseRole": MessageLookupByLibrary.simpleMessage("اختر الدور"),
+    "city": MessageLookupByLibrary.simpleMessage("المدينة"),
     "contributeToReducingWaste": MessageLookupByLibrary.simpleMessage(
       "ساهم في تقليل هدر الطعام وحماية البيئة مع مساعدة الأسر المحتاجة",
     ),
+    "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+    "createNewAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
     "donateEasily": MessageLookupByLibrary.simpleMessage("تبرع بسهولة"),
+    "donorRoleDesc": MessageLookupByLibrary.simpleMessage(
+      "متبرع - لديّ طعام فائض للتبرع",
+    ),
+    "dontHaveAccount": MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
+    "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+    "enterCity": MessageLookupByLibrary.simpleMessage("أدخل المدينة"),
+    "enterEmail": MessageLookupByLibrary.simpleMessage(
+      "أدخل البريد الإلكتروني",
+    ),
+    "enterFullName": MessageLookupByLibrary.simpleMessage("أدخل اسمك الكامل"),
+    "enterPassword": MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
+    "forgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+    "fullNameRequired": MessageLookupByLibrary.simpleMessage("الاسم بالكامل *"),
     "getInstantNotifications": MessageLookupByLibrary.simpleMessage(
       "احصل على إشعارات فورية للتبرعات القريبة منك ووزعها على المحتاجين",
     ),
     "joinThousandsOfVolunteers": MessageLookupByLibrary.simpleMessage(
       "انضم إلى آلاف المتطوعين والمتبرعين في جميع أنحاء مصر",
     ),
+    "joinUsMakeDifference": MessageLookupByLibrary.simpleMessage(
+      "انضم إلينا وابدأ في إحداث فرق",
+    ),
+    "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "next": MessageLookupByLibrary.simpleMessage("التالي"),
+    "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "phoneExample": MessageLookupByLibrary.simpleMessage("مثال: 01234567890"),
+    "phoneNumberRequired": MessageLookupByLibrary.simpleMessage("رقم الهاتف *"),
     "receiveAndDistribute": MessageLookupByLibrary.simpleMessage("استلم ووزع"),
+    "recipientRoleDesc": MessageLookupByLibrary.simpleMessage(
+      "مستلم - أبحث عن مساعدات غذائية",
+    ),
     "reduceWasteSlogan": MessageLookupByLibrary.simpleMessage(
       "معاً نقلل الهدر وننقذ الطعام",
     ),
@@ -48,6 +81,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "startYourJourneyNow": MessageLookupByLibrary.simpleMessage(
       "ابدأ رحلتك الآن",
     ),
+    "volunteerRoleDesc": MessageLookupByLibrary.simpleMessage(
+      "متطوع - أريد المساعدة في توزيع الطعام",
+    ),
+    "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحباً بك مرة أخرى"),
     "zadElKheirPlatform": MessageLookupByLibrary.simpleMessage(
       "منصة زاد الخير",
     ),

@@ -168,6 +168,206 @@ class S {
   String get next {
     return Intl.message('التالي', name: 'next', desc: '', args: []);
   }
+
+  /// `تسجيل الدخول`
+  String get login {
+    return Intl.message('تسجيل الدخول', name: 'login', desc: '', args: []);
+  }
+
+  /// `مرحباً بك مرة أخرى`
+  String get welcomeBack {
+    return Intl.message(
+      'مرحباً بك مرة أخرى',
+      name: 'welcomeBack',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `البريد الإلكتروني`
+  String get email {
+    return Intl.message('البريد الإلكتروني', name: 'email', desc: '', args: []);
+  }
+
+  /// `أدخل البريد الإلكتروني`
+  String get enterEmail {
+    return Intl.message(
+      'أدخل البريد الإلكتروني',
+      name: 'enterEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `كلمة المرور`
+  String get password {
+    return Intl.message('كلمة المرور', name: 'password', desc: '', args: []);
+  }
+
+  /// `أدخل كلمة المرور`
+  String get enterPassword {
+    return Intl.message(
+      'أدخل كلمة المرور',
+      name: 'enterPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `نسيت كلمة المرور؟`
+  String get forgotPassword {
+    return Intl.message(
+      'نسيت كلمة المرور؟',
+      name: 'forgotPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ليس لديك حساب؟`
+  String get dontHaveAccount {
+    return Intl.message(
+      'ليس لديك حساب؟',
+      name: 'dontHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `إنشاء حساب`
+  String get createAccount {
+    return Intl.message(
+      'إنشاء حساب',
+      name: 'createAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `إنشاء حساب جديد`
+  String get createNewAccount {
+    return Intl.message(
+      'إنشاء حساب جديد',
+      name: 'createNewAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `انضم إلينا وابدأ في إحداث فرق`
+  String get joinUsMakeDifference {
+    return Intl.message(
+      'انضم إلينا وابدأ في إحداث فرق',
+      name: 'joinUsMakeDifference',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رقم الهاتف *`
+  String get phoneNumberRequired {
+    return Intl.message(
+      'رقم الهاتف *',
+      name: 'phoneNumberRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مثال: 01234567890`
+  String get phoneExample {
+    return Intl.message(
+      'مثال: 01234567890',
+      name: 'phoneExample',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الاسم بالكامل *`
+  String get fullNameRequired {
+    return Intl.message(
+      'الاسم بالكامل *',
+      name: 'fullNameRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أدخل اسمك الكامل`
+  String get enterFullName {
+    return Intl.message(
+      'أدخل اسمك الكامل',
+      name: 'enterFullName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `المدينة`
+  String get city {
+    return Intl.message('المدينة', name: 'city', desc: '', args: []);
+  }
+
+  /// `أدخل المدينة`
+  String get enterCity {
+    return Intl.message('أدخل المدينة', name: 'enterCity', desc: '', args: []);
+  }
+
+  /// `اختر الدور`
+  String get chooseRole {
+    return Intl.message('اختر الدور', name: 'chooseRole', desc: '', args: []);
+  }
+
+  /// `متبرع - لديّ طعام فائض للتبرع`
+  String get donorRoleDesc {
+    return Intl.message(
+      'متبرع - لديّ طعام فائض للتبرع',
+      name: 'donorRoleDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `متطوع - أريد المساعدة في توزيع الطعام`
+  String get volunteerRoleDesc {
+    return Intl.message(
+      'متطوع - أريد المساعدة في توزيع الطعام',
+      name: 'volunteerRoleDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مستلم - أبحث عن مساعدات غذائية`
+  String get recipientRoleDesc {
+    return Intl.message(
+      'مستلم - أبحث عن مساعدات غذائية',
+      name: 'recipientRoleDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أوافق على الشروط والأحكام وسياسة الخصوصية`
+  String get agreeToTermsAndPrivacy {
+    return Intl.message(
+      'أوافق على الشروط والأحكام وسياسة الخصوصية',
+      name: 'agreeToTermsAndPrivacy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `لديك حساب بالفعل؟`
+  String get alreadyHaveAccount {
+    return Intl.message(
+      'لديك حساب بالفعل؟',
+      name: 'alreadyHaveAccount',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

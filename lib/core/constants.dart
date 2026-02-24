@@ -1,7 +1,7 @@
 class Constants {
   static const String onBoardingKey = 'onBoardingCompleted';
   static const int khorizontalPadding = 16;
-  static const int kbottomPadding = 69;
+  static const int kbottomPadding = 40;
   static const int ktopPadding = 16;
   static const int kbuttonRadius = 10;
   static const int ktextFieldRadius = 8;
