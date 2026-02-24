@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:zad/core/utils/app_colors.dart';
 
-class CustomBoton extends StatelessWidget {
-  const CustomBoton({super.key, required this.onTap, required this.child});
+class CustomButton extends StatelessWidget {
+  const CustomButton({super.key, required this.onTap, required this.child});
 
   final VoidCallback onTap;
   final Widget child;
