@@ -1,15 +1,15 @@
 import 'package:dio/dio.dart';
-import '../helper/shared_preferences_service.dart'; // (تم التعديل)
+import 'package:zad/core/constants.dart';
+import '../helper/shared_preferences_service.dart';
 
 class ApiHelper {
   Dio dio;
-  final String baseUrl = 'https://api.example.com/v1/'; // (تم التعديل)
+  final String baseUrl = 'https://zad-rho.vercel.app/api/';
 
   ApiHelper(this.dio);
 
   Future<String?> _getAuthToken() async {
-    // (تم التعديل) استخدام الـ Service الذي أنشأناه
-    return await SharedPreferencesService.getData(key: 'auth_token');
+    return await SharedPreferencesService.getData(key: Constants.tokeneKey);
   }
 
   Future<Options?> _createAuthOptions(bool requiresAuth) async {
@@ -19,7 +19,7 @@ class ApiHelper {
         return Options(headers: {'Authorization': 'Bearer $token'});
       }
     }
-    return null; // لا يوجد توكن أو غير مطلوب
+    return null;
   }
 
   Future<Response> get(
@@ -28,8 +28,11 @@ class ApiHelper {
     bool requiresAuth = false,
   }) async {
     Options? options = await _createAuthOptions(requiresAuth);
-    // (تم الإصلاح) طلبات GET تستخدم queryParameters
-    return await dio.get('$baseUrl$endpoint', queryParameters: data, options: options);
+    return await dio.get(
+      '$baseUrl$endpoint',
+      queryParameters: data,
+      options: options,
+    );
   }
 
   Future<Response> post(
