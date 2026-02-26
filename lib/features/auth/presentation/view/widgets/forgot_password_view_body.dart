@@ -24,7 +24,7 @@ class ForgotPasswordViewBody extends StatelessWidget {
         child: Column(
           children: [
             Constants.ktopPadding.h,
-
+            CustomAppBar(title: S.of(context).forgotPasswordText),
             AuthHeader(
               title: S.of(context).forgotPasswordTitle,
               subtitle: S
@@ -51,6 +51,27 @@ class ForgotPasswordViewBody extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class CustomAppBar extends StatelessWidget {
+  const CustomAppBar({super.key, required this.title});
+  final String title;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        const Spacer(),
+        Text(title, style: AppTextStyles.textStyle24),
+        const Spacer(),
+      ],
     );
   }
 }

@@ -34,7 +34,7 @@ class _PasswordLabeledTextFieldState extends State<PasswordLabeledTextField> {
       suffixIcon: IconButton(
         onPressed: () {
           setState(() {
-            _obscurePassword = _obscurePassword;
+            _obscurePassword = !_obscurePassword;
           });
         },
         icon: SvgPicture.asset(

@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:zad/core/cubit/locale_cubit.dart';
+import 'package:zad/core/extensions/extensions.dart';
+import 'package:zad/core/utils/app_colors.dart';
+import 'package:zad/core/utils/app_text_styles.dart';
+
+class LanguageButton extends StatelessWidget {
+  const LanguageButton({super.key, required this.onClick});
+  final VoidCallback onClick;
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<LocaleCubit, String>(
+      builder: (context, state) {
+        return InkWell(
+          onTap: onClick,
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(28),
+              border: Border.all(
+                color: AppColors.success,
+                style: BorderStyle.solid,
+                width: 2,
+              ),
+            ),
+            child: Row(
+              children: [
+                Text(
+                  state == 'ar' ? 'ع' : 'En',
+                  style: AppTextStyles.textStyle18,
+                ),
+                8.w,
+                SvgPicture.asset('assets/svg/lang.svg'),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+}
