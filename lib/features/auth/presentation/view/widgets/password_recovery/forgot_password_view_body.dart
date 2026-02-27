@@ -19,39 +19,41 @@ class ForgotPasswordViewBody extends StatelessWidget {
 
     return Padding(
       padding: Constants.khorizontalPadding.horizontal,
-      child: Form(
-        key: formKey,
-        child: Column(
-          children: [
-            Constants.ktopPadding.h,
-            CustomAppBar(title: S.of(context).forgotPasswordText),
-            AuthHeader(
-              title: S.of(context).forgotPasswordTitle,
-              subtitle: S
-                  .of(context)
-                  .dontWorryResetInstructions, // "لا تقلق، سنرسل لك تعليمات..."
-            ),
-            40.h,
-            EmailLabeledTextField(emailController: emailController),
-            const Spacer(),
-            CustomButton(
-              onTap: () {
-                if (formKey.currentState!.validate()) {
-                  Navigator.pushNamed(
-                    context,
-                    PhoneCodeVerificationView.routeName,
-                  );
-                }
-              },
-              child: Text(
-                S.of(context).sendCode,
-                style: AppTextStyles.textStyle16.copyWith(
-                  color: AppColors.background,
+      child: SingleChildScrollView(
+        child: Form(
+          key: formKey,
+          child: Column(
+            children: [
+              Constants.ktopPadding.h,
+              CustomAppBar(title: S.of(context).forgotPasswordText),
+              AuthHeader(
+                title: S.of(context).forgotPasswordTitle,
+                subtitle: S
+                    .of(context)
+                    .dontWorryResetInstructions, // "لا تقلق، سنرسل لك تعليمات..."
+              ),
+              40.h,
+              EmailLabeledTextField(emailController: emailController),
+              40.h,
+              CustomButton(
+                onTap: () {
+                  if (formKey.currentState!.validate()) {
+                    Navigator.pushNamed(
+                      context,
+                      PhoneCodeVerificationView.routeName,
+                    );
+                  }
+                },
+                child: Text(
+                  S.of(context).sendCode,
+                  style: AppTextStyles.textStyle16.copyWith(
+                    color: AppColors.background,
+                  ),
                 ),
               ),
-            ),
-            Constants.kbottomPadding.h,
-          ],
+              Constants.kbottomPadding.h,
+            ],
+          ),
         ),
       ),
     );

@@ -29,66 +29,68 @@ class _ResetPasswordViewBodyState extends State<ResetPasswordViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: _formKey,
-      child: Padding(
-        padding: Constants.khorizontalPadding.horizontal,
-        child: Column(
-          children: [
-            Constants.ktopPadding.h,
-            AuthHeader(
-              title: S.of(context).resetPassword,
-              subtitle: S.of(context).chooseStrongPassword,
-            ),
-            32.h,
-            NewPasswordLabeledTextField(
-              passwordController: passwordController,
-              onChanged: (value) {
-                setState(() {
-                  atLeast8Characters = value.length >= 8;
-                  hasUppercase = value.contains(RegExp(r'[A-Z]'));
-                  hasSpecialChar = value.contains(
-                    RegExp(r'[!@#$%^&*(),.?":{}|<>]'),
-                  );
-                });
-              },
-            ),
-            16.h,
-            ConfirmPasswordLabeledTextField(
-              passwordController: confirmPasswordController,
-              password: passwordController.text,
-            ),
-            24.h,
+    return SingleChildScrollView(
+      child: Form(
+        key: _formKey,
+        child: Padding(
+          padding: Constants.khorizontalPadding.horizontal,
+          child: Column(
+            children: [
+              Constants.ktopPadding.h,
+              AuthHeader(
+                title: S.of(context).resetPassword,
+                subtitle: S.of(context).chooseStrongPassword,
+              ),
+              32.h,
+              NewPasswordLabeledTextField(
+                passwordController: passwordController,
+                onChanged: (value) {
+                  setState(() {
+                    atLeast8Characters = value.length >= 8;
+                    hasUppercase = value.contains(RegExp(r'[A-Z]'));
+                    hasSpecialChar = value.contains(
+                      RegExp(r'[!@#$%^&*(),.?":{}|<>]'),
+                    );
+                  });
+                },
+              ),
+              16.h,
+              ConfirmPasswordLabeledTextField(
+                passwordController: confirmPasswordController,
+                password: passwordController.text,
+              ),
+              24.h,
 
-            PasswordRequirementItem(
-              text: S.of(context).atLeast8Characters,
-              isDone: atLeast8Characters,
-            ),
-            PasswordRequirementItem(
-              text: S.of(context).atLeastOneUppercase,
-              isDone: hasUppercase,
-            ),
-            PasswordRequirementItem(
-              text: S.of(context).atLeastOneSpecialChar,
-              isDone: hasSpecialChar,
-            ),
-            const Spacer(),
-            CustomButton(
-              isActtive: atLeast8Characters && hasUppercase && hasSpecialChar,
-              onTap: () {
-                if (_formKey.currentState!.validate()) {
-                  successDialog(context);
-                }
-              },
-              child: Text(
-                S.of(context).changePassword,
-                style: AppTextStyles.textStyle16.copyWith(
-                  color: AppColors.background,
+              PasswordRequirementItem(
+                text: S.of(context).atLeast8Characters,
+                isDone: atLeast8Characters,
+              ),
+              PasswordRequirementItem(
+                text: S.of(context).atLeastOneUppercase,
+                isDone: hasUppercase,
+              ),
+              PasswordRequirementItem(
+                text: S.of(context).atLeastOneSpecialChar,
+                isDone: hasSpecialChar,
+              ),
+              40.h,
+              CustomButton(
+                isActtive: atLeast8Characters && hasUppercase && hasSpecialChar,
+                onTap: () {
+                  if (_formKey.currentState!.validate()) {
+                    successDialog(context);
+                  }
+                },
+                child: Text(
+                  S.of(context).changePassword,
+                  style: AppTextStyles.textStyle16.copyWith(
+                    color: AppColors.background,
+                  ),
                 ),
               ),
-            ),
-            Constants.kbottomPadding.h,
-          ],
+              Constants.kbottomPadding.h,
+            ],
+          ),
         ),
       ),
     );

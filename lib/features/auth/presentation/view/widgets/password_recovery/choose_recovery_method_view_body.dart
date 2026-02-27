@@ -15,35 +15,37 @@ class ChooseRecoveryMethodViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: Constants.khorizontalPadding.horizontal,
-      child: Column(
-        children: [
-          Constants.ktopPadding.h,
-          CustomAppBar(title: S.of(context).forgotPasswordText),
-          AuthHeader(
-            title: S.of(context).forgotPasswordTitle,
-            subtitle: S.of(context).chooseRecoveryMethodDesc,
-          ),
-          32.h,
-          RecoveryMethodCard(
-            title: S.of(context).email,
-            subtitle: S.of(context).sendResetLinkViaEmail,
-            icon: Icons.email_outlined,
-            onTap: () {
-              Navigator.pushNamed(context, RecoverViaEmailView.routeName);
-            },
-          ),
-          16.h,
-          RecoveryMethodCard(
-            title: S.of(context).phoneNumberRequired,
-            subtitle: S.of(context).sendVerificationCodeViaSMS,
-            icon: Icons.phone_outlined,
-            onTap: () {
-              Navigator.pushNamed(context, RecoverViaPhoneView.routeName);
-            },
-          ),
-          24.h,
-          const RecoveryTipBox(),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Constants.ktopPadding.h,
+            CustomAppBar(title: S.of(context).forgotPasswordText),
+            AuthHeader(
+              title: S.of(context).forgotPasswordTitle,
+              subtitle: S.of(context).chooseRecoveryMethodDesc,
+            ),
+            32.h,
+            RecoveryMethodCard(
+              title: S.of(context).email,
+              subtitle: S.of(context).sendResetLinkViaEmail,
+              icon: Icons.email_outlined,
+              onTap: () {
+                Navigator.pushNamed(context, RecoverViaEmailView.routeName);
+              },
+            ),
+            16.h,
+            RecoveryMethodCard(
+              title: S.of(context).phoneNumberRequired,
+              subtitle: S.of(context).sendVerificationCodeViaSMS,
+              icon: Icons.phone_outlined,
+              onTap: () {
+                Navigator.pushNamed(context, RecoverViaPhoneView.routeName);
+              },
+            ),
+            24.h,
+            const RecoveryTipBox(),
+          ],
+        ),
       ),
     );
   }
