@@ -1,7 +1,7 @@
 class EndPoints {
   static const String register = "auth/register";
   static const String login = "auth/login";
-  static const String getMe = "auth/me";
+  static const String getMe = "auth/profile";
   static const String updateFcmToken = "auth/fcm-token";
   static const String createDonation = "donations";
   static const String nearbyDonations = "donations/nearby";

@@ -1,4 +1,5 @@
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:zad/features/auth/data/model/user_model.dart';
 
 class HiveHelper {
   static Future<void> init() async {
@@ -54,5 +55,9 @@ class HiveHelper {
   static Future<List> getAllValues(String boxName) async {
     final box = await openBox(boxName);
     return box.values.toList();
+  }
+
+  static void registerAdapter() {
+    Hive.registerAdapter(UserModelAdapter());
   }
 }
