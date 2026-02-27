@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:zad/core/constants.dart';
 import 'package:zad/core/extensions/extensions.dart';
+import 'package:zad/features/auth/presentation/cubit/auth_cubit.dart';
+import 'package:zad/features/auth/presentation/cubit/auth_state.dart';
 import 'package:zad/features/auth/presentation/view/widgets/register/agree_to_terms_and_privacy.dart';
 import 'package:zad/features/auth/presentation/view/widgets/register/already_have_account.dart';
 import 'package:zad/features/auth/presentation/view/widgets/common/auth_header.dart';
@@ -29,6 +33,8 @@ class _CreateAccountViewBodyState extends State<CreateAccountViewBody> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   int indexRole = 0;
   bool agreeToTerms = false;
+  final List<String> role = ['Donor', 'Volunteer', 'Receiver'];
+  bool isLoading = false;
 
   @override
   Widget build(BuildContext context) {
@@ -38,52 +44,105 @@ class _CreateAccountViewBodyState extends State<CreateAccountViewBody> {
       S.of(context).recipientRoleDesc,
     ];
 
-    return Form(
-      key: _formKey,
-      child: Padding(
-        padding: Constants.khorizontalPadding.horizontal,
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Constants.ktopPadding.h,
-              AuthHeader(
-                title: S.of(context).createNewAccount,
-                subtitle: S.of(context).joinUsMakeDifference,
-              ),
-              32.h,
-              PhoneLabeledTextField(phoneController: phoneController),
-              FullNameLabeledTextField(fullNameController: fullNameController),
-              16.h,
-              EmailLabeledTextField(emailController: emailController),
-              16.h,
-              PasswordLabeledTextField(passwordController: passwordController),
-              16.h,
-              CityLabeledTextField(cityController: cityController),
-              16.h,
-              ChooseRole(
-                roleTitle: roleTitle,
-                indexRole: indexRole,
-                onChanged: (value) {
-                  setState(() {
-                    indexRole = value;
-                  });
-                },
-              ),
+    return BlocListener<AuthCubit, AuthState>(
+      listener: (context, state) {
+        if (state is AuthError) {
+          ScaffoldMessenger.of(
+            context,
+          ).showSnackBar(SnackBar(content: Text(state.message)));
+          setState(() {
+            isLoading = false;
+          });
+        }
+        if (state is Authenticated) {
+          ScaffoldMessenger.of(
+            context,
+          ).showSnackBar(SnackBar(content: Text(state.role)));
+          setState(() {
+            isLoading = false;
+          });
+        }
+        if (state is AuthLoading) {
+          setState(() {
+            isLoading = true;
+          });
+        }
+      },
+      child: ModalProgressHUD(
+        inAsyncCall: isLoading,
+        child: Form(
+          key: _formKey,
+          child: Padding(
+            padding: Constants.khorizontalPadding.horizontal,
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Constants.ktopPadding.h,
+                  AuthHeader(
+                    title: S.of(context).createNewAccount,
+                    subtitle: S.of(context).joinUsMakeDifference,
+                  ),
+                  32.h,
+                  PhoneLabeledTextField(phoneController: phoneController),
+                  FullNameLabeledTextField(
+                    fullNameController: fullNameController,
+                  ),
+                  16.h,
+                  EmailLabeledTextField(emailController: emailController),
+                  16.h,
+                  PasswordLabeledTextField(
+                    passwordController: passwordController,
+                  ),
+                  16.h,
+                  CityLabeledTextField(cityController: cityController),
+                  16.h,
+                  ChooseRole(
+                    roleTitle: roleTitle,
+                    indexRole: indexRole,
+                    onChanged: (value) {
+                      setState(() {
+                        indexRole = value;
+                      });
+                    },
+                  ),
 
-              AgreeToTermsAndPrivacy(
-                value: agreeToTerms,
-                onChanged: (value) {
-                  setState(() {
-                    agreeToTerms = value!;
-                  });
-                },
+                  AgreeToTermsAndPrivacy(
+                    value: agreeToTerms,
+                    onChanged: (value) {
+                      setState(() {
+                        agreeToTerms = value!;
+                      });
+                    },
+                  ),
+                  30.h,
+                  CreateAccountButton(
+                    onTap: () {
+                      if (_formKey.currentState!.validate()) {
+                        if (!agreeToTerms) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(S.of(context).pleaseAgreeToTerms),
+                            ),
+                          );
+                        } else {
+                          context.read<AuthCubit>().register(
+                            email: emailController.text,
+                            password: passwordController.text,
+                            phone: phoneController.text,
+                            displayName: fullNameController.text,
+                            governorate: cityController.text,
+                            role: role[indexRole],
+                          );
+                        }
+                      }
+                    },
+                  ),
+                  16.h,
+                  AlreadyHaveAccount(),
+                  Constants.kbottomPadding.h,
+                ],
               ),
-              30.h,
-              CreateAccountButton(formKey: _formKey),
-              16.h,
-              AlreadyHaveAccount(),
-              Constants.kbottomPadding.h,
-            ],
+            ),
           ),
         ),
       ),
