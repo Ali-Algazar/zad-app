@@ -918,6 +918,36 @@ class S {
       args: [],
     );
   }
+
+  /// `الرجاء الموافقة على الشروط والأحكام`
+  String get pleaseAgreeToTerms {
+    return Intl.message(
+      'الرجاء الموافقة على الشروط والأحكام',
+      name: 'pleaseAgreeToTerms',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `حسابي`
+  String get myAccount {
+    return Intl.message('حسابي', name: 'myAccount', desc: '', args: []);
+  }
+
+  /// `الإشعارات`
+  String get notifications {
+    return Intl.message('الإشعارات', name: 'notifications', desc: '', args: []);
+  }
+
+  /// `تبرعاتي`
+  String get myDonations {
+    return Intl.message('تبرعاتي', name: 'myDonations', desc: '', args: []);
+  }
+
+  /// `الرئيسية`
+  String get home {
+    return Intl.message('الرئيسية', name: 'home', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

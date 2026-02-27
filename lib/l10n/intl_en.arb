@@ -95,5 +95,10 @@
 "dataProtectionBody": "We take all reasonable technical and security measures to protect your data from unauthorized access, modification, or disclosure. Passwords are encrypted and the connection to our databases is secured.",
 "yourRightsTitle": "5. Your Rights",
 "yourRightsBody": "You have the right at any time to modify your personal data through the \"My Account\" page, or request the permanent deletion of the account and all associated data by contacting technical support.",
-"readAndAgree": "I Read and Agree"
+"readAndAgree": "I Read and Agree",
+"pleaseAgreeToTerms": "Please agree to the Terms and Conditions",
+"myAccount": "My Account",
+"notifications": "Notifications",
+"myDonations": "My Donations",
+"home": "Home"
 }

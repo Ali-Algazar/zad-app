@@ -115,6 +115,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Get instant notifications for nearby donations and distribute them to the needy",
     ),
     "goToLoginPage": MessageLookupByLibrary.simpleMessage("Go to Login Page"),
+    "home": MessageLookupByLibrary.simpleMessage("Home"),
     "howWeUseInfoBody": MessageLookupByLibrary.simpleMessage(
       "• To connect restaurants and donors with nearby volunteers.\n• To send Push Notifications for new deliveries and order statuses.\n• To improve user experience and provide faster technical support.\n• To calculate app statistics such as (saved meals and reduced carbon emissions).",
     ),
@@ -139,8 +140,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "loginFailedErrorMsg": MessageLookupByLibrary.simpleMessage(
       "Sorry, we were unable to log you in. Please check your email and password and try again.",
     ),
+    "myAccount": MessageLookupByLibrary.simpleMessage("My Account"),
+    "myDonations": MessageLookupByLibrary.simpleMessage("My Donations"),
     "newPasswordRequired": MessageLookupByLibrary.simpleMessage("New Password"),
     "next": MessageLookupByLibrary.simpleMessage("Next"),
+    "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
     "nowUseNewPasswordToLogin": MessageLookupByLibrary.simpleMessage(
       "You can now use your new password to log in to your account.",
     ),
@@ -155,6 +159,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Example: 01234567890",
     ),
     "phoneNumberRequired": MessageLookupByLibrary.simpleMessage("Phone Number"),
+    "pleaseAgreeToTerms": MessageLookupByLibrary.simpleMessage(
+      "Please agree to the Terms and Conditions",
+    ),
     "privacy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
     "privacyPolicyIntro": MessageLookupByLibrary.simpleMessage(
       "At \"Zad\", we respect your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and protect the information you provide us while using the app to save food and deliver it to those in need.",

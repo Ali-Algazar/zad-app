@@ -117,6 +117,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "goToLoginPage": MessageLookupByLibrary.simpleMessage(
       "الذهاب لصفحة تسجيل الدخول",
     ),
+    "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "howWeUseInfoBody": MessageLookupByLibrary.simpleMessage(
       "• لتوصيل المطاعم والمتبرعين بالمتطوعين القريبين جغرافياً.\n• لإرسال إشعارات (Push Notifications) بالتسليمات الجديدة وحالات الطلبات.\n• لتحسين تجربة المستخدم وتقديم دعم فني أسرع.\n• لحساب إحصائيات التطبيق مثل (الوجبات المنقذة وانبعاثات الكربون التي تم تقليلها).",
     ),
@@ -143,10 +144,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "loginFailedErrorMsg": MessageLookupByLibrary.simpleMessage(
       "عذرًا، لم نتمكن من تسجيل دخولك. يرجى التحقق من بريدك الإلكتروني وكلمة السر والمحاولة مرة أخرى.",
     ),
+    "myAccount": MessageLookupByLibrary.simpleMessage("حسابي"),
+    "myDonations": MessageLookupByLibrary.simpleMessage("تبرعاتي"),
     "newPasswordRequired": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور الجديدة",
     ),
     "next": MessageLookupByLibrary.simpleMessage("التالي"),
+    "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
     "nowUseNewPasswordToLogin": MessageLookupByLibrary.simpleMessage(
       "يمكنك الآن استخدام كلمة السر الجديدة لتسجيل الدخول إلى حسابك.",
     ),
@@ -159,6 +163,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "phoneExample": MessageLookupByLibrary.simpleMessage("مثال: 01234567890"),
     "phoneNumberRequired": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+    "pleaseAgreeToTerms": MessageLookupByLibrary.simpleMessage(
+      "الرجاء الموافقة على الشروط والأحكام",
+    ),
     "privacy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
     "privacyPolicyIntro": MessageLookupByLibrary.simpleMessage(
       "نحن في \"زاد\" نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية. توضح هذه السياسة كيفية جمعنا واستخدامنا وحمايتنا للمعلومات التي تقدمها لنا أثناء استخدامك للتطبيق بهدف إنقاذ الطعام وتوصيله للمحتاجين.",
