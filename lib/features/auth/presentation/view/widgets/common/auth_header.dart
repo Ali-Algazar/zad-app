@@ -13,7 +13,11 @@ class AuthHeader extends StatelessWidget {
       children: [
         Image.asset('assets/image/logo.png'),
         15.h,
-        Text(title, style: AppTextStyles.textStyle32),
+        Text(
+          title,
+          style: AppTextStyles.textStyle32,
+          textAlign: TextAlign.center,
+        ),
         Text(
           subtitle,
           style: AppTextStyles.textStyle16,
