@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zad/features/auth/presentation/view/widgets/create_account_view_body.dart';
+import 'package:zad/features/auth/presentation/view/widgets/register/create_account_view_body.dart';
 
 class CreateAccountView extends StatelessWidget {
   const CreateAccountView({super.key});
