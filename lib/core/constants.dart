@@ -10,4 +10,5 @@ class Constants {
   static const String userHiveKey = 'userHiveKey';
   static const String tokeneKey = 'tokenKey';
   static const String localizations = 'localizationsKey';
+  static const String userRoleKey = 'userRoleKey';
 }
