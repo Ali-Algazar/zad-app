@@ -4,7 +4,6 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:zad/core/constants.dart';
 import 'package:zad/core/cubit/locale_cubit.dart';
 import 'package:zad/core/extensions/extensions.dart';
-import 'package:zad/core/utils/app_colors.dart';
 import 'package:zad/core/widgets/custom_dialog.dart';
 import 'package:zad/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:zad/features/auth/presentation/cubit/auth_state.dart';
