@@ -25,11 +25,13 @@ class AgreeToTermsAndPrivacy extends StatelessWidget {
           onTap: () {
             Navigator.pushNamed(context, PrivacyPolicyView.routeName);
           },
+
           child: Text(
             S.of(context).terms,
             style: AppTextStyles.caption.copyWith(color: AppColors.primary),
           ),
         ),
+
         Text(S.of(context).and, style: AppTextStyles.caption),
         InkWell(
           onTap: () {
