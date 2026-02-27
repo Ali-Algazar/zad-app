@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zad/core/extensions/extensions.dart';
+import 'package:zad/core/presentation/views/privacy_policy_view.dart';
 import 'package:zad/core/utils/app_colors.dart';
 import 'package:zad/core/utils/app_text_styles.dart';
 import 'package:zad/generated/l10n.dart';
@@ -20,14 +21,24 @@ class AgreeToTermsAndPrivacy extends StatelessWidget {
         Checkbox(value: value, onChanged: onChanged),
         8.w,
         Text(S.of(context).agreeTo, style: AppTextStyles.caption),
-        Text(
-          S.of(context).terms,
-          style: AppTextStyles.caption.copyWith(color: AppColors.primary),
+        InkWell(
+          onTap: () {
+            Navigator.pushNamed(context, PrivacyPolicyView.routeName);
+          },
+          child: Text(
+            S.of(context).terms,
+            style: AppTextStyles.caption.copyWith(color: AppColors.primary),
+          ),
         ),
         Text(S.of(context).and, style: AppTextStyles.caption),
-        Text(
-          S.of(context).privacy,
-          style: AppTextStyles.caption.copyWith(color: AppColors.primary),
+        InkWell(
+          onTap: () {
+            Navigator.pushNamed(context, PrivacyPolicyView.routeName);
+          },
+          child: Text(
+            S.of(context).privacy,
+            style: AppTextStyles.caption.copyWith(color: AppColors.primary),
+          ),
         ),
       ],
     );

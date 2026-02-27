@@ -59,6 +59,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "createNewAccount": MessageLookupByLibrary.simpleMessage(
       "Create New Account",
     ),
+    "dataProtectionBody": MessageLookupByLibrary.simpleMessage(
+      "We take all reasonable technical and security measures to protect your data from unauthorized access, modification, or disclosure. Passwords are encrypted and the connection to our databases is secured.",
+    ),
+    "dataProtectionTitle": MessageLookupByLibrary.simpleMessage(
+      "4. Data Protection",
+    ),
+    "dataSharingBody": MessageLookupByLibrary.simpleMessage(
+      "We do not sell your personal data to any third party. We may share limited information (such as the volunteer\'s name, phone number, and location) with the concerned restaurant only to ensure the safe and fast delivery of the donation.",
+    ),
+    "dataSharingTitle": MessageLookupByLibrary.simpleMessage("3. Data Sharing"),
     "donateEasily": MessageLookupByLibrary.simpleMessage("Donate Easily"),
     "donorRoleDesc": MessageLookupByLibrary.simpleMessage(
       "Donor - I have surplus food to donate",
@@ -105,6 +115,18 @@ class MessageLookup extends MessageLookupByLibrary {
       "Get instant notifications for nearby donations and distribute them to the needy",
     ),
     "goToLoginPage": MessageLookupByLibrary.simpleMessage("Go to Login Page"),
+    "howWeUseInfoBody": MessageLookupByLibrary.simpleMessage(
+      "• To connect restaurants and donors with nearby volunteers.\n• To send Push Notifications for new deliveries and order statuses.\n• To improve user experience and provide faster technical support.\n• To calculate app statistics such as (saved meals and reduced carbon emissions).",
+    ),
+    "howWeUseInfoTitle": MessageLookupByLibrary.simpleMessage(
+      "2. How We Use Your Information?",
+    ),
+    "infoWeCollectBody": MessageLookupByLibrary.simpleMessage(
+      "• Basic Data: Such as name, phone number, and email upon registration.\n• Location Data: We use your location to show the nearest available donations to you as a volunteer, or to locate the restaurant to facilitate the pickup process.\n• Usage Data: Such as in-app interactions and points collected in the rewards system.",
+    ),
+    "infoWeCollectTitle": MessageLookupByLibrary.simpleMessage(
+      "1. Information We Collect",
+    ),
     "invalidOtpCode": MessageLookupByLibrary.simpleMessage("Invalid OTP Code"),
     "joinThousandsOfVolunteers": MessageLookupByLibrary.simpleMessage(
       "Join thousands of volunteers and donors across Egypt",
@@ -134,6 +156,13 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "phoneNumberRequired": MessageLookupByLibrary.simpleMessage("Phone Number"),
     "privacy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
+    "privacyPolicyIntro": MessageLookupByLibrary.simpleMessage(
+      "At \"Zad\", we respect your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and protect the information you provide us while using the app to save food and deliver it to those in need.",
+    ),
+    "privacyPolicyTitle": MessageLookupByLibrary.simpleMessage(
+      "Privacy Policy",
+    ),
+    "readAndAgree": MessageLookupByLibrary.simpleMessage("I Read and Agree"),
     "receiveAndDistribute": MessageLookupByLibrary.simpleMessage(
       "Receive and Distribute",
     ),
@@ -198,6 +227,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "Volunteer - I want to help distribute food",
     ),
     "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back"),
+    "welcomeToZadApp": MessageLookupByLibrary.simpleMessage(
+      "Welcome to Zad App",
+    ),
+    "yourRightsBody": MessageLookupByLibrary.simpleMessage(
+      "You have the right at any time to modify your personal data through the \"My Account\" page, or request the permanent deletion of the account and all associated data by contacting technical support.",
+    ),
+    "yourRightsTitle": MessageLookupByLibrary.simpleMessage("5. Your Rights"),
     "zadElKheirPlatform": MessageLookupByLibrary.simpleMessage(
       "Zad El Kheir Platform",
     ),

@@ -61,6 +61,18 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
+    "dataProtectionBody": MessageLookupByLibrary.simpleMessage(
+      "نتخذ كافة التدابير التقنية والأمنية المعقولة لحماية بياناتك من الوصول غير المصرح به أو التعديل أو الإفشاء. يتم تشفير كلمات المرور وتأمين الاتصال بقواعد البيانات الخاصة بنا.",
+    ),
+    "dataProtectionTitle": MessageLookupByLibrary.simpleMessage(
+      "4. حماية البيانات",
+    ),
+    "dataSharingBody": MessageLookupByLibrary.simpleMessage(
+      "نحن لا نبيع بياناتك الشخصية لأي طرف ثالث. قد نشارك معلومات محدودة (مثل اسم المتطوع ورقم هاتفه وموقعه) مع المطعم المعني فقط لضمان نجاح عملية تسليم التبرع بأمان وسرعة.",
+    ),
+    "dataSharingTitle": MessageLookupByLibrary.simpleMessage(
+      "3. مشاركة البيانات",
+    ),
     "donateEasily": MessageLookupByLibrary.simpleMessage("تبرع بسهولة"),
     "donorRoleDesc": MessageLookupByLibrary.simpleMessage(
       "متبرع - لديّ طعام فائض للتبرع",
@@ -105,6 +117,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "goToLoginPage": MessageLookupByLibrary.simpleMessage(
       "الذهاب لصفحة تسجيل الدخول",
     ),
+    "howWeUseInfoBody": MessageLookupByLibrary.simpleMessage(
+      "• لتوصيل المطاعم والمتبرعين بالمتطوعين القريبين جغرافياً.\n• لإرسال إشعارات (Push Notifications) بالتسليمات الجديدة وحالات الطلبات.\n• لتحسين تجربة المستخدم وتقديم دعم فني أسرع.\n• لحساب إحصائيات التطبيق مثل (الوجبات المنقذة وانبعاثات الكربون التي تم تقليلها).",
+    ),
+    "howWeUseInfoTitle": MessageLookupByLibrary.simpleMessage(
+      "2. كيف نستخدم معلوماتك؟",
+    ),
+    "infoWeCollectBody": MessageLookupByLibrary.simpleMessage(
+      "• البيانات الأساسية: مثل الاسم، رقم الهاتف، والبريد الإلكتروني عند التسجيل.\n• بيانات الموقع الجغرافي (Location): نستخدم موقعك لعرض أقرب التبرعات المتاحة لك كمتطوع، أو لتحديد موقع المطعم لتسهيل عملية الاستلام.\n• بيانات الاستخدام: مثل التفاعلات داخل التطبيق، والنقاط التي تم جمعها في نظام المكافآت.",
+    ),
+    "infoWeCollectTitle": MessageLookupByLibrary.simpleMessage(
+      "1. المعلومات التي نجمعها",
+    ),
     "invalidOtpCode": MessageLookupByLibrary.simpleMessage(
       "رمز الـ OTP غير صحيح",
     ),
@@ -136,6 +160,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "phoneExample": MessageLookupByLibrary.simpleMessage("مثال: 01234567890"),
     "phoneNumberRequired": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
     "privacy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
+    "privacyPolicyIntro": MessageLookupByLibrary.simpleMessage(
+      "نحن في \"زاد\" نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية. توضح هذه السياسة كيفية جمعنا واستخدامنا وحمايتنا للمعلومات التي تقدمها لنا أثناء استخدامك للتطبيق بهدف إنقاذ الطعام وتوصيله للمحتاجين.",
+    ),
+    "privacyPolicyTitle": MessageLookupByLibrary.simpleMessage(
+      "سياسة الخصوصية",
+    ),
+    "readAndAgree": MessageLookupByLibrary.simpleMessage("قرأت وأوافق"),
     "receiveAndDistribute": MessageLookupByLibrary.simpleMessage("استلم ووزع"),
     "recipientRoleDesc": MessageLookupByLibrary.simpleMessage(
       "مستلم - أبحث عن مساعدات غذائية",
@@ -200,6 +231,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "متطوع - أريد المساعدة في توزيع الطعام",
     ),
     "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحباً بك مرة أخرى"),
+    "welcomeToZadApp": MessageLookupByLibrary.simpleMessage(
+      "مرحباً بك في تطبيق زاد",
+    ),
+    "yourRightsBody": MessageLookupByLibrary.simpleMessage(
+      "يحق لك في أي وقت تعديل بياناتك الشخصية من خلال صفحة \"حسابي\"، أو طلب حذف الحساب نهائياً ومسح كافة بياناتك المرتبطة به بالتواصل مع الدعم الفني.",
+    ),
+    "yourRightsTitle": MessageLookupByLibrary.simpleMessage("5. حقوقك"),
     "zadElKheirPlatform": MessageLookupByLibrary.simpleMessage(
       "منصة زاد الخير",
     ),

@@ -80,5 +80,20 @@
 "tryAgain": "Try Again",
 "loginFailed": "Login Failed",
 "loginFailedErrorMsg": "Sorry, we were unable to log you in. Please check your email and password and try again.",
-"confirmEmail": "Confirm Email"
+"confirmEmail": "Confirm Email",
+
+"privacyPolicyTitle": "Privacy Policy",
+"welcomeToZadApp": "Welcome to Zad App",
+"privacyPolicyIntro": "At \"Zad\", we respect your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and protect the information you provide us while using the app to save food and deliver it to those in need.",
+"infoWeCollectTitle": "1. Information We Collect",
+"infoWeCollectBody": "• Basic Data: Such as name, phone number, and email upon registration.\n• Location Data: We use your location to show the nearest available donations to you as a volunteer, or to locate the restaurant to facilitate the pickup process.\n• Usage Data: Such as in-app interactions and points collected in the rewards system.",
+"howWeUseInfoTitle": "2. How We Use Your Information?",
+"howWeUseInfoBody": "• To connect restaurants and donors with nearby volunteers.\n• To send Push Notifications for new deliveries and order statuses.\n• To improve user experience and provide faster technical support.\n• To calculate app statistics such as (saved meals and reduced carbon emissions).",
+"dataSharingTitle": "3. Data Sharing",
+"dataSharingBody": "We do not sell your personal data to any third party. We may share limited information (such as the volunteer's name, phone number, and location) with the concerned restaurant only to ensure the safe and fast delivery of the donation.",
+"dataProtectionTitle": "4. Data Protection",
+"dataProtectionBody": "We take all reasonable technical and security measures to protect your data from unauthorized access, modification, or disclosure. Passwords are encrypted and the connection to our databases is secured.",
+"yourRightsTitle": "5. Your Rights",
+"yourRightsBody": "You have the right at any time to modify your personal data through the \"My Account\" page, or request the permanent deletion of the account and all associated data by contacting technical support.",
+"readAndAgree": "I Read and Agree"
 }

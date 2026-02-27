@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zad/core/presentation/views/privacy_policy_view.dart';
 import 'package:zad/features/auth/presentation/view/choose_recovery_method_view.dart';
 import 'package:zad/features/auth/presentation/view/create_account_view.dart';
 import 'package:zad/features/auth/presentation/view/forgot_password_view.dart';
@@ -51,6 +52,12 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
           return const RecoverViaEmailView();
         },
         settings: settings,
+      );
+    case PrivacyPolicyView.routeName:
+      return MaterialPageRoute(
+        builder: (_) {
+          return const PrivacyPolicyView();
+        },
       );
 
     default:
