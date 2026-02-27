@@ -1,14 +1,19 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:zad/app_restart.dart';
+import 'package:zad/core/constants.dart';
 import 'package:zad/core/cubit/locale_cubit.dart';
 import 'package:zad/core/helper/hive_helper.dart';
+import 'package:zad/core/helper/shared_preferences_service.dart';
 import 'package:zad/core/helper_functions/on_generate_routes.dart';
 import 'package:zad/core/services/get_it_service.dart';
 import 'package:zad/core/services/notification_service.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:zad/core/theme/app_theme.dart';
+import 'package:zad/features/auth/data/repositories/auth_repository.dart';
+import 'package:zad/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:zad/firebase_options.dart';
 import 'package:zad/generated/l10n.dart';
 
@@ -17,7 +22,14 @@ void main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   setupServiceLocator();
   await NotificationService.init();
+
+  var role = await SharedPreferencesService.getData(key: Constants.userRoleKey);
+  var token = await SharedPreferencesService.getData(key: Constants.tokeneKey);
+  print('Cached user role: $role');
+  print('Cached user token: $token');
+
   await HiveHelper.init();
+  HiveHelper.registerAdapter();
 
   runApp(RestartWidget(child: const ZadApp()));
 }
@@ -27,8 +39,11 @@ class ZadApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => LocaleCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => LocaleCubit()),
+        BlocProvider(create: (context) => AuthCubit(sl<AuthRepository>())),
+      ],
       child: BlocBuilder<LocaleCubit, String>(
         builder: (context, state) {
           return MaterialApp(

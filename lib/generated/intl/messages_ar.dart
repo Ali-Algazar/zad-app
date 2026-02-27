@@ -36,16 +36,26 @@ class MessageLookup extends MessageLookupByLibrary {
     "atLeastOneUppercase": MessageLookupByLibrary.simpleMessage(
       "حرف كبير واحد على الأقل",
     ),
+    "back": MessageLookupByLibrary.simpleMessage("رجوع"),
     "bePartOfChange": MessageLookupByLibrary.simpleMessage(
       "كن جزءاً من التغيير",
     ),
     "changePassword": MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
+    "chooseRecoveryMethodDesc": MessageLookupByLibrary.simpleMessage(
+      "لا تقلق، اختر الطريقة المفضلة لاستعادة حسابك وسنرسل لك تعليمات إعادة تعيين كلمة المرور",
+    ),
     "chooseRole": MessageLookupByLibrary.simpleMessage("اختر الدور"),
     "chooseStrongPassword": MessageLookupByLibrary.simpleMessage(
       "اختر كلمة مرور جديدة وقوية لحسابك",
     ),
     "city": MessageLookupByLibrary.simpleMessage("المدينة"),
     "confirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
+    "confirmEmail": MessageLookupByLibrary.simpleMessage(
+      "تأكيد البريد الإلكتروني",
+    ),
+    "confirmPassword": MessageLookupByLibrary.simpleMessage(
+      "تأكيد كلمة المرور",
+    ),
     "contributeToReducingWaste": MessageLookupByLibrary.simpleMessage(
       "ساهم في تقليل هدر الطعام وحماية البيئة مع مساعدة الأسر المحتاجة",
     ),
@@ -61,6 +71,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
     "enterCity": MessageLookupByLibrary.simpleMessage("أدخل المدينة"),
+    "enterConfirmPassword": MessageLookupByLibrary.simpleMessage(
+      "أدخل تأكيد كلمة المرور",
+    ),
     "enterEmail": MessageLookupByLibrary.simpleMessage(
       "أدخل البريد الإلكتروني",
     ),
@@ -69,13 +82,31 @@ class MessageLookup extends MessageLookupByLibrary {
       "أدخل كلمة المرور الجديدة",
     ),
     "enterPassword": MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
+    "enterRegisteredEmailDesc": MessageLookupByLibrary.simpleMessage(
+      "أدخل البريد الإلكتروني المسجل في حسابك وسنرسل لك رابط لإعادة تعيين كلمة المرور",
+    ),
+    "enterRegisteredPhoneDesc": MessageLookupByLibrary.simpleMessage(
+      "أدخل رقم الهاتف المسجل في حسابك وسنرسل لك رمز التحقق لإعادة تعيين كلمة المرور",
+    ),
+    "enterValidEgyptianPhone": MessageLookupByLibrary.simpleMessage(
+      "الرجاء إدخال رقم هاتف مصري صحيح مكون من 11 رقمًا",
+    ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+    "forgotPasswordText": MessageLookupByLibrary.simpleMessage(
+      "نسيت كلمة المرور",
+    ),
     "forgotPasswordTitle": MessageLookupByLibrary.simpleMessage(
       "نسيت كلمة المرور؟",
     ),
     "fullNameRequired": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
     "getInstantNotifications": MessageLookupByLibrary.simpleMessage(
       "احصل على إشعارات فورية للتبرعات القريبة منك ووزعها على المحتاجين",
+    ),
+    "goToLoginPage": MessageLookupByLibrary.simpleMessage(
+      "الذهاب لصفحة تسجيل الدخول",
+    ),
+    "invalidOtpCode": MessageLookupByLibrary.simpleMessage(
+      "رمز الـ OTP غير صحيح",
     ),
     "joinThousandsOfVolunteers": MessageLookupByLibrary.simpleMessage(
       "انضم إلى آلاف المتطوعين والمتبرعين في جميع أنحاء مصر",
@@ -84,11 +115,24 @@ class MessageLookup extends MessageLookupByLibrary {
       "انضم إلينا وابدأ في إحداث فرق",
     ),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+    "loginFailed": MessageLookupByLibrary.simpleMessage("فشل تسجيل الدخول"),
+    "loginFailedErrorMsg": MessageLookupByLibrary.simpleMessage(
+      "عذرًا، لم نتمكن من تسجيل دخولك. يرجى التحقق من بريدك الإلكتروني وكلمة السر والمحاولة مرة أخرى.",
+    ),
     "newPasswordRequired": MessageLookupByLibrary.simpleMessage(
-      "كلمة المرور الجديدة *",
+      "كلمة المرور الجديدة",
     ),
     "next": MessageLookupByLibrary.simpleMessage("التالي"),
+    "nowUseNewPasswordToLogin": MessageLookupByLibrary.simpleMessage(
+      "يمكنك الآن استخدام كلمة السر الجديدة لتسجيل الدخول إلى حسابك.",
+    ),
+    "otpMismatchErrorMsg": MessageLookupByLibrary.simpleMessage(
+      "للأسف الرمز اللي دخلته مش هو اللي بعتناه. راجع الرمز اللي وصلك على الموبايل في رسالة الـ SMS ودخله تاني.",
+    ),
     "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+    "passwordChangedSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "تم تغيير كلمة السر بنجاح",
+    ),
     "phoneExample": MessageLookupByLibrary.simpleMessage("مثال: 01234567890"),
     "phoneNumberRequired": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
     "privacy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
@@ -96,8 +140,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "recipientRoleDesc": MessageLookupByLibrary.simpleMessage(
       "مستلم - أبحث عن مساعدات غذائية",
     ),
+    "recoverViaEmail": MessageLookupByLibrary.simpleMessage(
+      "استعادة عبر البريد الإلكتروني",
+    ),
+    "recoverViaPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "استعادة عبر رقم الهاتف",
+    ),
+    "recoveryTip": MessageLookupByLibrary.simpleMessage(
+      "💡 نصيحة: اختر الطريقة التي لديك إمكانية الوصول إليها الآن لاستعادة حسابك بسرعة",
+    ),
     "reduceWasteSlogan": MessageLookupByLibrary.simpleMessage(
       "معاً نقلل الهدر وننقذ الطعام",
+    ),
+    "registeredEmailRequired": MessageLookupByLibrary.simpleMessage(
+      "البريد الإلكتروني المسجل",
+    ),
+    "registeredPhoneRequired": MessageLookupByLibrary.simpleMessage(
+      "رقم الهاتف المسجل",
     ),
     "resendCodeAfter": MessageLookupByLibrary.simpleMessage(
       "إعادة إرسال الرمز بعد ",
@@ -105,16 +164,32 @@ class MessageLookup extends MessageLookupByLibrary {
     "resetPassword": MessageLookupByLibrary.simpleMessage(
       "إعادة تعيين كلمة المرور",
     ),
+    "secureLinkNotice": MessageLookupByLibrary.simpleMessage(
+      "سنرسل لك رابط آمن لإعادة تعيين كلمة المرور. تحقق من صندوق الوارد والبريد المزعج (Spam).",
+    ),
     "sendCode": MessageLookupByLibrary.simpleMessage("إرسال الكود"),
+    "sendRecoveryLink": MessageLookupByLibrary.simpleMessage(
+      "إرسال رابط الاستعادة",
+    ),
+    "sendResetLinkViaEmail": MessageLookupByLibrary.simpleMessage(
+      "إرسال رابط إعادة التعيين عبر البريد الإلكتروني",
+    ),
+    "sendVerificationCodeViaSMS": MessageLookupByLibrary.simpleMessage(
+      "إرسال رمز التحقق عبر رسالة نصية (SMS)",
+    ),
     "shareSurplusFood": MessageLookupByLibrary.simpleMessage(
       "شارك الطعام الفائض مع من يحتاجه في مجتمعك بضغطة زر واحدة",
     ),
     "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
+    "smsVerificationNotice": MessageLookupByLibrary.simpleMessage(
+      "تأكد من إدخال رقم الهاتف المسجل في حسابك. سيتم إرسال رمز التحقق المكون من 6 أرقام عبر رسالة SMS.",
+    ),
     "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
     "startYourJourneyNow": MessageLookupByLibrary.simpleMessage(
       "ابدأ رحلتك الآن",
     ),
     "terms": MessageLookupByLibrary.simpleMessage("الشروط والأحكام"),
+    "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مرة أخرى"),
     "verificationCodeSentTo": MessageLookupByLibrary.simpleMessage(
       "تم إرسال رمز التحقق إلى",
     ),

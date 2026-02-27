@@ -36,16 +36,22 @@ class MessageLookup extends MessageLookupByLibrary {
     "atLeastOneUppercase": MessageLookupByLibrary.simpleMessage(
       "At least one uppercase letter",
     ),
+    "back": MessageLookupByLibrary.simpleMessage("Back"),
     "bePartOfChange": MessageLookupByLibrary.simpleMessage(
       "Be Part of the Change",
     ),
     "changePassword": MessageLookupByLibrary.simpleMessage("Change Password"),
+    "chooseRecoveryMethodDesc": MessageLookupByLibrary.simpleMessage(
+      "Don\'t worry, choose your preferred method to recover your account and we will send you password reset instructions",
+    ),
     "chooseRole": MessageLookupByLibrary.simpleMessage("Choose Role"),
     "chooseStrongPassword": MessageLookupByLibrary.simpleMessage(
       "Choose a new, strong password for your account",
     ),
     "city": MessageLookupByLibrary.simpleMessage("City"),
     "confirm": MessageLookupByLibrary.simpleMessage("Confirm"),
+    "confirmEmail": MessageLookupByLibrary.simpleMessage("Confirm Email"),
+    "confirmPassword": MessageLookupByLibrary.simpleMessage("Confirm Password"),
     "contributeToReducingWaste": MessageLookupByLibrary.simpleMessage(
       "Contribute to reducing food waste and protecting the environment while helping families in need",
     ),
@@ -65,6 +71,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "email": MessageLookupByLibrary.simpleMessage("Email"),
     "enterCity": MessageLookupByLibrary.simpleMessage("Enter your city"),
+    "enterConfirmPassword": MessageLookupByLibrary.simpleMessage(
+      "Enter confirm password",
+    ),
     "enterEmail": MessageLookupByLibrary.simpleMessage("Enter your email"),
     "enterFullName": MessageLookupByLibrary.simpleMessage(
       "Enter your full name",
@@ -75,7 +84,19 @@ class MessageLookup extends MessageLookupByLibrary {
     "enterPassword": MessageLookupByLibrary.simpleMessage(
       "Enter your password",
     ),
+    "enterRegisteredEmailDesc": MessageLookupByLibrary.simpleMessage(
+      "Enter the email registered to your account and we will send you a link to reset your password",
+    ),
+    "enterRegisteredPhoneDesc": MessageLookupByLibrary.simpleMessage(
+      "Enter the phone number registered to your account and we will send you a verification code to reset your password",
+    ),
+    "enterValidEgyptianPhone": MessageLookupByLibrary.simpleMessage(
+      "Please enter a valid 11-digit Egyptian phone number",
+    ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+    "forgotPasswordText": MessageLookupByLibrary.simpleMessage(
+      "Forgot Password",
+    ),
     "forgotPasswordTitle": MessageLookupByLibrary.simpleMessage(
       "Forgot Password?",
     ),
@@ -83,6 +104,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "getInstantNotifications": MessageLookupByLibrary.simpleMessage(
       "Get instant notifications for nearby donations and distribute them to the needy",
     ),
+    "goToLoginPage": MessageLookupByLibrary.simpleMessage("Go to Login Page"),
+    "invalidOtpCode": MessageLookupByLibrary.simpleMessage("Invalid OTP Code"),
     "joinThousandsOfVolunteers": MessageLookupByLibrary.simpleMessage(
       "Join thousands of volunteers and donors across Egypt",
     ),
@@ -90,11 +113,22 @@ class MessageLookup extends MessageLookupByLibrary {
       "Join us and start making a difference",
     ),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
-    "newPasswordRequired": MessageLookupByLibrary.simpleMessage(
-      "New Password *",
+    "loginFailed": MessageLookupByLibrary.simpleMessage("Login Failed"),
+    "loginFailedErrorMsg": MessageLookupByLibrary.simpleMessage(
+      "Sorry, we were unable to log you in. Please check your email and password and try again.",
     ),
+    "newPasswordRequired": MessageLookupByLibrary.simpleMessage("New Password"),
     "next": MessageLookupByLibrary.simpleMessage("Next"),
+    "nowUseNewPasswordToLogin": MessageLookupByLibrary.simpleMessage(
+      "You can now use your new password to log in to your account.",
+    ),
+    "otpMismatchErrorMsg": MessageLookupByLibrary.simpleMessage(
+      "Unfortunately, the code you entered is incorrect. Please check the SMS sent to your mobile phone and try again.",
+    ),
     "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "passwordChangedSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "Password Changed Successfully",
+    ),
     "phoneExample": MessageLookupByLibrary.simpleMessage(
       "Example: 01234567890",
     ),
@@ -106,23 +140,54 @@ class MessageLookup extends MessageLookupByLibrary {
     "recipientRoleDesc": MessageLookupByLibrary.simpleMessage(
       "Recipient - I am looking for food assistance",
     ),
+    "recoverViaEmail": MessageLookupByLibrary.simpleMessage(
+      "Recover via Email",
+    ),
+    "recoverViaPhoneNumber": MessageLookupByLibrary.simpleMessage(
+      "Recover via Phone Number",
+    ),
+    "recoveryTip": MessageLookupByLibrary.simpleMessage(
+      "💡 Tip: Choose the method you currently have access to so you can recover your account quickly.",
+    ),
     "reduceWasteSlogan": MessageLookupByLibrary.simpleMessage(
       "Together, we reduce waste and save food",
+    ),
+    "registeredEmailRequired": MessageLookupByLibrary.simpleMessage(
+      "Registered Email *",
+    ),
+    "registeredPhoneRequired": MessageLookupByLibrary.simpleMessage(
+      "Registered Phone Number *",
     ),
     "resendCodeAfter": MessageLookupByLibrary.simpleMessage(
       "Resend code after ",
     ),
     "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
+    "secureLinkNotice": MessageLookupByLibrary.simpleMessage(
+      "We will send you a secure link to reset your password. Check your inbox and spam folder.",
+    ),
     "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
+    "sendRecoveryLink": MessageLookupByLibrary.simpleMessage(
+      "Send Recovery Link",
+    ),
+    "sendResetLinkViaEmail": MessageLookupByLibrary.simpleMessage(
+      "Send reset link via email",
+    ),
+    "sendVerificationCodeViaSMS": MessageLookupByLibrary.simpleMessage(
+      "Send verification code via SMS text message",
+    ),
     "shareSurplusFood": MessageLookupByLibrary.simpleMessage(
       "Share surplus food with those in need in your community with a single click",
     ),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
+    "smsVerificationNotice": MessageLookupByLibrary.simpleMessage(
+      "Make sure to enter the phone number registered to your account. A 6-digit verification code will be sent via SMS.",
+    ),
     "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
     "startYourJourneyNow": MessageLookupByLibrary.simpleMessage(
       "Start Your Journey Now",
     ),
     "terms": MessageLookupByLibrary.simpleMessage("the Terms and Conditions"),
+    "tryAgain": MessageLookupByLibrary.simpleMessage("Try Again"),
     "verificationCodeSentTo": MessageLookupByLibrary.simpleMessage(
       "Verification code sent to",
     ),

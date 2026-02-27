@@ -91,14 +91,13 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void navigateToNextView(String routeName, [dynamic arguments]) {
-    Future.delayed(const Duration(milliseconds: 2800), () {
+    Future.delayed(const Duration(milliseconds: 3100), () {
       controller.stop();
       Navigator.pushReplacementNamed(context, routeName, arguments: arguments);
     });
   }
 
   Future<void> setupInteractedMessage() async {
-    // 1. حالة التطبيق كان مقفول تماماً (Terminated)
     RemoteMessage? initialMessage = await FirebaseMessaging.instance
         .getInitialMessage();
 

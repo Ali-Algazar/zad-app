@@ -459,10 +459,10 @@ class S {
     );
   }
 
-  /// `كلمة المرور الجديدة *`
+  /// `كلمة المرور الجديدة`
   String get newPasswordRequired {
     return Intl.message(
-      'كلمة المرور الجديدة *',
+      'كلمة المرور الجديدة',
       name: 'newPasswordRequired',
       desc: '',
       args: [],
@@ -514,6 +514,266 @@ class S {
     return Intl.message(
       'تغيير كلمة المرور',
       name: 'changePassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رجوع`
+  String get back {
+    return Intl.message('رجوع', name: 'back', desc: '', args: []);
+  }
+
+  /// `لا تقلق، اختر الطريقة المفضلة لاستعادة حسابك وسنرسل لك تعليمات إعادة تعيين كلمة المرور`
+  String get chooseRecoveryMethodDesc {
+    return Intl.message(
+      'لا تقلق، اختر الطريقة المفضلة لاستعادة حسابك وسنرسل لك تعليمات إعادة تعيين كلمة المرور',
+      name: 'chooseRecoveryMethodDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `إرسال رابط إعادة التعيين عبر البريد الإلكتروني`
+  String get sendResetLinkViaEmail {
+    return Intl.message(
+      'إرسال رابط إعادة التعيين عبر البريد الإلكتروني',
+      name: 'sendResetLinkViaEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `إرسال رمز التحقق عبر رسالة نصية (SMS)`
+  String get sendVerificationCodeViaSMS {
+    return Intl.message(
+      'إرسال رمز التحقق عبر رسالة نصية (SMS)',
+      name: 'sendVerificationCodeViaSMS',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `💡 نصيحة: اختر الطريقة التي لديك إمكانية الوصول إليها الآن لاستعادة حسابك بسرعة`
+  String get recoveryTip {
+    return Intl.message(
+      '💡 نصيحة: اختر الطريقة التي لديك إمكانية الوصول إليها الآن لاستعادة حسابك بسرعة',
+      name: 'recoveryTip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `استعادة عبر البريد الإلكتروني`
+  String get recoverViaEmail {
+    return Intl.message(
+      'استعادة عبر البريد الإلكتروني',
+      name: 'recoverViaEmail',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أدخل البريد الإلكتروني المسجل في حسابك وسنرسل لك رابط لإعادة تعيين كلمة المرور`
+  String get enterRegisteredEmailDesc {
+    return Intl.message(
+      'أدخل البريد الإلكتروني المسجل في حسابك وسنرسل لك رابط لإعادة تعيين كلمة المرور',
+      name: 'enterRegisteredEmailDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `البريد الإلكتروني المسجل`
+  String get registeredEmailRequired {
+    return Intl.message(
+      'البريد الإلكتروني المسجل',
+      name: 'registeredEmailRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `سنرسل لك رابط آمن لإعادة تعيين كلمة المرور. تحقق من صندوق الوارد والبريد المزعج (Spam).`
+  String get secureLinkNotice {
+    return Intl.message(
+      'سنرسل لك رابط آمن لإعادة تعيين كلمة المرور. تحقق من صندوق الوارد والبريد المزعج (Spam).',
+      name: 'secureLinkNotice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `إرسال رابط الاستعادة`
+  String get sendRecoveryLink {
+    return Intl.message(
+      'إرسال رابط الاستعادة',
+      name: 'sendRecoveryLink',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `استعادة عبر رقم الهاتف`
+  String get recoverViaPhoneNumber {
+    return Intl.message(
+      'استعادة عبر رقم الهاتف',
+      name: 'recoverViaPhoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أدخل رقم الهاتف المسجل في حسابك وسنرسل لك رمز التحقق لإعادة تعيين كلمة المرور`
+  String get enterRegisteredPhoneDesc {
+    return Intl.message(
+      'أدخل رقم الهاتف المسجل في حسابك وسنرسل لك رمز التحقق لإعادة تعيين كلمة المرور',
+      name: 'enterRegisteredPhoneDesc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رقم الهاتف المسجل`
+  String get registeredPhoneRequired {
+    return Intl.message(
+      'رقم الهاتف المسجل',
+      name: 'registeredPhoneRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تأكد من إدخال رقم الهاتف المسجل في حسابك. سيتم إرسال رمز التحقق المكون من 6 أرقام عبر رسالة SMS.`
+  String get smsVerificationNotice {
+    return Intl.message(
+      'تأكد من إدخال رقم الهاتف المسجل في حسابك. سيتم إرسال رمز التحقق المكون من 6 أرقام عبر رسالة SMS.',
+      name: 'smsVerificationNotice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `نسيت كلمة المرور`
+  String get forgotPasswordText {
+    return Intl.message(
+      'نسيت كلمة المرور',
+      name: 'forgotPasswordText',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الرجاء إدخال رقم هاتف مصري صحيح مكون من 11 رقمًا`
+  String get enterValidEgyptianPhone {
+    return Intl.message(
+      'الرجاء إدخال رقم هاتف مصري صحيح مكون من 11 رقمًا',
+      name: 'enterValidEgyptianPhone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تأكيد كلمة المرور`
+  String get confirmPassword {
+    return Intl.message(
+      'تأكيد كلمة المرور',
+      name: 'confirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أدخل تأكيد كلمة المرور`
+  String get enterConfirmPassword {
+    return Intl.message(
+      'أدخل تأكيد كلمة المرور',
+      name: 'enterConfirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تم تغيير كلمة السر بنجاح`
+  String get passwordChangedSuccessfully {
+    return Intl.message(
+      'تم تغيير كلمة السر بنجاح',
+      name: 'passwordChangedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `يمكنك الآن استخدام كلمة السر الجديدة لتسجيل الدخول إلى حسابك.`
+  String get nowUseNewPasswordToLogin {
+    return Intl.message(
+      'يمكنك الآن استخدام كلمة السر الجديدة لتسجيل الدخول إلى حسابك.',
+      name: 'nowUseNewPasswordToLogin',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الذهاب لصفحة تسجيل الدخول`
+  String get goToLoginPage {
+    return Intl.message(
+      'الذهاب لصفحة تسجيل الدخول',
+      name: 'goToLoginPage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `رمز الـ OTP غير صحيح`
+  String get invalidOtpCode {
+    return Intl.message(
+      'رمز الـ OTP غير صحيح',
+      name: 'invalidOtpCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `للأسف الرمز اللي دخلته مش هو اللي بعتناه. راجع الرمز اللي وصلك على الموبايل في رسالة الـ SMS ودخله تاني.`
+  String get otpMismatchErrorMsg {
+    return Intl.message(
+      'للأسف الرمز اللي دخلته مش هو اللي بعتناه. راجع الرمز اللي وصلك على الموبايل في رسالة الـ SMS ودخله تاني.',
+      name: 'otpMismatchErrorMsg',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `حاول مرة أخرى`
+  String get tryAgain {
+    return Intl.message('حاول مرة أخرى', name: 'tryAgain', desc: '', args: []);
+  }
+
+  /// `فشل تسجيل الدخول`
+  String get loginFailed {
+    return Intl.message(
+      'فشل تسجيل الدخول',
+      name: 'loginFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عذرًا، لم نتمكن من تسجيل دخولك. يرجى التحقق من بريدك الإلكتروني وكلمة السر والمحاولة مرة أخرى.`
+  String get loginFailedErrorMsg {
+    return Intl.message(
+      'عذرًا، لم نتمكن من تسجيل دخولك. يرجى التحقق من بريدك الإلكتروني وكلمة السر والمحاولة مرة أخرى.',
+      name: 'loginFailedErrorMsg',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `تأكيد البريد الإلكتروني`
+  String get confirmEmail {
+    return Intl.message(
+      'تأكيد البريد الإلكتروني',
+      name: 'confirmEmail',
       desc: '',
       args: [],
     );
