@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zad/core/constants.dart';
 import 'package:zad/core/extensions/extensions.dart';
+import 'package:zad/core/helper/shared_preferences_service.dart';
 import 'package:zad/core/utils/app_text_styles.dart';
 import 'package:zad/core/widgets/custom_button.dart';
 import 'package:zad/features/auth/presentation/view/login_view.dart';
@@ -44,8 +45,12 @@ class OnBoardingItim extends StatelessWidget {
           CustomDots(aIndex: index),
           24.h,
           CustomButton(
-            onTap: () {
+            onTap: () async {
               if (index == 3) {
+                await SharedPreferencesService.saveData(
+                  key: Constants.onBoardingKey,
+                  value: true,
+                );
                 Navigator.pushReplacementNamed(context, LoginView.routeName);
               } else {
                 context.read<OnboardingCubit>().nextPage();

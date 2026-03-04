@@ -1,9 +1,17 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:zad/core/constants.dart';
 import 'package:zad/core/extensions/extensions.dart';
+import 'package:zad/core/helper/shared_preferences_service.dart';
 import 'package:zad/core/utils/app_colors.dart';
 import 'package:zad/core/utils/app_text_styles.dart';
+import 'package:zad/features/auth/presentation/cubit/auth_cubit.dart';
+import 'package:zad/features/auth/presentation/cubit/auth_state.dart';
+import 'package:zad/features/auth/presentation/view/login_view.dart';
+import 'package:zad/features/donor_main/presentation/view/donor_main_view.dart';
 import 'package:zad/features/onboarding/presentation/view/onboarding_view.dart';
+import 'package:zad/features/volunteer_main/presentation/view/volunteer_main_view.dart';
 import 'package:zad/generated/l10n.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -24,38 +32,57 @@ class _SplashViewBodyState extends State<SplashViewBody>
     requestPermission();
     initAnimations();
     setupInteractedMessage();
-    navigateToNextView(OnboardingView.routeName);
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: double.infinity,
-      decoration: BoxDecoration(gradient: AppColors.primaryGradient),
-      child: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ScaleTransition(
-              scale: scale,
-              child: Image.asset('assets/image/logo_w.png', height: 190),
-            ),
-            32.h,
-            Text(
-              S.of(context).zadElKheirPlatform,
-              style: AppTextStyles.textStyle32.copyWith(
-                color: AppColors.background,
+    return BlocListener<AuthCubit, AuthState>(
+      listener: (context, state) async {
+        if (state is Authenticated) {
+          if (state.role == 'Donor') {
+            navigateToNextView(DonorMainView.routeName);
+          } else {
+            navigateToNextView(VolunteerMainView.routeName);
+          }
+        } else if (state is UnAuthenticated) {
+          var onbordin = await SharedPreferencesService.getData(
+            key: Constants.onBoardingKey,
+          );
+          if (onbordin.isNull || onbordin == false) {
+            navigateToNextView(OnboardingView.routeName);
+          } else {
+            navigateToNextView(LoginView.routeName);
+          }
+        }
+      },
+      child: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(gradient: AppColors.primaryGradient),
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ScaleTransition(
+                scale: scale,
+                child: Image.asset('assets/image/logo_w.png', height: 190),
               ),
-            ),
-            // 4.h,
-            Text(
-              S.of(context).reduceWasteSlogan,
-              style: AppTextStyles.textStyle16.copyWith(
-                color: AppColors.background,
+              32.h,
+              Text(
+                S.of(context).zadElKheirPlatform,
+                style: AppTextStyles.textStyle32.copyWith(
+                  color: AppColors.background,
+                ),
               ),
-            ),
-          ],
+              // 4.h,
+              Text(
+                S.of(context).reduceWasteSlogan,
+                style: AppTextStyles.textStyle16.copyWith(
+                  color: AppColors.background,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -92,7 +119,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   void navigateToNextView(String routeName, [dynamic arguments]) {
     Future.delayed(const Duration(milliseconds: 3100), () {
-      controller.stop();
       Navigator.pushReplacementNamed(context, routeName, arguments: arguments);
     });
   }
