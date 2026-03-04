@@ -9,8 +9,10 @@ import 'package:zad/features/auth/presentation/view/recover_via_phone_view.dart'
 import 'package:zad/features/auth/presentation/view/reset_password_view.dart';
 import 'package:zad/features/auth/presentation/view/verify_code_via_email_view.dart';
 import 'package:zad/features/auth/presentation/view/verify_code_via_phone_view.dart';
+import 'package:zad/features/donor_main/presentation/view/donor_main_view.dart';
 import 'package:zad/features/splash/presentation/view/splash_view.dart';
 import 'package:zad/features/onboarding/presentation/view/onboarding_view.dart';
+import 'package:zad/features/volunteer_main/presentation/view/volunteer_main_view.dart';
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -57,6 +59,18 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (_) {
           return const PrivacyPolicyView();
+        },
+      );
+    case DonorMainView.routeName:
+      return MaterialPageRoute(
+        builder: (_) {
+          return const DonorMainView();
+        },
+      );
+    case VolunteerMainView.routeName:
+      return MaterialPageRoute(
+        builder: (_) {
+          return const VolunteerMainView();
         },
       );
 
