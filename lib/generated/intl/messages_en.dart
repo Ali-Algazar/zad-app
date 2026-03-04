@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "addNewDonation": MessageLookupByLibrary.simpleMessage("Add New Donation"),
     "agreeTo": MessageLookupByLibrary.simpleMessage("I agree to"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Already have an account?",
@@ -115,7 +116,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Get instant notifications for nearby donations and distribute them to the needy",
     ),
     "goToLoginPage": MessageLookupByLibrary.simpleMessage("Go to Login Page"),
+    "hello": MessageLookupByLibrary.simpleMessage("Hello, "),
     "home": MessageLookupByLibrary.simpleMessage("Home"),
+    "hour": MessageLookupByLibrary.simpleMessage("hour"),
     "howWeUseInfoBody": MessageLookupByLibrary.simpleMessage(
       "• To connect restaurants and donors with nearby volunteers.\n• To send Push Notifications for new deliveries and order statuses.\n• To improve user experience and provide faster technical support.\n• To calculate app statistics such as (saved meals and reduced carbon emissions).",
     ),
@@ -135,13 +138,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "joinUsMakeDifference": MessageLookupByLibrary.simpleMessage(
       "Join us and start making a difference",
     ),
+    "kg": MessageLookupByLibrary.simpleMessage("kg"),
     "login": MessageLookupByLibrary.simpleMessage("Login"),
     "loginFailed": MessageLookupByLibrary.simpleMessage("Login Failed"),
     "loginFailedErrorMsg": MessageLookupByLibrary.simpleMessage(
       "Sorry, we were unable to log you in. Please check your email and password and try again.",
     ),
+    "meal": MessageLookupByLibrary.simpleMessage("Meal"),
+    "mealsSaved": MessageLookupByLibrary.simpleMessage("Meals Saved"),
+    "minute": MessageLookupByLibrary.simpleMessage("minute"),
     "myAccount": MessageLookupByLibrary.simpleMessage("My Account"),
     "myDonations": MessageLookupByLibrary.simpleMessage("My Donations"),
+    "myTasks": MessageLookupByLibrary.simpleMessage("My Tasks"),
     "newPasswordRequired": MessageLookupByLibrary.simpleMessage("New Password"),
     "next": MessageLookupByLibrary.simpleMessage("Next"),
     "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
@@ -155,6 +163,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordChangedSuccessfully": MessageLookupByLibrary.simpleMessage(
       "Password Changed Successfully",
     ),
+    "pending": MessageLookupByLibrary.simpleMessage("Pending"),
     "phoneExample": MessageLookupByLibrary.simpleMessage(
       "Example: 01234567890",
     ),
@@ -173,6 +182,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "receiveAndDistribute": MessageLookupByLibrary.simpleMessage(
       "Receive and Distribute",
     ),
+    "received": MessageLookupByLibrary.simpleMessage("Received"),
+    "recentActivity": MessageLookupByLibrary.simpleMessage("Recent Activity"),
     "recipientRoleDesc": MessageLookupByLibrary.simpleMessage(
       "Recipient - I am looking for food assistance",
     ),
@@ -214,6 +225,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "shareSurplusFood": MessageLookupByLibrary.simpleMessage(
       "Share surplus food with those in need in your community with a single click",
     ),
+    "since": MessageLookupByLibrary.simpleMessage("ago"),
     "skip": MessageLookupByLibrary.simpleMessage("Skip"),
     "smsVerificationNotice": MessageLookupByLibrary.simpleMessage(
       "Make sure to enter the phone number registered to your account. A 6-digit verification code will be sent via SMS.",
@@ -223,12 +235,18 @@ class MessageLookup extends MessageLookupByLibrary {
       "Start Your Journey Now",
     ),
     "terms": MessageLookupByLibrary.simpleMessage("the Terms and Conditions"),
+    "thisMonth": MessageLookupByLibrary.simpleMessage("this month"),
+    "totalDonations": MessageLookupByLibrary.simpleMessage("Total Donations"),
     "tryAgain": MessageLookupByLibrary.simpleMessage("Try Again"),
     "verificationCodeSentTo": MessageLookupByLibrary.simpleMessage(
       "Verification code sent to",
     ),
     "verifyPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "Verify Phone Number",
+    ),
+    "viewAll": MessageLookupByLibrary.simpleMessage("View All"),
+    "volunteerOnTheWay": MessageLookupByLibrary.simpleMessage(
+      "Volunteer on the way",
     ),
     "volunteerRoleDesc": MessageLookupByLibrary.simpleMessage(
       "Volunteer - I want to help distribute food",

@@ -100,5 +100,21 @@
 "myAccount": "My Account",
 "notifications": "Notifications",
 "myDonations": "My Donations",
-"home": "Home"
+"home": "Home",
+"myTasks": "My Tasks",
+"hello": "Hello, ",
+"totalDonations": "Total Donations",
+"thisMonth": "this month",
+"mealsSaved": "Meals Saved",
+"meal": "Meal",
+"kg": "kg",
+"addNewDonation": "Add New Donation",
+"recentActivity": "Recent Activity",
+"viewAll": "View All",
+"volunteerOnTheWay": "Volunteer on the way",
+"pending": "Pending",
+"received": "Received",
+"since": "ago",
+"minute": "minute",
+"hour": "hour"
 }

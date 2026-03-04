@@ -948,6 +948,111 @@ class S {
   String get home {
     return Intl.message('الرئيسية', name: 'home', desc: '', args: []);
   }
+
+  /// `مهامي`
+  String get myTasks {
+    return Intl.message('مهامي', name: 'myTasks', desc: '', args: []);
+  }
+
+  /// `أهلاً، `
+  String get hello {
+    return Intl.message('أهلاً، ', name: 'hello', desc: '', args: []);
+  }
+
+  /// `إجمالي التبرعات`
+  String get totalDonations {
+    return Intl.message(
+      'إجمالي التبرعات',
+      name: 'totalDonations',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `هذا الشهر`
+  String get thisMonth {
+    return Intl.message('هذا الشهر', name: 'thisMonth', desc: '', args: []);
+  }
+
+  /// `وجبات تم إنقاذها`
+  String get mealsSaved {
+    return Intl.message(
+      'وجبات تم إنقاذها',
+      name: 'mealsSaved',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `وجبة`
+  String get meal {
+    return Intl.message('وجبة', name: 'meal', desc: '', args: []);
+  }
+
+  /// `كجم`
+  String get kg {
+    return Intl.message('كجم', name: 'kg', desc: '', args: []);
+  }
+
+  /// `إضافة تبرع جديد`
+  String get addNewDonation {
+    return Intl.message(
+      'إضافة تبرع جديد',
+      name: 'addNewDonation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `النشاط الأخير`
+  String get recentActivity {
+    return Intl.message(
+      'النشاط الأخير',
+      name: 'recentActivity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `عرض الكل`
+  String get viewAll {
+    return Intl.message('عرض الكل', name: 'viewAll', desc: '', args: []);
+  }
+
+  /// `المتطوع في الطريق`
+  String get volunteerOnTheWay {
+    return Intl.message(
+      'المتطوع في الطريق',
+      name: 'volunteerOnTheWay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `قيد الانتظار`
+  String get pending {
+    return Intl.message('قيد الانتظار', name: 'pending', desc: '', args: []);
+  }
+
+  /// `تم الاستلام`
+  String get received {
+    return Intl.message('تم الاستلام', name: 'received', desc: '', args: []);
+  }
+
+  /// `منذ `
+  String get since {
+    return Intl.message('منذ ', name: 'since', desc: '', args: []);
+  }
+
+  /// `دقيقة`
+  String get minute {
+    return Intl.message('دقيقة', name: 'minute', desc: '', args: []);
+  }
+
+  /// `ساعة`
+  String get hour {
+    return Intl.message('ساعة', name: 'hour', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

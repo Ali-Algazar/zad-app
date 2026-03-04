@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "addNewDonation": MessageLookupByLibrary.simpleMessage("إضافة تبرع جديد"),
     "agreeTo": MessageLookupByLibrary.simpleMessage("أوافق على"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "لديك حساب بالفعل؟",
@@ -117,7 +118,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "goToLoginPage": MessageLookupByLibrary.simpleMessage(
       "الذهاب لصفحة تسجيل الدخول",
     ),
+    "hello": MessageLookupByLibrary.simpleMessage("أهلاً، "),
     "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+    "hour": MessageLookupByLibrary.simpleMessage("ساعة"),
     "howWeUseInfoBody": MessageLookupByLibrary.simpleMessage(
       "• لتوصيل المطاعم والمتبرعين بالمتطوعين القريبين جغرافياً.\n• لإرسال إشعارات (Push Notifications) بالتسليمات الجديدة وحالات الطلبات.\n• لتحسين تجربة المستخدم وتقديم دعم فني أسرع.\n• لحساب إحصائيات التطبيق مثل (الوجبات المنقذة وانبعاثات الكربون التي تم تقليلها).",
     ),
@@ -139,13 +142,18 @@ class MessageLookup extends MessageLookupByLibrary {
     "joinUsMakeDifference": MessageLookupByLibrary.simpleMessage(
       "انضم إلينا وابدأ في إحداث فرق",
     ),
+    "kg": MessageLookupByLibrary.simpleMessage("كجم"),
     "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
     "loginFailed": MessageLookupByLibrary.simpleMessage("فشل تسجيل الدخول"),
     "loginFailedErrorMsg": MessageLookupByLibrary.simpleMessage(
       "عذرًا، لم نتمكن من تسجيل دخولك. يرجى التحقق من بريدك الإلكتروني وكلمة السر والمحاولة مرة أخرى.",
     ),
+    "meal": MessageLookupByLibrary.simpleMessage("وجبة"),
+    "mealsSaved": MessageLookupByLibrary.simpleMessage("وجبات تم إنقاذها"),
+    "minute": MessageLookupByLibrary.simpleMessage("دقيقة"),
     "myAccount": MessageLookupByLibrary.simpleMessage("حسابي"),
     "myDonations": MessageLookupByLibrary.simpleMessage("تبرعاتي"),
+    "myTasks": MessageLookupByLibrary.simpleMessage("مهامي"),
     "newPasswordRequired": MessageLookupByLibrary.simpleMessage(
       "كلمة المرور الجديدة",
     ),
@@ -161,6 +169,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordChangedSuccessfully": MessageLookupByLibrary.simpleMessage(
       "تم تغيير كلمة السر بنجاح",
     ),
+    "pending": MessageLookupByLibrary.simpleMessage("قيد الانتظار"),
     "phoneExample": MessageLookupByLibrary.simpleMessage("مثال: 01234567890"),
     "phoneNumberRequired": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
     "pleaseAgreeToTerms": MessageLookupByLibrary.simpleMessage(
@@ -175,6 +184,8 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "readAndAgree": MessageLookupByLibrary.simpleMessage("قرأت وأوافق"),
     "receiveAndDistribute": MessageLookupByLibrary.simpleMessage("استلم ووزع"),
+    "received": MessageLookupByLibrary.simpleMessage("تم الاستلام"),
+    "recentActivity": MessageLookupByLibrary.simpleMessage("النشاط الأخير"),
     "recipientRoleDesc": MessageLookupByLibrary.simpleMessage(
       "مستلم - أبحث عن مساعدات غذائية",
     ),
@@ -218,6 +229,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "shareSurplusFood": MessageLookupByLibrary.simpleMessage(
       "شارك الطعام الفائض مع من يحتاجه في مجتمعك بضغطة زر واحدة",
     ),
+    "since": MessageLookupByLibrary.simpleMessage("منذ "),
     "skip": MessageLookupByLibrary.simpleMessage("تخطي"),
     "smsVerificationNotice": MessageLookupByLibrary.simpleMessage(
       "تأكد من إدخال رقم الهاتف المسجل في حسابك. سيتم إرسال رمز التحقق المكون من 6 أرقام عبر رسالة SMS.",
@@ -227,12 +239,18 @@ class MessageLookup extends MessageLookupByLibrary {
       "ابدأ رحلتك الآن",
     ),
     "terms": MessageLookupByLibrary.simpleMessage("الشروط والأحكام"),
+    "thisMonth": MessageLookupByLibrary.simpleMessage("هذا الشهر"),
+    "totalDonations": MessageLookupByLibrary.simpleMessage("إجمالي التبرعات"),
     "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مرة أخرى"),
     "verificationCodeSentTo": MessageLookupByLibrary.simpleMessage(
       "تم إرسال رمز التحقق إلى",
     ),
     "verifyPhoneNumber": MessageLookupByLibrary.simpleMessage(
       "تأكيد رقم الهاتف",
+    ),
+    "viewAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
+    "volunteerOnTheWay": MessageLookupByLibrary.simpleMessage(
+      "المتطوع في الطريق",
     ),
     "volunteerRoleDesc": MessageLookupByLibrary.simpleMessage(
       "متطوع - أريد المساعدة في توزيع الطعام",

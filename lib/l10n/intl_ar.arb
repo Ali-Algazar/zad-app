@@ -98,5 +98,21 @@
 "myAccount": "حسابي",
 "notifications": "الإشعارات",
 "myDonations": "تبرعاتي",
-"home": "الرئيسية"
+"home": "الرئيسية",
+"myTasks": "مهامي",
+"hello": "أهلاً، ",
+"totalDonations": "إجمالي التبرعات",
+"thisMonth": "هذا الشهر",
+"mealsSaved": "وجبات تم إنقاذها",
+"meal": "وجبة",
+"kg": "كجم",
+"addNewDonation": "إضافة تبرع جديد",
+"recentActivity": "النشاط الأخير",
+"viewAll": "عرض الكل",
+"volunteerOnTheWay": "المتطوع في الطريق",
+"pending": "قيد الانتظار",
+"received": "تم الاستلام",
+"since": "منذ ",
+"minute": "دقيقة",
+"hour": "ساعة"
 }
