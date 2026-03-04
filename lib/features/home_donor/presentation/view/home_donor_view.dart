@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:zad/core/constants.dart';
-import 'package:zad/core/cubit/nav_cubit.dart';
 import 'package:zad/core/extensions/extensions.dart';
-import 'package:zad/core/utils/app_colors.dart';
-import 'package:zad/core/utils/app_text_styles.dart';
-import 'package:zad/features/home_donor/presentation/view/widgets/home_donor_app_bar.dart';
-import 'package:zad/generated/l10n.dart';
+import 'package:zad/features/home_donor/presentation/view/widgets/header/home_donor_header.dart';
+import 'package:zad/features/home_donor/presentation/view/widgets/home_donor_view_body.dart';
 
 class HomeDonorView extends StatelessWidget {
   const HomeDonorView({super.key});
@@ -14,9 +9,8 @@ class HomeDonorView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Padding(
-        padding: Constants.khorizontalPadding.horizontal,
-        child: Column(children: [Constants.ktopPadding.h, HomeDonorAppBar()]),
+      child: SingleChildScrollView(
+        child: Column(children: [HomeDonorHeader(), 24.h, HomeDonorViewBody()]),
       ),
     );
   }
