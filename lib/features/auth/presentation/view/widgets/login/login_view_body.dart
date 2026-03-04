@@ -14,6 +14,8 @@ import 'package:zad/features/auth/presentation/view/widgets/login/forgot_passwor
 import 'package:zad/features/auth/presentation/view/widgets/common/language_button.dart';
 import 'package:zad/features/auth/presentation/view/widgets/login/login_button.dart';
 import 'package:zad/features/auth/presentation/view/widgets/common/password_labeled_text_field.dart';
+import 'package:zad/features/donor_main/presentation/view/donor_main_view.dart';
+import 'package:zad/features/volunteer_main/presentation/view/volunteer_main_view.dart';
 import 'package:zad/generated/l10n.dart';
 
 class LoginViewBody extends StatefulWidget {
@@ -54,7 +56,19 @@ class _LoginViewBodyState extends State<LoginViewBody> {
           );
         }
         if (state is Authenticated) {
-          Navigator.pushReplacementNamed(context, '/home');
+          if (state.role == 'Volunteer') {
+            Navigator.pushNamedAndRemoveUntil(
+              context,
+              VolunteerMainView.routeName,
+              (route) => false,
+            );
+          } else if (state.role == 'Donor') {
+            Navigator.pushNamedAndRemoveUntil(
+              context,
+              DonorMainView.routeName,
+              (route) => false,
+            );
+          }
         }
         if (state is AuthLoading) {
           setState(() {
