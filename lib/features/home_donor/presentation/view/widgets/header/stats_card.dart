@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:zad/core/extensions/extensions.dart';
 import 'package:zad/core/utils/app_text_styles.dart';
+import 'package:zad/features/home_donor/data/model/dashboard_model.dart';
 import 'package:zad/generated/l10n.dart';
 
 class StatsCard extends StatelessWidget {
-  const StatsCard({super.key});
+  const StatsCard({super.key, required this.kgDonated});
+  final KgDonated kgDonated;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,7 @@ class StatsCard extends StatelessWidget {
               ),
             ),
             Text(
-              '150 ${S.of(context).kg}',
+              '${kgDonated.total} ${S.of(context).kg}',
               style: AppTextStyles.textStyle24.copyWith(color: Colors.white),
             ),
             Row(
@@ -42,7 +44,7 @@ class StatsCard extends StatelessWidget {
                 ),
                 4.w,
                 Text(
-                  ' 15% ${S.of(context).thisMonth} ',
+                  '${kgDonated.growthPercent} ${S.of(context).thisMonth} ',
                   style: AppTextStyles.textStyle14r.copyWith(
                     color: Colors.white.withValues(alpha: 0.9),
                   ),

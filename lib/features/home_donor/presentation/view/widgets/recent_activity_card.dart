@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:zad/core/extensions/extensions.dart';
+import 'package:zad/core/helper_functions/time_ago.dart';
 import 'package:zad/core/utils/app_colors.dart';
+import 'package:zad/features/home_donor/data/model/dashboard_model.dart';
 
 class RecentActivityCard extends StatelessWidget {
-  const RecentActivityCard({super.key});
+  const RecentActivityCard({super.key, required this.recentActivity});
+  final RecentActivity recentActivity;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +46,7 @@ class RecentActivityCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'وجبات أرز ودجاج',
+                  recentActivity.title,
                   textAlign: TextAlign.right,
                   style: TextStyle(
                     color: const Color(0xFF1A1A1A),
@@ -55,7 +58,7 @@ class RecentActivityCard extends StatelessWidget {
                 ),
 
                 Text(
-                  '25 وجبة',
+                  '${recentActivity.quantity} ${recentActivity.unit}',
                   textAlign: TextAlign.right,
                   style: TextStyle(
                     color: const Color(0xFF4A5565),
@@ -75,7 +78,7 @@ class RecentActivityCard extends StatelessWidget {
                         borderRadius: BorderRadius.circular(16),
                       ),
                       child: Text(
-                        'تم الاستلام',
+                        getstatus(recentActivity.status),
                         textAlign: TextAlign.right,
                         style: TextStyle(
                           color: const Color(0xFF1447E6),
@@ -90,7 +93,7 @@ class RecentActivityCard extends StatelessWidget {
                     Icon(Icons.timelapse_outlined, color: AppColors.primary),
                     4.w,
                     Text(
-                      'منذ 15 دقيقة',
+                      timeAgo(recentActivity.createdAt.toIso8601String()),
                       textAlign: TextAlign.right,
                       style: TextStyle(
                         color: const Color(0xFF6A7282),
@@ -108,5 +111,18 @@ class RecentActivityCard extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  String getstatus(String status) {
+    switch (status) {
+      case 'Available':
+        return 'متاح';
+
+      case 'Claimed':
+        return 'المتطوع في الطريق';
+
+      default:
+        return 'تم الاستلام';
+    }
   }
 }

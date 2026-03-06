@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:zad/core/extensions/extensions.dart';
 import 'package:zad/core/utils/app_text_styles.dart';
+import 'package:zad/features/home_donor/data/model/dashboard_model.dart';
 import 'package:zad/generated/l10n.dart';
 
 class MealsSavedCard extends StatelessWidget {
-  const MealsSavedCard({super.key});
+  const MealsSavedCard({super.key, required this.mealsSaved});
+  final MealsSaved mealsSaved;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,7 @@ class MealsSavedCard extends StatelessWidget {
               ),
             ),
             Text(
-              '50 ${S.of(context).meal}',
+              '${mealsSaved.total} ${S.of(context).meal}',
               style: AppTextStyles.textStyle24.copyWith(color: Colors.white),
             ),
             Row(
@@ -42,7 +44,7 @@ class MealsSavedCard extends StatelessWidget {
                 ),
                 4.w,
                 Text(
-                  ' 10% ${S.of(context).thisMonth} ',
+                  '${mealsSaved.growthPercent} ${S.of(context).thisMonth} ',
                   style: AppTextStyles.textStyle14r.copyWith(
                     color: Colors.white.withValues(alpha: 0.9),
                   ),
