@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dio/dio.dart';
 
 abstract class Failure {
@@ -26,6 +28,10 @@ class ServerFailure extends Failure {
       default:
         return ServerFailure('Network error: ${error.message}');
     }
+  }
+
+  factory ServerFailure.fromSocketException(SocketException error) {
+    return ServerFailure('Network error: ${error.message}');
   }
 }
 

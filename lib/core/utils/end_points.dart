@@ -1,5 +1,6 @@
 class EndPoints {
   static const String register = "auth/register";
+  static const String getDonorHomeStats = "donations/stats";
   static const String login = "auth/login";
   static const String getMe = "auth/profile";
   static const String updateFcmToken = "auth/fcm-token";
