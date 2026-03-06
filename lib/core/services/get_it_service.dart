@@ -1,3 +1,4 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:zad/core/services/api_helper.dart';
@@ -5,6 +6,9 @@ import 'package:zad/features/auth/data/datasources/auth_local_data_source.dart';
 import 'package:zad/features/auth/data/datasources/auth_remote_data_source.dart';
 import 'package:zad/features/auth/data/repositories/auth_repository.dart';
 import 'package:zad/features/auth/data/repositories/auth_repository_impl.dart';
+import 'package:zad/features/home_donor/data/datasources/home_donor_remote_data_source.dart';
+import 'package:zad/features/home_donor/data/repositories/home_donor_repository.dart';
+import 'package:zad/features/home_donor/data/repositories/home_donor_repository_impl.dart';
 
 final sl = GetIt.instance;
 
@@ -19,6 +23,7 @@ void setupServiceLocator() {
       ),
     ),
   );
+  sl.registerLazySingleton<Connectivity>(() => Connectivity());
   sl.registerLazySingleton<ApiHelper>(() => ApiHelper(sl<Dio>()));
 
   sl.registerLazySingleton<AuthLocalDataSource>(
@@ -33,6 +38,15 @@ void setupServiceLocator() {
     () => AuthRepositoryImpl(
       localDataSource: sl<AuthLocalDataSource>(),
       remoteDataSource: sl<AuthRemoteDataSource>(),
+    ),
+  );
+  sl.registerLazySingleton<HomeDonorRemoteDataSource>(
+    () => HomeDonorRemoteDataSourceImpl(apiHelper: sl<ApiHelper>()),
+  );
+  sl.registerLazySingleton<HomeDonorRepository>(
+    () => HomeDonorRepositoryImpl(
+      remoteDataSource: sl<HomeDonorRemoteDataSource>(),
+      connectivity: sl<Connectivity>(),
     ),
   );
 }
