@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zad/core/presentation/views/privacy_policy_view.dart';
+import 'package:zad/features/add_new_donation/presentation/view/add_new_donation_view.dart';
 import 'package:zad/features/auth/presentation/view/choose_recovery_method_view.dart';
 import 'package:zad/features/auth/presentation/view/create_account_view.dart';
 import 'package:zad/features/auth/presentation/view/forgot_password_view.dart';
@@ -72,6 +73,11 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
         builder: (_) {
           return const VolunteerMainView();
         },
+      );
+    case AddNewDonationView.routeName:
+      return MaterialPageRoute(
+        builder: (_) => const AddNewDonationView(),
+        settings: settings,
       );
 
     default:

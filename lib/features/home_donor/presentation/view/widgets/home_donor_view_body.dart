@@ -3,6 +3,7 @@ import 'package:zad/core/constants.dart';
 import 'package:zad/core/extensions/extensions.dart';
 import 'package:zad/core/utils/app_text_styles.dart';
 import 'package:zad/core/widgets/custom_button.dart';
+import 'package:zad/features/add_new_donation/presentation/view/add_new_donation_view.dart';
 import 'package:zad/features/home_donor/presentation/view/widgets/recent_activity_list_view.dart';
 import 'package:zad/features/home_donor/presentation/view/widgets/recent_activity_row.dart';
 import 'package:zad/generated/l10n.dart';
@@ -17,7 +18,9 @@ class HomeDonorViewBody extends StatelessWidget {
       child: Column(
         children: [
           CustomButton(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, AddNewDonationView.routeName);
+            },
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
