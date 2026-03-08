@@ -7,6 +7,9 @@ class AddNewDonationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: AddNewDonationViewBody());
+    return const Scaffold(
+      body: AddNewDonationViewBody(),
+      backgroundColor: Colors.white,
+    );
   }
 }
