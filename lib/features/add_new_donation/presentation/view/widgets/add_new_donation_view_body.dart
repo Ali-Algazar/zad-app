@@ -132,8 +132,9 @@ class _AddNewDonationViewBodyState extends State<AddNewDonationViewBody> {
           ),
           child: CustomButton(
             onTap: () {
-              if (_pageController.page! == 3)
-                return; // ممكن هنا تضيف Function للـ Publish
+              if (_pageController.page! == 3) {
+                return;
+              }
 
               if (_formKeys[_pageController.page!.toInt()].currentState!
                   .validate()) {
