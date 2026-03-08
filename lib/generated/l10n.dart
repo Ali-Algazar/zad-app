@@ -1053,6 +1053,301 @@ class S {
   String get hour {
     return Intl.message('ساعة', name: 'hour', desc: '', args: []);
   }
+
+  /// `إضافة تبرع`
+  String get addDonation {
+    return Intl.message('إضافة تبرع', name: 'addDonation', desc: '', args: []);
+  }
+
+  /// `ما نوع التبرع؟`
+  String get whatIsDonationType {
+    return Intl.message(
+      'ما نوع التبرع؟',
+      name: 'whatIsDonationType',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أضف صورة وتفاصيل عن الطعام`
+  String get addPhotoAndDetails {
+    return Intl.message(
+      'أضف صورة وتفاصيل عن الطعام',
+      name: 'addPhotoAndDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `صورة الطعام`
+  String get foodPhoto {
+    return Intl.message('صورة الطعام', name: 'foodPhoto', desc: '', args: []);
+  }
+
+  /// `التقط صورة`
+  String get takePhoto {
+    return Intl.message('التقط صورة', name: 'takePhoto', desc: '', args: []);
+  }
+
+  /// `عنوان التبرع`
+  String get donationTitle {
+    return Intl.message(
+      'عنوان التبرع',
+      name: 'donationTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `مثال: وجبات أرز ودجاج متبقية`
+  String get donationTitleExample {
+    return Intl.message(
+      'مثال: وجبات أرز ودجاج متبقية',
+      name: 'donationTitleExample',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `التصنيف`
+  String get category {
+    return Intl.message('التصنيف', name: 'category', desc: '', args: []);
+  }
+
+  /// `🥖 مخبوزات`
+  String get bakery {
+    return Intl.message('🥖 مخبوزات', name: 'bakery', desc: '', args: []);
+  }
+
+  /// `🍲 وجبات جاهزة`
+  String get preparedMeals {
+    return Intl.message(
+      '🍲 وجبات جاهزة',
+      name: 'preparedMeals',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `🥛 ألبان`
+  String get dairy {
+    return Intl.message('🥛 ألبان', name: 'dairy', desc: '', args: []);
+  }
+
+  /// `🍎 فواكه`
+  String get fruits {
+    return Intl.message('🍎 فواكه', name: 'fruits', desc: '', args: []);
+  }
+
+  /// `🥕 مواد خام`
+  String get rawMaterials {
+    return Intl.message(
+      '🥕 مواد خام',
+      name: 'rawMaterials',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `وصف إضافي (اختياري)`
+  String get additionalDescriptionOptional {
+    return Intl.message(
+      'وصف إضافي (اختياري)',
+      name: 'additionalDescriptionOptional',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `أضف أي تفاصيل إضافية...`
+  String get addAdditionalDetails {
+    return Intl.message(
+      'أضف أي تفاصيل إضافية...',
+      name: 'addAdditionalDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الكمية والتفاصيل`
+  String get quantityAndDetails {
+    return Intl.message(
+      'الكمية والتفاصيل',
+      name: 'quantityAndDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `حدد الكمية وتاريخ الصلاحية`
+  String get specifyQuantityAndExpiry {
+    return Intl.message(
+      'حدد الكمية وتاريخ الصلاحية',
+      name: 'specifyQuantityAndExpiry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الكمية (كجم أو وجبة)`
+  String get quantityKgOrMeal {
+    return Intl.message(
+      'الكمية (كجم أو وجبة)',
+      name: 'quantityKgOrMeal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `10`
+  String get quantityExample {
+    return Intl.message('10', name: 'quantityExample', desc: '', args: []);
+  }
+
+  /// `تاريخ الصلاحية`
+  String get expiryDate {
+    return Intl.message(
+      'تاريخ الصلاحية',
+      name: 'expiryDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `💡 تأكد من أن الطعام صالح للاستهلاك وآمن للمستفيدين`
+  String get foodSafetyTip {
+    return Intl.message(
+      '💡 تأكد من أن الطعام صالح للاستهلاك وآمن للمستفيدين',
+      name: 'foodSafetyTip',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `موعد الاستلام`
+  String get pickupTime {
+    return Intl.message(
+      'موعد الاستلام',
+      name: 'pickupTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `حدد الفترة المتاحة للاستلام`
+  String get selectAvailablePickupTime {
+    return Intl.message(
+      'حدد الفترة المتاحة للاستلام',
+      name: 'selectAvailablePickupTime',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `التاريخ`
+  String get date {
+    return Intl.message('التاريخ', name: 'date', desc: '', args: []);
+  }
+
+  /// `غداً`
+  String get tomorrow {
+    return Intl.message('غداً', name: 'tomorrow', desc: '', args: []);
+  }
+
+  /// `اليوم`
+  String get today {
+    return Intl.message('اليوم', name: 'today', desc: '', args: []);
+  }
+
+  /// `الوقت من - إلى`
+  String get timeFromTo {
+    return Intl.message(
+      'الوقت من - إلى',
+      name: 'timeFromTo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `إلى`
+  String get to {
+    return Intl.message('إلى', name: 'to', desc: '', args: []);
+  }
+
+  /// `من`
+  String get from {
+    return Intl.message('من', name: 'from', desc: '', args: []);
+  }
+
+  /// `📅 ملخص الموعد`
+  String get appointmentSummary {
+    return Intl.message(
+      '📅 ملخص الموعد',
+      name: 'appointmentSummary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `متاح للاستلام`
+  String get availableForPickup {
+    return Intl.message(
+      'متاح للاستلام',
+      name: 'availableForPickup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `بين الساعة`
+  String get betweenTime {
+    return Intl.message('بين الساعة', name: 'betweenTime', desc: '', args: []);
+  }
+
+  /// `نشر التبرع الآن`
+  String get publishDonationNow {
+    return Intl.message(
+      'نشر التبرع الآن',
+      name: 'publishDonationNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `الكمية`
+  String get quantityLabel {
+    return Intl.message('الكمية', name: 'quantityLabel', desc: '', args: []);
+  }
+
+  /// `تاريخ الصلاحية`
+  String get expiryDateLabel {
+    return Intl.message(
+      'تاريخ الصلاحية',
+      name: 'expiryDateLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `موعد الاستلام`
+  String get pickupTimeLabel {
+    return Intl.message(
+      'موعد الاستلام',
+      name: 'pickupTimeLabel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `⚠️ بنشر هذا التبرع، أنت تؤكد أن الطعام آمن وصالح للاستهلاك وتلتزم بموعد الاستلام المحدد.`
+  String get publishDisclaimer {
+    return Intl.message(
+      '⚠️ بنشر هذا التبرع، أنت تؤكد أن الطعام آمن وصالح للاستهلاك وتلتزم بموعد الاستلام المحدد.',
+      name: 'publishDisclaimer',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

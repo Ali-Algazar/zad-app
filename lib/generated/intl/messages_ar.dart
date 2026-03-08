@@ -22,12 +22,25 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "addAdditionalDetails": MessageLookupByLibrary.simpleMessage(
+      "أضف أي تفاصيل إضافية...",
+    ),
+    "addDonation": MessageLookupByLibrary.simpleMessage("إضافة تبرع"),
     "addNewDonation": MessageLookupByLibrary.simpleMessage("إضافة تبرع جديد"),
+    "addPhotoAndDetails": MessageLookupByLibrary.simpleMessage(
+      "أضف صورة وتفاصيل عن الطعام",
+    ),
+    "additionalDescriptionOptional": MessageLookupByLibrary.simpleMessage(
+      "وصف إضافي (اختياري)",
+    ),
     "agreeTo": MessageLookupByLibrary.simpleMessage("أوافق على"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "لديك حساب بالفعل؟",
     ),
     "and": MessageLookupByLibrary.simpleMessage("و"),
+    "appointmentSummary": MessageLookupByLibrary.simpleMessage(
+      "📅 ملخص الموعد",
+    ),
     "atLeast8Characters": MessageLookupByLibrary.simpleMessage(
       "8 أحرف على الأقل",
     ),
@@ -37,10 +50,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "atLeastOneUppercase": MessageLookupByLibrary.simpleMessage(
       "حرف كبير واحد على الأقل",
     ),
+    "availableForPickup": MessageLookupByLibrary.simpleMessage("متاح للاستلام"),
     "back": MessageLookupByLibrary.simpleMessage("رجوع"),
+    "bakery": MessageLookupByLibrary.simpleMessage("🥖 مخبوزات"),
     "bePartOfChange": MessageLookupByLibrary.simpleMessage(
       "كن جزءاً من التغيير",
     ),
+    "betweenTime": MessageLookupByLibrary.simpleMessage("بين الساعة"),
+    "category": MessageLookupByLibrary.simpleMessage("التصنيف"),
     "changePassword": MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
     "chooseRecoveryMethodDesc": MessageLookupByLibrary.simpleMessage(
       "لا تقلق، اختر الطريقة المفضلة لاستعادة حسابك وسنرسل لك تعليمات إعادة تعيين كلمة المرور",
@@ -62,6 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "createAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
     "createNewAccount": MessageLookupByLibrary.simpleMessage("إنشاء حساب جديد"),
+    "dairy": MessageLookupByLibrary.simpleMessage("🥛 ألبان"),
     "dataProtectionBody": MessageLookupByLibrary.simpleMessage(
       "نتخذ كافة التدابير التقنية والأمنية المعقولة لحماية بياناتك من الوصول غير المصرح به أو التعديل أو الإفشاء. يتم تشفير كلمات المرور وتأمين الاتصال بقواعد البيانات الخاصة بنا.",
     ),
@@ -74,7 +92,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "dataSharingTitle": MessageLookupByLibrary.simpleMessage(
       "3. مشاركة البيانات",
     ),
+    "date": MessageLookupByLibrary.simpleMessage("التاريخ"),
     "donateEasily": MessageLookupByLibrary.simpleMessage("تبرع بسهولة"),
+    "donationTitle": MessageLookupByLibrary.simpleMessage("عنوان التبرع"),
+    "donationTitleExample": MessageLookupByLibrary.simpleMessage(
+      "مثال: وجبات أرز ودجاج متبقية",
+    ),
     "donorRoleDesc": MessageLookupByLibrary.simpleMessage(
       "متبرع - لديّ طعام فائض للتبرع",
     ),
@@ -104,6 +127,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "enterValidEgyptianPhone": MessageLookupByLibrary.simpleMessage(
       "الرجاء إدخال رقم هاتف مصري صحيح مكون من 11 رقمًا",
     ),
+    "expiryDate": MessageLookupByLibrary.simpleMessage("تاريخ الصلاحية"),
+    "expiryDateLabel": MessageLookupByLibrary.simpleMessage("تاريخ الصلاحية"),
+    "foodPhoto": MessageLookupByLibrary.simpleMessage("صورة الطعام"),
+    "foodSafetyTip": MessageLookupByLibrary.simpleMessage(
+      "💡 تأكد من أن الطعام صالح للاستهلاك وآمن للمستفيدين",
+    ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
     "forgotPasswordText": MessageLookupByLibrary.simpleMessage(
       "نسيت كلمة المرور",
@@ -111,6 +140,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgotPasswordTitle": MessageLookupByLibrary.simpleMessage(
       "نسيت كلمة المرور؟",
     ),
+    "from": MessageLookupByLibrary.simpleMessage("من"),
+    "fruits": MessageLookupByLibrary.simpleMessage("🍎 فواكه"),
     "fullNameRequired": MessageLookupByLibrary.simpleMessage("الاسم بالكامل"),
     "getInstantNotifications": MessageLookupByLibrary.simpleMessage(
       "احصل على إشعارات فورية للتبرعات القريبة منك ووزعها على المحتاجين",
@@ -172,9 +203,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "pending": MessageLookupByLibrary.simpleMessage("قيد الانتظار"),
     "phoneExample": MessageLookupByLibrary.simpleMessage("مثال: 01234567890"),
     "phoneNumberRequired": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+    "pickupTime": MessageLookupByLibrary.simpleMessage("موعد الاستلام"),
+    "pickupTimeLabel": MessageLookupByLibrary.simpleMessage("موعد الاستلام"),
     "pleaseAgreeToTerms": MessageLookupByLibrary.simpleMessage(
       "الرجاء الموافقة على الشروط والأحكام",
     ),
+    "preparedMeals": MessageLookupByLibrary.simpleMessage("🍲 وجبات جاهزة"),
     "privacy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
     "privacyPolicyIntro": MessageLookupByLibrary.simpleMessage(
       "نحن في \"زاد\" نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية. توضح هذه السياسة كيفية جمعنا واستخدامنا وحمايتنا للمعلومات التي تقدمها لنا أثناء استخدامك للتطبيق بهدف إنقاذ الطعام وتوصيله للمحتاجين.",
@@ -182,6 +216,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "privacyPolicyTitle": MessageLookupByLibrary.simpleMessage(
       "سياسة الخصوصية",
     ),
+    "publishDisclaimer": MessageLookupByLibrary.simpleMessage(
+      "⚠️ بنشر هذا التبرع، أنت تؤكد أن الطعام آمن وصالح للاستهلاك وتلتزم بموعد الاستلام المحدد.",
+    ),
+    "publishDonationNow": MessageLookupByLibrary.simpleMessage(
+      "نشر التبرع الآن",
+    ),
+    "quantityAndDetails": MessageLookupByLibrary.simpleMessage(
+      "الكمية والتفاصيل",
+    ),
+    "quantityExample": MessageLookupByLibrary.simpleMessage("10"),
+    "quantityKgOrMeal": MessageLookupByLibrary.simpleMessage(
+      "الكمية (كجم أو وجبة)",
+    ),
+    "quantityLabel": MessageLookupByLibrary.simpleMessage("الكمية"),
+    "rawMaterials": MessageLookupByLibrary.simpleMessage("🥕 مواد خام"),
     "readAndAgree": MessageLookupByLibrary.simpleMessage("قرأت وأوافق"),
     "receiveAndDistribute": MessageLookupByLibrary.simpleMessage("استلم ووزع"),
     "received": MessageLookupByLibrary.simpleMessage("تم الاستلام"),
@@ -216,6 +265,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "secureLinkNotice": MessageLookupByLibrary.simpleMessage(
       "سنرسل لك رابط آمن لإعادة تعيين كلمة المرور. تحقق من صندوق الوارد والبريد المزعج (Spam).",
     ),
+    "selectAvailablePickupTime": MessageLookupByLibrary.simpleMessage(
+      "حدد الفترة المتاحة للاستلام",
+    ),
     "sendCode": MessageLookupByLibrary.simpleMessage("إرسال الكود"),
     "sendRecoveryLink": MessageLookupByLibrary.simpleMessage(
       "إرسال رابط الاستعادة",
@@ -234,12 +286,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "smsVerificationNotice": MessageLookupByLibrary.simpleMessage(
       "تأكد من إدخال رقم الهاتف المسجل في حسابك. سيتم إرسال رمز التحقق المكون من 6 أرقام عبر رسالة SMS.",
     ),
+    "specifyQuantityAndExpiry": MessageLookupByLibrary.simpleMessage(
+      "حدد الكمية وتاريخ الصلاحية",
+    ),
     "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الآن"),
     "startYourJourneyNow": MessageLookupByLibrary.simpleMessage(
       "ابدأ رحلتك الآن",
     ),
+    "takePhoto": MessageLookupByLibrary.simpleMessage("التقط صورة"),
     "terms": MessageLookupByLibrary.simpleMessage("الشروط والأحكام"),
     "thisMonth": MessageLookupByLibrary.simpleMessage("هذا الشهر"),
+    "timeFromTo": MessageLookupByLibrary.simpleMessage("الوقت من - إلى"),
+    "to": MessageLookupByLibrary.simpleMessage("إلى"),
+    "today": MessageLookupByLibrary.simpleMessage("اليوم"),
+    "tomorrow": MessageLookupByLibrary.simpleMessage("غداً"),
     "totalDonations": MessageLookupByLibrary.simpleMessage("إجمالي التبرعات"),
     "tryAgain": MessageLookupByLibrary.simpleMessage("حاول مرة أخرى"),
     "verificationCodeSentTo": MessageLookupByLibrary.simpleMessage(
@@ -258,6 +318,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحباً بك مرة أخرى"),
     "welcomeToZadApp": MessageLookupByLibrary.simpleMessage(
       "مرحباً بك في تطبيق زاد",
+    ),
+    "whatIsDonationType": MessageLookupByLibrary.simpleMessage(
+      "ما نوع التبرع؟",
     ),
     "yourRightsBody": MessageLookupByLibrary.simpleMessage(
       "يحق لك في أي وقت تعديل بياناتك الشخصية من خلال صفحة \"حسابي\"، أو طلب حذف الحساب نهائياً ومسح كافة بياناتك المرتبطة به بالتواصل مع الدعم الفني.",

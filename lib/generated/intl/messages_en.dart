@@ -22,12 +22,25 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "addAdditionalDetails": MessageLookupByLibrary.simpleMessage(
+      "Add any additional details...",
+    ),
+    "addDonation": MessageLookupByLibrary.simpleMessage("Add Donation"),
     "addNewDonation": MessageLookupByLibrary.simpleMessage("Add New Donation"),
+    "addPhotoAndDetails": MessageLookupByLibrary.simpleMessage(
+      "Add a photo and details about the food",
+    ),
+    "additionalDescriptionOptional": MessageLookupByLibrary.simpleMessage(
+      "Additional Description (Optional)",
+    ),
     "agreeTo": MessageLookupByLibrary.simpleMessage("I agree to"),
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "Already have an account?",
     ),
     "and": MessageLookupByLibrary.simpleMessage("and"),
+    "appointmentSummary": MessageLookupByLibrary.simpleMessage(
+      "📅 Schedule Summary",
+    ),
     "atLeast8Characters": MessageLookupByLibrary.simpleMessage(
       "At least 8 characters",
     ),
@@ -37,10 +50,16 @@ class MessageLookup extends MessageLookupByLibrary {
     "atLeastOneUppercase": MessageLookupByLibrary.simpleMessage(
       "At least one uppercase letter",
     ),
+    "availableForPickup": MessageLookupByLibrary.simpleMessage(
+      "Available for pickup",
+    ),
     "back": MessageLookupByLibrary.simpleMessage("Back"),
+    "bakery": MessageLookupByLibrary.simpleMessage("🥖 Bakery"),
     "bePartOfChange": MessageLookupByLibrary.simpleMessage(
       "Be Part of the Change",
     ),
+    "betweenTime": MessageLookupByLibrary.simpleMessage("between"),
+    "category": MessageLookupByLibrary.simpleMessage("Category"),
     "changePassword": MessageLookupByLibrary.simpleMessage("Change Password"),
     "chooseRecoveryMethodDesc": MessageLookupByLibrary.simpleMessage(
       "Don\'t worry, choose your preferred method to recover your account and we will send you password reset instructions",
@@ -60,6 +79,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "createNewAccount": MessageLookupByLibrary.simpleMessage(
       "Create New Account",
     ),
+    "dairy": MessageLookupByLibrary.simpleMessage("🥛 Dairy"),
     "dataProtectionBody": MessageLookupByLibrary.simpleMessage(
       "We take all reasonable technical and security measures to protect your data from unauthorized access, modification, or disclosure. Passwords are encrypted and the connection to our databases is secured.",
     ),
@@ -70,7 +90,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "We do not sell your personal data to any third party. We may share limited information (such as the volunteer\'s name, phone number, and location) with the concerned restaurant only to ensure the safe and fast delivery of the donation.",
     ),
     "dataSharingTitle": MessageLookupByLibrary.simpleMessage("3. Data Sharing"),
+    "date": MessageLookupByLibrary.simpleMessage("Date"),
     "donateEasily": MessageLookupByLibrary.simpleMessage("Donate Easily"),
+    "donationTitle": MessageLookupByLibrary.simpleMessage("Donation Title"),
+    "donationTitleExample": MessageLookupByLibrary.simpleMessage(
+      "Example: Leftover rice and chicken meals",
+    ),
     "donorRoleDesc": MessageLookupByLibrary.simpleMessage(
       "Donor - I have surplus food to donate",
     ),
@@ -104,6 +129,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "enterValidEgyptianPhone": MessageLookupByLibrary.simpleMessage(
       "Please enter a valid 11-digit Egyptian phone number",
     ),
+    "expiryDate": MessageLookupByLibrary.simpleMessage("Expiry Date"),
+    "expiryDateLabel": MessageLookupByLibrary.simpleMessage("Expiry Date"),
+    "foodPhoto": MessageLookupByLibrary.simpleMessage("Food Photo"),
+    "foodSafetyTip": MessageLookupByLibrary.simpleMessage(
+      "💡 Make sure the food is fit for consumption and safe for beneficiaries",
+    ),
     "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
     "forgotPasswordText": MessageLookupByLibrary.simpleMessage(
       "Forgot Password",
@@ -111,6 +142,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "forgotPasswordTitle": MessageLookupByLibrary.simpleMessage(
       "Forgot Password?",
     ),
+    "from": MessageLookupByLibrary.simpleMessage("From"),
+    "fruits": MessageLookupByLibrary.simpleMessage("🍎 Fruits"),
     "fullNameRequired": MessageLookupByLibrary.simpleMessage("Full Name"),
     "getInstantNotifications": MessageLookupByLibrary.simpleMessage(
       "Get instant notifications for nearby donations and distribute them to the needy",
@@ -168,9 +201,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "Example: 01234567890",
     ),
     "phoneNumberRequired": MessageLookupByLibrary.simpleMessage("Phone Number"),
+    "pickupTime": MessageLookupByLibrary.simpleMessage("Pickup Time"),
+    "pickupTimeLabel": MessageLookupByLibrary.simpleMessage("Pickup Time"),
     "pleaseAgreeToTerms": MessageLookupByLibrary.simpleMessage(
       "Please agree to the Terms and Conditions",
     ),
+    "preparedMeals": MessageLookupByLibrary.simpleMessage("🍲 Ready Meals"),
     "privacy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
     "privacyPolicyIntro": MessageLookupByLibrary.simpleMessage(
       "At \"Zad\", we respect your privacy and are committed to protecting your personal data. This policy explains how we collect, use, and protect the information you provide us while using the app to save food and deliver it to those in need.",
@@ -178,6 +214,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "privacyPolicyTitle": MessageLookupByLibrary.simpleMessage(
       "Privacy Policy",
     ),
+    "publishDisclaimer": MessageLookupByLibrary.simpleMessage(
+      "⚠️ By publishing this donation, you confirm that the food is safe and fit for consumption and commit to the specified pickup time.",
+    ),
+    "publishDonationNow": MessageLookupByLibrary.simpleMessage(
+      "Publish Donation Now",
+    ),
+    "quantityAndDetails": MessageLookupByLibrary.simpleMessage(
+      "Quantity and Details",
+    ),
+    "quantityExample": MessageLookupByLibrary.simpleMessage("10"),
+    "quantityKgOrMeal": MessageLookupByLibrary.simpleMessage(
+      "Quantity (kg or meal)",
+    ),
+    "quantityLabel": MessageLookupByLibrary.simpleMessage("Quantity"),
+    "rawMaterials": MessageLookupByLibrary.simpleMessage("🥕 Raw Ingredients"),
     "readAndAgree": MessageLookupByLibrary.simpleMessage("I Read and Agree"),
     "receiveAndDistribute": MessageLookupByLibrary.simpleMessage(
       "Receive and Distribute",
@@ -212,6 +263,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "secureLinkNotice": MessageLookupByLibrary.simpleMessage(
       "We will send you a secure link to reset your password. Check your inbox and spam folder.",
     ),
+    "selectAvailablePickupTime": MessageLookupByLibrary.simpleMessage(
+      "Select the available time period for pickup",
+    ),
     "sendCode": MessageLookupByLibrary.simpleMessage("Send Code"),
     "sendRecoveryLink": MessageLookupByLibrary.simpleMessage(
       "Send Recovery Link",
@@ -230,12 +284,20 @@ class MessageLookup extends MessageLookupByLibrary {
     "smsVerificationNotice": MessageLookupByLibrary.simpleMessage(
       "Make sure to enter the phone number registered to your account. A 6-digit verification code will be sent via SMS.",
     ),
+    "specifyQuantityAndExpiry": MessageLookupByLibrary.simpleMessage(
+      "Specify quantity and expiry date",
+    ),
     "startNow": MessageLookupByLibrary.simpleMessage("Start Now"),
     "startYourJourneyNow": MessageLookupByLibrary.simpleMessage(
       "Start Your Journey Now",
     ),
+    "takePhoto": MessageLookupByLibrary.simpleMessage("Take a photo"),
     "terms": MessageLookupByLibrary.simpleMessage("the Terms and Conditions"),
     "thisMonth": MessageLookupByLibrary.simpleMessage("this month"),
+    "timeFromTo": MessageLookupByLibrary.simpleMessage("Time (From - To)"),
+    "to": MessageLookupByLibrary.simpleMessage("To"),
+    "today": MessageLookupByLibrary.simpleMessage("Today"),
+    "tomorrow": MessageLookupByLibrary.simpleMessage("Tomorrow"),
     "totalDonations": MessageLookupByLibrary.simpleMessage("Total Donations"),
     "tryAgain": MessageLookupByLibrary.simpleMessage("Try Again"),
     "verificationCodeSentTo": MessageLookupByLibrary.simpleMessage(
@@ -254,6 +316,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back"),
     "welcomeToZadApp": MessageLookupByLibrary.simpleMessage(
       "Welcome to Zad App",
+    ),
+    "whatIsDonationType": MessageLookupByLibrary.simpleMessage(
+      "What kind of donation?",
     ),
     "yourRightsBody": MessageLookupByLibrary.simpleMessage(
       "You have the right at any time to modify your personal data through the \"My Account\" page, or request the permanent deletion of the account and all associated data by contacting technical support.",
