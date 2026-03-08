@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-
 class DonationModel {
   final String title;
   final String category;
