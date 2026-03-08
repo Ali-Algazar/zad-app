@@ -70,7 +70,7 @@ class _AddNewDonation4State extends State<AddNewDonation4> {
                       image: DecorationImage(
                         image: widget.imageFile != null
                             ? FileImage(widget.imageFile!)
-                            : AssetImage('assets/images/default_image.png')
+                            : AssetImage('assets/image/default_image.png')
                                   as ImageProvider,
                         fit: BoxFit.cover,
                       ),
