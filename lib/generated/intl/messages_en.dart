@@ -120,6 +120,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "enterPassword": MessageLookupByLibrary.simpleMessage(
       "Enter your password",
     ),
+    "enterPickupAddressHere": MessageLookupByLibrary.simpleMessage(
+      "Enter the pickup address here",
+    ),
     "enterRegisteredEmailDesc": MessageLookupByLibrary.simpleMessage(
       "Enter the email registered to your account and we will send you a link to reset your password",
     ),
@@ -201,6 +204,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Example: 01234567890",
     ),
     "phoneNumberRequired": MessageLookupByLibrary.simpleMessage("Phone Number"),
+    "pickupAddress": MessageLookupByLibrary.simpleMessage("Pickup Address"),
     "pickupTime": MessageLookupByLibrary.simpleMessage("Pickup Time"),
     "pickupTimeLabel": MessageLookupByLibrary.simpleMessage("Pickup Time"),
     "pleaseAgreeToTerms": MessageLookupByLibrary.simpleMessage(

@@ -2,6 +2,9 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:zad/core/services/api_helper.dart';
+import 'package:zad/features/add_new_donation/data/datasources/add_new_donation_remote_data_source.dart';
+import 'package:zad/features/add_new_donation/data/repositories/add_new_donation_repository.dart';
+import 'package:zad/features/add_new_donation/data/repositories/add_new_donation_repository_impl.dart';
 import 'package:zad/features/auth/data/datasources/auth_local_data_source.dart';
 import 'package:zad/features/auth/data/datasources/auth_remote_data_source.dart';
 import 'package:zad/features/auth/data/repositories/auth_repository.dart';
@@ -46,6 +49,16 @@ void setupServiceLocator() {
   sl.registerLazySingleton<HomeDonorRepository>(
     () => HomeDonorRepositoryImpl(
       remoteDataSource: sl<HomeDonorRemoteDataSource>(),
+      connectivity: sl<Connectivity>(),
+    ),
+  );
+
+  sl.registerLazySingleton<AddNewDonationRemoteDataSource>(
+    () => AddNewDonationRemoteDataSourceImpl(apiHelper: sl<ApiHelper>()),
+  );
+  sl.registerLazySingleton<AddNewDonationRepository>(
+    () => AddNewDonationRepositoryImpl(
+      remoteDataSource: sl<AddNewDonationRemoteDataSource>(),
       connectivity: sl<Connectivity>(),
     ),
   );

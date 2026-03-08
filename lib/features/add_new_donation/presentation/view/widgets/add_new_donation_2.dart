@@ -13,11 +13,13 @@ class AddNewDonation2 extends StatefulWidget {
     required this.unit,
     required this.expiryDateController,
     required this.formKey,
+    required this.expiryTime,
   });
   final ValueChanged<int> quantity;
   final ValueChanged<String> unit;
   final TextEditingController expiryDateController;
   final GlobalKey<FormState> formKey;
+  final ValueChanged<DateTime> expiryTime;
 
   @override
   State<AddNewDonation2> createState() => _AddNewDonation2State();
@@ -141,7 +143,9 @@ class _AddNewDonation2State extends State<AddNewDonation2> {
                     firstDate: DateTime.now(),
                     lastDate: DateTime.now().add(Duration(days: 365)),
                   );
+
                   if (selectedDate != null) {
+                    widget.expiryTime(selectedDate);
                     widget.expiryDateController.text = selectedDate
                         .toString()
                         .split(' ')[0];

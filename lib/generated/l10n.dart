@@ -1348,6 +1348,26 @@ class S {
       args: [],
     );
   }
+
+  /// `عنوان الاستلام`
+  String get pickupAddress {
+    return Intl.message(
+      'عنوان الاستلام',
+      name: 'pickupAddress',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ادخل عنوان الاستلام هنا`
+  String get enterPickupAddressHere {
+    return Intl.message(
+      'ادخل عنوان الاستلام هنا',
+      name: 'enterPickupAddressHere',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

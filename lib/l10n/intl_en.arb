@@ -153,6 +153,8 @@
 "quantityLabel": "Quantity",
 "expiryDateLabel": "Expiry Date",
 "pickupTimeLabel": "Pickup Time",
-"publishDisclaimer": "⚠️ By publishing this donation, you confirm that the food is safe and fit for consumption and commit to the specified pickup time."
+"publishDisclaimer": "⚠️ By publishing this donation, you confirm that the food is safe and fit for consumption and commit to the specified pickup time.",
+"pickupAddress": "Pickup Address",
+"enterPickupAddressHere": "Enter the pickup address here"
 
 }

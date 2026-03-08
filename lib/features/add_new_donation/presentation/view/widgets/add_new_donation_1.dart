@@ -17,12 +17,14 @@ class AddNewDonation1 extends StatefulWidget {
     required this.category,
     required this.titleController,
     required this.descriptionController,
+    required this.addressController,
   });
   final GlobalKey<FormState> formKey;
   final void Function(File) onImageSelected;
   final void Function(String) category;
   final TextEditingController titleController;
   final TextEditingController descriptionController;
+  final TextEditingController addressController;
 
   @override
   State<AddNewDonation1> createState() => _AddNewDonation1State();
@@ -106,6 +108,20 @@ class _AddNewDonation1State extends State<AddNewDonation1> {
               ),
               24.h,
               Text(
+                S.of(context).pickupAddress,
+                style: AppTextStyles.textStyle14Bold,
+              ),
+              12.h,
+              CustomTextFormField(
+                validator: (value) => value!.isEmpty ? 'Required' : null,
+                fillColor: AppColors.gray,
+                controller: widget.addressController,
+
+                filled: true,
+                hintText: S.of(context).enterPickupAddressHere,
+              ),
+              24.h,
+              Text(
                 S.of(context).additionalDescriptionOptional,
                 style: AppTextStyles.textStyle14Bold,
               ),
@@ -118,6 +134,7 @@ class _AddNewDonation1State extends State<AddNewDonation1> {
                 filled: true,
                 hintText: S.of(context).addAdditionalDetails,
               ),
+
               Constants.kbottomPadding.h,
             ],
           ),

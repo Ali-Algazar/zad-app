@@ -18,6 +18,7 @@ class AddNewDonationRepositoryImpl implements AddNewDonationRepository {
 
   @override
   Future<Either<Failure, Unit>> addNewDonation(DonationModel donation) async {
+    print(donation.toJson());
     try {
       if (await hasConnection(connectivity)) {
         final response = await remoteDataSource.addNewDonation(donation);
@@ -25,7 +26,9 @@ class AddNewDonationRepositoryImpl implements AddNewDonationRepository {
           return Right(unit);
         } else {
           return Left(
-            ServerFailure('Failed to add new donation. Please try again.'),
+            ServerFailure(
+              'Failed to add new donation. Please try again. whith status code: ${response.statusCode} ${response.data}',
+            ),
           );
         }
       } else {
@@ -36,9 +39,10 @@ class AddNewDonationRepositoryImpl implements AddNewDonationRepository {
         );
       }
     } catch (e) {
+      print(e.toString());
       return Left(
         ServerFailure(
-          'An error occurred while adding the donation. Please try again.',
+          'An error occurred while adding the donation. Please try again. ${e.toString()}',
         ),
       );
     }

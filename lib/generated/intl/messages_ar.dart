@@ -118,6 +118,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "أدخل كلمة المرور الجديدة",
     ),
     "enterPassword": MessageLookupByLibrary.simpleMessage("أدخل كلمة المرور"),
+    "enterPickupAddressHere": MessageLookupByLibrary.simpleMessage(
+      "ادخل عنوان الاستلام هنا",
+    ),
     "enterRegisteredEmailDesc": MessageLookupByLibrary.simpleMessage(
       "أدخل البريد الإلكتروني المسجل في حسابك وسنرسل لك رابط لإعادة تعيين كلمة المرور",
     ),
@@ -203,6 +206,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "pending": MessageLookupByLibrary.simpleMessage("قيد الانتظار"),
     "phoneExample": MessageLookupByLibrary.simpleMessage("مثال: 01234567890"),
     "phoneNumberRequired": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+    "pickupAddress": MessageLookupByLibrary.simpleMessage("عنوان الاستلام"),
     "pickupTime": MessageLookupByLibrary.simpleMessage("موعد الاستلام"),
     "pickupTimeLabel": MessageLookupByLibrary.simpleMessage("موعد الاستلام"),
     "pleaseAgreeToTerms": MessageLookupByLibrary.simpleMessage(

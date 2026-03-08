@@ -35,10 +35,10 @@ class DonationModel {
   Map<String, dynamic> toJson() {
     return {
       "title": title,
-      "category": category,
+      "category": "ReadyMeals",
       "quantity": quantity,
-      "unit": unit,
-      "expiryTime": expiryTime.toIso8601String(),
+      "unit": unit == "kg" ? 'كجم' : 'وجبة',
+      "expiryTime": expiryTime.toUtc().toIso8601String(),
       "specialInstructions": specialInstructions,
       "coordinates": coordinates,
       "address": address,
