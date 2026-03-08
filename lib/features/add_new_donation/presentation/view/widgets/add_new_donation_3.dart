@@ -138,6 +138,8 @@ class _AddNewDonation3State extends State<AddNewDonation3> {
                         ),
                         8.h,
                         CustomTextFormField(
+                          validator: (value) =>
+                              value!.isEmpty ? 'Required' : null,
                           controller: widget.fromTimeController,
                           onTap: () async {
                             var time = await showTimePicker(
@@ -168,6 +170,8 @@ class _AddNewDonation3State extends State<AddNewDonation3> {
                         ),
                         8.h,
                         CustomTextFormField(
+                          validator: (value) =>
+                              value!.isEmpty ? 'Required' : null,
                           controller: widget.toTimeController,
                           onTap: () async {
                             var time = await showTimePicker(

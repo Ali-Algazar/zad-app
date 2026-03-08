@@ -45,7 +45,6 @@ dependencies:
     sdk: flutter
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.2.3
-  geocoding: ^4.0.0
   geolocator: ^14.0.2
   get_it: ^9.2.1
   hive: ^2.2.3

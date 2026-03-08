@@ -135,6 +135,9 @@ class _AddNewDonation2State extends State<AddNewDonation2> {
                 controller: widget.expiryDateController,
                 fillColor: AppColors.gray,
                 filled: true,
+                validator: (value) => value!.isEmpty
+                    ? 'الرجاء اختيار تاريخ انتهاء الصلاحية'
+                    : null,
                 keyboardType: TextInputType.datetime,
                 onTap: () async {
                   final DateTime? selectedDate = await showDatePicker(

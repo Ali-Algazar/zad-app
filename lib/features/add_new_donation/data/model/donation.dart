@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 class DonationModel {
   final String title;
   final String category;
@@ -35,13 +37,33 @@ class DonationModel {
   Map<String, dynamic> toJson() {
     return {
       "title": title,
-      "category": "ReadyMeals",
+      "category": categoryName(category),
       "quantity": quantity,
-      "unit": unit == "kg" ? 'كجم' : 'وجبة',
+      "unit": unitName(unit),
       "expiryTime": expiryTime.toUtc().toIso8601String(),
       "specialInstructions": specialInstructions,
       "coordinates": coordinates,
       "address": address,
     };
+  }
+
+  String unitName(String unit) {
+    return unit == "kg" ? 'كجم' : 'وجبة';
+  }
+
+  String categoryName(String category) {
+    switch (category) {
+      case "🍲 وجبات جاهزة" || '🍲 Ready Meals':
+        return 'ReadyMeals';
+      case "🥖 مخبوزات" || '🥖 Bakery':
+        return 'Bakery';
+      case "🥛 ألبان" || "🥛 Dairy":
+        return 'dairy';
+      case "🍎 فواكه" || "🍎 Fruits":
+        return 'Fruits';
+
+      default:
+        return 'RawMaterials';
+    }
   }
 }

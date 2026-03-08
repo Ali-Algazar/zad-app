@@ -78,7 +78,8 @@ class _AddNewDonation1State extends State<AddNewDonation1> {
               12.h,
               CustomTextFormField(
                 controller: widget.titleController,
-                validator: (value) => value!.isEmpty ? 'Required' : null,
+                validator: (value) =>
+                    value!.isEmpty ? 'الرجاء الدخال اسم التبرع' : null,
                 fillColor: AppColors.gray,
                 filled: true,
                 hintText: S.of(context).donationTitleExample,
@@ -113,7 +114,8 @@ class _AddNewDonation1State extends State<AddNewDonation1> {
               ),
               12.h,
               CustomTextFormField(
-                validator: (value) => value!.isEmpty ? 'Required' : null,
+                validator: (value) =>
+                    value!.isEmpty ? 'الرجاء الدخال عنوان الاستلام' : null,
                 fillColor: AppColors.gray,
                 controller: widget.addressController,
 
@@ -128,7 +130,7 @@ class _AddNewDonation1State extends State<AddNewDonation1> {
               12.h,
               CustomTextFormField(
                 controller: widget.descriptionController,
-                validator: (value) => value!.isEmpty ? 'Required' : null,
+
                 fillColor: AppColors.gray,
                 maxLines: 4,
                 filled: true,
