@@ -19,7 +19,7 @@ class CustomTextFormField extends StatelessWidget {
     this.errorText,
     this.fillColor,
     this.filled = false,
-    this.maxLines,
+    this.maxLines = 1,
     this.enabled = true,
     this.onTap,
   });
