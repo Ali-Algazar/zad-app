@@ -27,6 +27,7 @@ class _PasswordLabeledTextFieldState extends State<PasswordLabeledTextField> {
       controller: widget.passwordController,
       keyboardType: TextInputType.visiblePassword,
       obscureText: _obscurePassword,
+      // maxLength: 1,
       labelText: S.of(context).password,
       hintText: S.of(context).enterPassword,
       validator: (value) {
