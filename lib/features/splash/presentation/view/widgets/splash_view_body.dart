@@ -38,6 +38,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   Widget build(BuildContext context) {
     return BlocListener<AuthCubit, AuthState>(
       listener: (context, state) async {
+        print(state);
         if (state is Authenticated) {
           if (state.role == 'Donor') {
             navigateToNextView(DonorMainView.routeName);
@@ -49,6 +50,19 @@ class _SplashViewBodyState extends State<SplashViewBody>
             key: Constants.onBoardingKey,
           );
           if (onbordin.isNull || onbordin == false) {
+            navigateToNextView(OnboardingView.routeName);
+          } else {
+            navigateToNextView(LoginView.routeName);
+          }
+        }
+        if (state is AuthError) {
+          print(state.message);
+          var onbordin =
+              await SharedPreferencesService.getData(
+                key: Constants.onBoardingKey,
+              ) ??
+              false;
+          if (onbordin == false) {
             navigateToNextView(OnboardingView.routeName);
           } else {
             navigateToNextView(LoginView.routeName);
