@@ -170,7 +170,7 @@ class _AddNewDonationViewBodyState extends State<AddNewDonationViewBody> {
                           expiryDate ?? DateTime.now().add(Duration(days: 1)),
                       specialInstructions: descriptionController.text,
                       unit: unit,
-                      coordinates: [position.longitude, position.latitude],
+                      coordinates: [position.latitude, position.longitude],
                       address: addressController.text,
                     ),
                   );
