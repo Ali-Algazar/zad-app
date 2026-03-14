@@ -1,4 +1,6 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:zad/app_restart.dart';
 import 'package:zad/features/auth/data/repositories/auth_repository.dart';
 import 'auth_state.dart';
 
@@ -38,13 +40,13 @@ class AuthCubit extends Cubit<AuthState> {
     );
   }
 
-  Future<void> logout() async {
+  Future<void> logout(BuildContext context) async {
     emit(AuthLoading());
     var result = await authRepository.logout();
-    result.fold(
-      (failure) => emit(AuthError(failure.message)),
-      (_) => emit(UnAuthenticated()),
-    );
+    result.fold((failure) => emit(AuthError(failure.message)), (_) {
+      emit(UnAuthenticated());
+      RestartWidget.restartApp(context);
+    });
   }
 
   Future<void> checkAuth() async {
