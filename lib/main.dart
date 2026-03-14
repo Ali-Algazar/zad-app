@@ -12,6 +12,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:zad/core/theme/app_theme.dart';
 import 'package:zad/features/auth/data/repositories/auth_repository.dart';
 import 'package:zad/features/auth/presentation/cubit/auth_cubit.dart';
+import 'package:zad/features/volunteer_main/presentation/view/volunteer_main_view.dart';
 import 'package:zad/firebase_options.dart';
 import 'package:zad/generated/l10n.dart';
 
@@ -42,7 +43,7 @@ class ZadApp extends StatelessWidget {
       child: BlocBuilder<LocaleCubit, String>(
         builder: (context, state) {
           return MaterialApp(
-            // home: const DonorMainView(),
+            home: const VolunteerMainView(),
             localizationsDelegates: [
               S.delegate,
               GlobalMaterialLocalizations.delegate,

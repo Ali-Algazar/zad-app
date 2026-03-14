@@ -5,6 +5,9 @@ import 'package:zad/core/cubit/nav_cubit.dart';
 import 'package:zad/core/extensions/extensions.dart';
 import 'package:zad/core/utils/app_colors.dart';
 import 'package:zad/features/home_donor/presentation/view/home_donor_view.dart';
+import 'package:zad/features/my_donations/presentation/view/my_donations_view.dart';
+import 'package:zad/features/notifications/presentation/view/notifications_view.dart';
+import 'package:zad/features/profile/presentation/view/profile_view.dart';
 import 'package:zad/generated/l10n.dart';
 
 class DonorMainViewBody extends StatefulWidget {
@@ -17,9 +20,9 @@ class DonorMainViewBody extends StatefulWidget {
 class _DonorMainViewBodyState extends State<DonorMainViewBody> {
   final List<Widget> pages = [
     HomeDonorView(),
-    Center(child: Text('My Donations')),
-    Center(child: Text('Notifications')),
-    Center(child: Text('MyAccount')),
+    MyDonationsView(),
+    NotificationsView(),
+    ProfileView(),
   ];
   int currentIndex = 0;
   @override
