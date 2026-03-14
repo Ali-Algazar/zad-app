@@ -59,6 +59,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Be Part of the Change",
     ),
     "betweenTime": MessageLookupByLibrary.simpleMessage("between"),
+    "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
     "category": MessageLookupByLibrary.simpleMessage("Category"),
     "changePassword": MessageLookupByLibrary.simpleMessage("Change Password"),
     "chooseRecoveryMethodDesc": MessageLookupByLibrary.simpleMessage(
@@ -179,6 +180,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "loginFailed": MessageLookupByLibrary.simpleMessage("Login Failed"),
     "loginFailedErrorMsg": MessageLookupByLibrary.simpleMessage(
       "Sorry, we were unable to log you in. Please check your email and password and try again.",
+    ),
+    "logoutConfirmation": MessageLookupByLibrary.simpleMessage(
+      "Are you sure you want to log out?",
     ),
     "meal": MessageLookupByLibrary.simpleMessage("Meal"),
     "mealsSaved": MessageLookupByLibrary.simpleMessage("Meals Saved"),
@@ -324,6 +328,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "whatIsDonationType": MessageLookupByLibrary.simpleMessage(
       "What kind of donation?",
     ),
+    "yes": MessageLookupByLibrary.simpleMessage("Yes"),
     "yourRightsBody": MessageLookupByLibrary.simpleMessage(
       "You have the right at any time to modify your personal data through the \"My Account\" page, or request the permanent deletion of the account and all associated data by contacting technical support.",
     ),

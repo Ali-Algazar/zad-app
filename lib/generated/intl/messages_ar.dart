@@ -57,6 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "كن جزءاً من التغيير",
     ),
     "betweenTime": MessageLookupByLibrary.simpleMessage("بين الساعة"),
+    "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
     "category": MessageLookupByLibrary.simpleMessage("التصنيف"),
     "changePassword": MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
     "chooseRecoveryMethodDesc": MessageLookupByLibrary.simpleMessage(
@@ -181,6 +182,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "loginFailed": MessageLookupByLibrary.simpleMessage("فشل تسجيل الدخول"),
     "loginFailedErrorMsg": MessageLookupByLibrary.simpleMessage(
       "عذرًا، لم نتمكن من تسجيل دخولك. يرجى التحقق من بريدك الإلكتروني وكلمة السر والمحاولة مرة أخرى.",
+    ),
+    "logoutConfirmation": MessageLookupByLibrary.simpleMessage(
+      "هل أنت متأكد من أنك تريد تسجيل الخروج؟",
     ),
     "meal": MessageLookupByLibrary.simpleMessage("وجبة"),
     "mealsSaved": MessageLookupByLibrary.simpleMessage("وجبات تم إنقاذها"),
@@ -326,6 +330,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "whatIsDonationType": MessageLookupByLibrary.simpleMessage(
       "ما نوع التبرع؟",
     ),
+    "yes": MessageLookupByLibrary.simpleMessage("نعم"),
     "yourRightsBody": MessageLookupByLibrary.simpleMessage(
       "يحق لك في أي وقت تعديل بياناتك الشخصية من خلال صفحة \"حسابي\"، أو طلب حذف الحساب نهائياً ومسح كافة بياناتك المرتبطة به بالتواصل مع الدعم الفني.",
     ),

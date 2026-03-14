@@ -1368,6 +1368,26 @@ class S {
       args: [],
     );
   }
+
+  /// `هل أنت متأكد من أنك تريد تسجيل الخروج؟`
+  String get logoutConfirmation {
+    return Intl.message(
+      'هل أنت متأكد من أنك تريد تسجيل الخروج؟',
+      name: 'logoutConfirmation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `نعم`
+  String get yes {
+    return Intl.message('نعم', name: 'yes', desc: '', args: []);
+  }
+
+  /// `إلغاء`
+  String get cancel {
+    return Intl.message('إلغاء', name: 'cancel', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

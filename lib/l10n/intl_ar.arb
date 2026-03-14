@@ -153,6 +153,9 @@
 "pickupTimeLabel": "موعد الاستلام",
 "publishDisclaimer": "⚠️ بنشر هذا التبرع، أنت تؤكد أن الطعام آمن وصالح للاستهلاك وتلتزم بموعد الاستلام المحدد.",
 "pickupAddress": "عنوان الاستلام",
-"enterPickupAddressHere": "ادخل عنوان الاستلام هنا"
+"enterPickupAddressHere": "ادخل عنوان الاستلام هنا",
+"logoutConfirmation": "هل أنت متأكد من أنك تريد تسجيل الخروج؟",
+  "yes": "نعم",
+  "cancel": "إلغاء"
 
 }
