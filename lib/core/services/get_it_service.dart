@@ -16,6 +16,9 @@ import 'package:zad/features/my_donations/data/datasources/my_donations_local_da
 import 'package:zad/features/my_donations/data/datasources/my_donations_remote_data_source.dart';
 import 'package:zad/features/my_donations/data/repositories/my_donations_repository.dart';
 import 'package:zad/features/my_donations/data/repositories/my_donations_repository_impl.dart';
+import 'package:zad/features/notifications/data/datasources/notifications_remote_data_source.dart';
+import 'package:zad/features/notifications/data/repositories/notifications_repository.dart';
+import 'package:zad/features/notifications/data/repositories/notifications_repository_impl.dart';
 
 final sl = GetIt.instance;
 
@@ -80,6 +83,15 @@ void setupServiceLocator() {
       localDataSource: sl<MyDonationsLocalDataSource>(),
       remoteDataSource: sl<MyDonationsRemoteDataSource>(),
       connectivity: sl<Connectivity>(),
+    ),
+  );
+  sl.registerLazySingleton<NotificationsRemoteDataSource>(
+    () => NotificationsRemoteDataSourceImpl(apiHelper: sl<ApiHelper>()),
+  );
+
+  sl.registerLazySingleton<NotificationsRepository>(
+    () => NotificationsRepositoryImpl(
+      remoteDataSource: sl<NotificationsRemoteDataSource>(),
     ),
   );
 }

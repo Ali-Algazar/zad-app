@@ -12,7 +12,7 @@ class NotificationsRepositoryImpl implements NotificationsRepository {
   Future<Either<Failure, List<NotificationModel>>> getNotifications() async {
     try {
       final response = await remoteDataSource.getNotifications();
-      final notifications = (response.data['notifications'] as List)
+      final notifications = (response.data['data'] as List)
           .map((json) => NotificationModel.fromJson(json))
           .toList();
       return Right(notifications);
