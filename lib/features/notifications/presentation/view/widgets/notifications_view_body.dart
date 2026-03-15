@@ -3,7 +3,7 @@ import 'package:zad/core/constants.dart';
 import 'package:zad/core/extensions/extensions.dart';
 import 'package:zad/core/utils/app_colors.dart';
 import 'package:zad/core/utils/app_text_styles.dart';
-import 'package:zad/features/my_donations/presentation/view/widgets/my_donations_view_body.dart';
+import 'package:zad/features/my_donations/presentation/view/widgets/status_container.dart';
 
 class NotificationsViewBody extends StatelessWidget {
   const NotificationsViewBody({super.key});

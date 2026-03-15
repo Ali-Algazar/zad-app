@@ -12,6 +12,10 @@ import 'package:zad/features/auth/data/repositories/auth_repository_impl.dart';
 import 'package:zad/features/home_donor/data/datasources/home_donor_remote_data_source.dart';
 import 'package:zad/features/home_donor/data/repositories/home_donor_repository.dart';
 import 'package:zad/features/home_donor/data/repositories/home_donor_repository_impl.dart';
+import 'package:zad/features/my_donations/data/datasources/my_donations_local_data_source.dart';
+import 'package:zad/features/my_donations/data/datasources/my_donations_remote_data_source.dart';
+import 'package:zad/features/my_donations/data/repositories/my_donations_repository.dart';
+import 'package:zad/features/my_donations/data/repositories/my_donations_repository_impl.dart';
 
 final sl = GetIt.instance;
 
@@ -59,6 +63,22 @@ void setupServiceLocator() {
   sl.registerLazySingleton<AddNewDonationRepository>(
     () => AddNewDonationRepositoryImpl(
       remoteDataSource: sl<AddNewDonationRemoteDataSource>(),
+      connectivity: sl<Connectivity>(),
+    ),
+  );
+
+  sl.registerLazySingleton<MyDonationsLocalDataSource>(
+    () => MyDonationsLocalDataSourceImpl(),
+  );
+
+  sl.registerLazySingleton<MyDonationsRemoteDataSource>(
+    () => MyDonationsRemoteDataSourceImpl(apiHelper: sl<ApiHelper>()),
+  );
+
+  sl.registerLazySingleton<MyDonationsRepository>(
+    () => MyDonationsRepositoryImpl(
+      localDataSource: sl<MyDonationsLocalDataSource>(),
+      remoteDataSource: sl<MyDonationsRemoteDataSource>(),
       connectivity: sl<Connectivity>(),
     ),
   );
