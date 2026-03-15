@@ -46,8 +46,7 @@ class _MyDonationsViewBodyState extends State<MyDonationsViewBody> {
                     ),
                     itemCount: 5,
                   );
-                } else if (state is MyDonationsLoaded &&
-                    state.donations.isEmpty) {
+                } else if (state is MyDonationsLoaded && donations.isEmpty) {
                   return Center(child: Text('لا توجد تبرعات بعد'));
                 } else if (state is MyDonationsLoaded) {
                   if (statusIndex == 1) {
