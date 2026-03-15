@@ -1,16 +1,34 @@
+import 'package:hive_flutter/hive_flutter.dart';
+
+part 'donation_model.g.dart';
+
+@HiveType(typeId: 2)
 class DonationModel {
+  @HiveField(0)
   final String id;
+  @HiveField(1)
   final String restaurant;
+  @HiveField(2)
   final String title;
+  @HiveField(3)
   final String category;
+  @HiveField(4)
   final int quantity;
+  @HiveField(5)
   final String unit;
+  @HiveField(6)
   final DateTime expiryTime;
+  @HiveField(7)
   final String specialInstructions;
+  @HiveField(8)
   final String address;
+  @HiveField(9)
   final String status;
+  @HiveField(10)
   final Location location;
+  @HiveField(11)
   final DateTime createdAt;
+  @HiveField(12)
   final DateTime updatedAt;
 
   DonationModel({
@@ -66,8 +84,11 @@ class DonationModel {
   }
 }
 
+@HiveType(typeId: 3)
 class Location {
+  @HiveField(0)
   final String type;
+  @HiveField(1)
   final List<double> coordinates;
 
   Location({required this.type, required this.coordinates});
