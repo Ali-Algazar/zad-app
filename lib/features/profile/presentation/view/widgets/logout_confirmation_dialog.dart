@@ -13,8 +13,6 @@ class LogoutConfirmationDialog extends StatelessWidget {
       insetPadding: EdgeInsets.symmetric(horizontal: 16),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Container(
-        height: 320,
-
         padding: EdgeInsets.all(16),
         child: Column(
           spacing: 16,
