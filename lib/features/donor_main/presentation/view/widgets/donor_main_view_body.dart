@@ -35,7 +35,9 @@ class _DonorMainViewBodyState extends State<DonorMainViewBody> {
       },
       child: Column(
         children: [
-          Expanded(child: pages[currentIndex]),
+          Expanded(
+            child: IndexedStack(index: currentIndex, children: pages),
+          ),
           CustomDonorNavBar(currentIndex: currentIndex),
         ],
       ),

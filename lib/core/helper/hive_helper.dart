@@ -1,6 +1,7 @@
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:zad/features/auth/data/model/user_model.dart';
 import 'package:zad/features/my_donations/data/model/donation_model.dart';
+import 'package:zad/features/notifications/data/model/notification_model.dart';
 
 class HiveHelper {
   static Future<void> init() async {
@@ -62,5 +63,6 @@ class HiveHelper {
     Hive.registerAdapter(UserModelAdapter());
     Hive.registerAdapter(DonationModelAdapter());
     Hive.registerAdapter(LocationAdapter());
+    Hive.registerAdapter(NotificationModelAdapter());
   }
 }
