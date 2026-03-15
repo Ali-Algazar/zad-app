@@ -3,6 +3,7 @@ class EndPoints {
   static const String getDonorHomeStats = "donations/stats";
   static const String login = "auth/login";
   static const String getMe = "auth/profile";
+  static const String myDonations = "donations/my-donations";
   static const String updateFcmToken = "auth/fcm-token";
   static const String createDonation = "donations";
   static const String nearbyDonations = "donations/nearby";
