@@ -46,8 +46,6 @@ class _MyDonationsViewBodyState extends State<MyDonationsViewBody> {
                     ),
                     itemCount: 5,
                   );
-                } else if (state is MyDonationsLoaded && donations.isEmpty) {
-                  return Center(child: Text('لا توجد تبرعات بعد'));
                 } else if (state is MyDonationsLoaded) {
                   if (statusIndex == 1) {
                     donations = state.donations
@@ -59,6 +57,9 @@ class _MyDonationsViewBodyState extends State<MyDonationsViewBody> {
                         .toList();
                   } else {
                     donations = state.donations;
+                  }
+                  if (donations.isEmpty) {
+                    return Center(child: Text('لا توجد تبرعات بعد'));
                   }
                   return ListView.builder(
                     itemBuilder: (context, index) => Padding(
