@@ -18,7 +18,13 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
         isCoreLibraryDesugaringEnabled = true
     }
-
+buildTypes {
+    release {
+        signingConfig = signingConfigs.getByName("debug")
+        isMinifyEnabled = false
+        isShrinkResources = false
+    }
+}
    kotlin {
     compilerOptions {
         jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)

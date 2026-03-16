@@ -21,7 +21,7 @@ abstract class SharedPreferencesService {
 
   static dynamic getData({required String key}) async {
     if (_prefs == null) await init();
-    return _prefs!.get(key);
+    return _prefs!.get(key) ?? null;
   }
 
   static Future<bool> removeData({required String key}) async {

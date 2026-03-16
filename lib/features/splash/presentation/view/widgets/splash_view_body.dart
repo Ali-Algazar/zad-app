@@ -56,7 +56,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
           }
         }
         if (state is AuthError) {
-          print(state.message);
           var onbordin =
               await SharedPreferencesService.getData(
                 key: Constants.onBoardingKey,
