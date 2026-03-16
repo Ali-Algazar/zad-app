@@ -24,6 +24,7 @@ class AuthCubit extends Cubit<AuthState> {
     required String displayName,
     required String governorate,
     required String role,
+    required List<double> coordinates,
   }) async {
     emit(AuthLoading());
     var result = await authRepository.register(
@@ -33,6 +34,7 @@ class AuthCubit extends Cubit<AuthState> {
       displayName: displayName,
       governorate: governorate,
       role: role,
+      coordinates: coordinates,
     );
     result.fold(
       (failure) => emit(AuthError(failure.message)),

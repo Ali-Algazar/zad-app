@@ -11,6 +11,7 @@ abstract class AuthRepository {
     required String displayName,
     required String governorate,
     required String role,
+    required List<double> coordinates,
   });
   Future<Either<Failure, Unit>> logout();
   Future<Either<Failure, UserModel>> checkAuth();

@@ -74,6 +74,7 @@ class AuthRepositoryImpl extends AuthRepository {
     required String displayName,
     required String governorate,
     required String role,
+    required List<double> coordinates,
   }) async {
     try {
       var response = await remoteDataSource.register(
@@ -83,9 +84,11 @@ class AuthRepositoryImpl extends AuthRepository {
         password: password,
         phone: phone,
         role: role,
+        coordinates: coordinates,
       );
 
       if (response.statusCode == 201 || response.statusCode == 200) {
+        log('Registration successful with status code: ${response.statusCode}');
         await localDataSource.cacheUserToken(response.data['token']);
         await localDataSource.cachedUserRole(response.data['role']);
         var userResponse = await remoteDataSource.getUserData();
@@ -97,7 +100,7 @@ class AuthRepositoryImpl extends AuthRepository {
 
         return Right(user);
       } else {
-        log(response.data.toString());
+        // log(response.data.toString());
         return Left(
           ServerFailure(
             'Registration failed with status code: ${response.statusCode}',

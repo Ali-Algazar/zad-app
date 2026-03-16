@@ -12,6 +12,7 @@ abstract class AuthRemoteDataSource {
     required String displayName,
     required String governorate,
     required String role,
+    required List<double> coordinates,
   });
   Future<Response> updateFcmToken();
   Future<Response> getUserData();
@@ -41,6 +42,7 @@ class AuthRemoteDataSourceImpl extends AuthRemoteDataSource {
     required String displayName,
     required String governorate,
     required String role,
+    required List<double> coordinates,
   }) async {
     var response = await apiHelper.post(
       EndPoints.register,
@@ -51,8 +53,21 @@ class AuthRemoteDataSourceImpl extends AuthRemoteDataSource {
         "password": password,
         "governorate": governorate,
         "role": role,
+        "coordinates": coordinates,
       },
     );
+
+    print('''
+{
+        "fullName": $displayName,
+        "phone": $phone,
+        "email": $email,
+        "password": $password,
+        "governorate": $governorate,
+        "role": $role,
+        "coordinates": $coordinates,
+      },
+''');
 
     return response;
   }

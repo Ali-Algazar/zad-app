@@ -1,8 +1,11 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:zad/core/constants.dart';
 import 'package:zad/core/extensions/extensions.dart';
+import 'package:zad/core/helper_functions/get_location.dart';
 import 'package:zad/features/auth/presentation/cubit/auth_cubit.dart';
 import 'package:zad/features/auth/presentation/cubit/auth_state.dart';
 import 'package:zad/features/auth/presentation/view/widgets/register/agree_to_terms_and_privacy.dart';
@@ -15,6 +18,8 @@ import 'package:zad/features/auth/presentation/view/widgets/common/email_labeled
 import 'package:zad/features/auth/presentation/view/widgets/register/full_name_labeled_text_field.dart';
 import 'package:zad/features/auth/presentation/view/widgets/common/password_labeled_text_field.dart';
 import 'package:zad/features/auth/presentation/view/widgets/register/phone_labeled_text_field.dart';
+import 'package:zad/features/donor_main/presentation/view/donor_main_view.dart';
+import 'package:zad/features/volunteer_main/presentation/view/volunteer_main_view.dart';
 import 'package:zad/generated/l10n.dart';
 
 class CreateAccountViewBody extends StatefulWidget {
@@ -47,6 +52,7 @@ class _CreateAccountViewBodyState extends State<CreateAccountViewBody> {
     return BlocListener<AuthCubit, AuthState>(
       listener: (context, state) {
         if (state is AuthError) {
+          log(state.message);
           ScaffoldMessenger.of(
             context,
           ).showSnackBar(SnackBar(content: Text(state.message)));
@@ -61,6 +67,17 @@ class _CreateAccountViewBodyState extends State<CreateAccountViewBody> {
           setState(() {
             isLoading = false;
           });
+          state.role == 'Volunteer'
+              ? Navigator.pushNamedAndRemoveUntil(
+                  context,
+                  VolunteerMainView.routeName,
+                  (route) => false,
+                )
+              : Navigator.pushNamedAndRemoveUntil(
+                  context,
+                  DonorMainView.routeName,
+                  (route) => false,
+                );
         }
         if (state is AuthLoading) {
           setState(() {
@@ -116,7 +133,7 @@ class _CreateAccountViewBodyState extends State<CreateAccountViewBody> {
                   ),
                   30.h,
                   CreateAccountButton(
-                    onTap: () {
+                    onTap: () async {
                       if (_formKey.currentState!.validate()) {
                         if (!agreeToTerms) {
                           ScaffoldMessenger.of(context).showSnackBar(
@@ -125,6 +142,11 @@ class _CreateAccountViewBodyState extends State<CreateAccountViewBody> {
                             ),
                           );
                         } else {
+                          final position = await getLocation();
+                          List<double> coordinates = [
+                            position.latitude,
+                            position.longitude,
+                          ];
                           context.read<AuthCubit>().register(
                             email: emailController.text,
                             password: passwordController.text,
@@ -132,6 +154,7 @@ class _CreateAccountViewBodyState extends State<CreateAccountViewBody> {
                             displayName: fullNameController.text,
                             governorate: cityController.text,
                             role: role[indexRole],
+                            coordinates: coordinates,
                           );
                         }
                       }

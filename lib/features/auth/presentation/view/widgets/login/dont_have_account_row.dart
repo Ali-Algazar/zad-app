@@ -17,7 +17,11 @@ class DontHaveAccountRow extends StatelessWidget {
         4.w,
         InkWell(
           onTap: () {
-            Navigator.pushNamed(context, CreateAccountView.routeName);
+            Navigator.pushNamedAndRemoveUntil(
+              context,
+              CreateAccountView.routeName,
+              (route) => false,
+            );
           },
           child: Text(
             S.of(context).createAccount,

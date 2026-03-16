@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:zad/core/extensions/extensions.dart';
 import 'package:zad/core/utils/app_colors.dart';
 import 'package:zad/core/utils/app_text_styles.dart';
+import 'package:zad/features/auth/presentation/view/login_view.dart';
 import 'package:zad/generated/l10n.dart';
 
 class AlreadyHaveAccount extends StatelessWidget {
@@ -16,7 +17,7 @@ class AlreadyHaveAccount extends StatelessWidget {
         4.w,
         InkWell(
           onTap: () {
-            Navigator.pop(context);
+            Navigator.pushNamed(context, LoginView.routeName);
           },
           child: Text(
             S.of(context).login,
