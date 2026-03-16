@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zad/core/constants.dart';
 import 'package:zad/core/extensions/extensions.dart';
-import 'package:zad/core/utils/app_colors.dart';
-import 'package:zad/core/utils/app_text_styles.dart';
-import 'package:zad/core/widgets/custom_button.dart';
-import 'package:zad/core/widgets/custom_container.dart';
-import 'package:zad/features/home_donor/presentation/view/widgets/header/notifications_button.dart';
+import 'package:zad/features/home_volunteer/presentation/cubit/home_volunteer_cubit.dart';
+import 'package:zad/features/home_volunteer/presentation/cubit/home_volunteer_state.dart';
+import 'package:zad/features/home_volunteer/presentation/view/widgets/home_volunteer_header.dart';
+import 'package:zad/features/home_volunteer/presentation/view/widgets/nearby_orders_title.dart';
+import 'package:zad/features/home_volunteer/presentation/view/widgets/order_item.dart';
+import 'package:zad/features/home_volunteer/presentation/view/widgets/order_item_shimmer.dart';
+import 'package:zad/features/home_volunteer/presentation/view/widgets/volunteer_stats_row.dart';
 
 class HomeVolunteerViewBody extends StatelessWidget {
   const HomeVolunteerViewBody({super.key});
@@ -24,84 +27,9 @@ class HomeVolunteerViewBody extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      spacing: 12,
-                      children: [
-                        Expanded(
-                          child: CustomContainer(
-                            child: Column(
-                              children: [
-                                Icon(
-                                  Icons.local_dining_outlined,
-                                  color: AppColors.primary,
-                                ),
-                                Text(
-                                  '200',
-                                  style: AppTextStyles.textStyle18.copyWith(
-                                    color: AppColors.primary,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  'وجبات أنقذتها',
-                                  style: AppTextStyles.textStyle14r,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: CustomContainer(
-                            child: Column(
-                              children: [
-                                Icon(Icons.star, color: AppColors.secondary),
-                                Text(
-                                  '2000',
-                                  style: AppTextStyles.textStyle18.copyWith(
-                                    color: AppColors.primary,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  'نقاط التميز',
-                                  style: AppTextStyles.textStyle14r,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: CustomContainer(
-                            child: Column(
-                              children: [
-                                Icon(
-                                  Icons.fitness_center_rounded,
-                                  color: AppColors.primary,
-                                ),
-                                Text(
-                                  'محترف',
-                                  style: AppTextStyles.textStyle18.copyWith(
-                                    color: AppColors.primary,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  'مستوى التقييم',
-                                  style: AppTextStyles.textStyle14r,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                    VolunteerStatsRow(),
                     26.h,
-                    Text(
-                      'طلبات قريبة منك الآن',
-                      style: AppTextStyles.textStyle24.copyWith(
-                        color: AppColors.primary,
-                      ),
-                    ),
+                    NearbyOrdersTitle(),
                     12.h,
                   ],
                 ),
@@ -109,139 +37,44 @@ class HomeVolunteerViewBody extends StatelessWidget {
             ],
           ),
         ),
-        SliverList.builder(
-          itemCount: 5,
-          itemBuilder: (context, index) => Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-            child: OrderItem(),
-          ),
+        BlocBuilder<HomeVolunteerCubit, HomeVolunteerState>(
+          builder: (context, state) {
+            if (state is HomeVolunteerError) {
+              return SliverToBoxAdapter(
+                child: Center(child: Text(state.message)),
+              );
+            } else if (state is HomeVolunteerLoading) {
+              return SliverList.builder(
+                itemCount: 5,
+                itemBuilder: (context, index) => Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 8,
+                  ),
+                  child: OrderItemShimmer(),
+                ),
+              );
+            }
+            if (state is HomeVolunteerLoaded) {
+              return SliverList.builder(
+                itemCount: state.donations.length,
+                itemBuilder: (context, index) => Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 8,
+                  ),
+                  child: OrderItem(
+                    donationWithRestaurantModel: state.donations[index],
+                  ),
+                ),
+              );
+            }
+            return SliverFillRemaining(
+              child: Center(child: Text('لا توجد طلبات قريبة في الوقت الحالي')),
+            );
+          },
         ),
       ],
-    );
-  }
-}
-
-class OrderItem extends StatelessWidget {
-  const OrderItem({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return CustomContainer(
-      child: Column(
-        children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                height: 64,
-                width: 64,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
-                  color: Color(0xffF9FAFB),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Color(0xFF000000).withValues(alpha: 0.04),
-                      spreadRadius: 2,
-                      blurRadius: 4,
-                      offset: const Offset(0, 0),
-                    ),
-                    BoxShadow(
-                      color: Color(0xFF000000).withValues(alpha: 0.04),
-                      spreadRadius: 2,
-                      blurRadius: 8,
-                      offset: const Offset(0, 6),
-                    ),
-                  ],
-                ),
-              ),
-              16.w,
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                spacing: 4,
-                children: [
-                  Text(
-                    'مطعم البرنس',
-                    style: AppTextStyles.textStyle18.copyWith(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Row(
-                    spacing: 3,
-                    children: [
-                      Text(
-                        '5 وجبات جاهزة',
-                        style: AppTextStyles.textStyle14Medium,
-                      ),
-                      CircleAvatar(radius: 3),
-                      Text('أرز ودجاج', style: AppTextStyles.textStyle14Medium),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.location_on_outlined,
-                        size: 20,
-                        color: AppColors.grayText,
-                      ),
-                      Text(
-                        'وسط البلد - شارع 26 يوليو',
-                        style: AppTextStyles.caption.copyWith(
-                          color: AppColors.grayText,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-            ],
-          ),
-          24.h,
-          CustomButton(
-            onTap: () {},
-            child: Text(
-              'أنا لها! (تأكيد الاستلام)',
-              style: AppTextStyles.textStyle16.copyWith(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class HomeVolunteerHeader extends StatelessWidget {
-  const HomeVolunteerHeader({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-      decoration: BoxDecoration(color: Colors.white),
-      child: Row(
-        children: [
-          Image.asset('assets/image/logo.png', width: 55),
-          12.w,
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('مرحباً بك،', style: AppTextStyles.caption),
-              Text(
-                'بطل زاد',
-                style: AppTextStyles.textStyle18.copyWith(
-                  color: AppColors.primary,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-          Spacer(),
-          NotificationsButon(),
-        ],
-      ),
     );
   }
 }

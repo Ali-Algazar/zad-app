@@ -12,6 +12,9 @@ import 'package:zad/features/auth/data/repositories/auth_repository_impl.dart';
 import 'package:zad/features/home_donor/data/datasources/home_donor_remote_data_source.dart';
 import 'package:zad/features/home_donor/data/repositories/home_donor_repository.dart';
 import 'package:zad/features/home_donor/data/repositories/home_donor_repository_impl.dart';
+import 'package:zad/features/home_volunteer/data/datasources/home_volunteer_remote_data_source.dart';
+import 'package:zad/features/home_volunteer/data/repositories/home_volunteer_repository.dart';
+import 'package:zad/features/home_volunteer/data/repositories/home_volunteer_repository_impl.dart';
 import 'package:zad/features/my_donations/data/datasources/my_donations_local_data_source.dart';
 import 'package:zad/features/my_donations/data/datasources/my_donations_remote_data_source.dart';
 import 'package:zad/features/my_donations/data/repositories/my_donations_repository.dart';
@@ -92,6 +95,15 @@ void setupServiceLocator() {
   sl.registerLazySingleton<NotificationsRepository>(
     () => NotificationsRepositoryImpl(
       remoteDataSource: sl<NotificationsRemoteDataSource>(),
+    ),
+  );
+  sl.registerLazySingleton<HomeVolunteerRemoteDataSource>(
+    () => HomeVolunteerRemoteDataSourceImpl(sl<ApiHelper>()),
+  );
+  sl.registerLazySingleton<HomeVolunteerRepository>(
+    () => HomeVolunteerRepositoryImpl(
+      remoteDataSource: sl<HomeVolunteerRemoteDataSource>(),
+      connectivity: sl<Connectivity>(),
     ),
   );
 }
