@@ -11,7 +11,7 @@ plugins {
 android {
     namespace = "com.example.zad"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = "29.0.14033849"
+    ndkVersion = "30.0.14904198"
 
      compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17

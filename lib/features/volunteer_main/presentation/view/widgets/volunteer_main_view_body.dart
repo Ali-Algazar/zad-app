@@ -4,6 +4,7 @@ import 'package:zad/core/cubit/nav_cubit.dart';
 import 'package:zad/core/utils/app_colors.dart';
 import 'package:zad/features/donor_main/presentation/view/widgets/donor_main_view_body.dart';
 import 'package:zad/features/home_volunteer/presentation/view/home_volunteer_view.dart';
+import 'package:zad/features/my_tasks/presentation/view/my_tasks_view.dart';
 import 'package:zad/features/notifications/presentation/view/notifications_view.dart';
 import 'package:zad/features/volunteer_profile/presentation/view/volunteer_profile_view.dart';
 import 'package:zad/generated/l10n.dart';
@@ -18,10 +19,10 @@ class VolunteerMainViewBody extends StatefulWidget {
 class _VolunteerMainViewBodyState extends State<VolunteerMainViewBody> {
   int currentIndex = 0;
   final List<Widget> pages = [
-    HomeVolunteerView(),
-    Center(child: Text('My Tasks')),
-    NotificationsView(),
-    VolunteerProfileView(),
+    const HomeVolunteerView(),
+    const MyTasksView(),
+    const NotificationsView(),
+    const VolunteerProfileView(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -33,7 +34,9 @@ class _VolunteerMainViewBodyState extends State<VolunteerMainViewBody> {
       },
       child: Column(
         children: [
-          Expanded(child: pages[currentIndex]),
+          Expanded(
+            child: IndexedStack(index: currentIndex, children: pages),
+          ),
           CustomVolunteerNavBar(currentIndex: currentIndex),
         ],
       ),

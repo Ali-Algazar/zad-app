@@ -52,6 +52,7 @@ class ZadApp extends StatelessWidget {
             locale: Locale(state),
             onGenerateRoute: onGenerateRoute,
             debugShowCheckedModeBanner: false,
+
             theme: AppTheme.lightTheme,
           );
         },
