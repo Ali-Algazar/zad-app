@@ -27,75 +27,112 @@ class MyTasksViewBody extends StatelessWidget {
         Expanded(
           child: Padding(
             padding: Constants.khorizontalPadding.horizontal,
-            child: Column(
-              children: [
-                CustomContainer(
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Text(
-                            'مطعم البرنس',
-                            style: AppTextStyles.textStyle14Bold,
-                          ),
-                          Spacer(),
-                          Container(
-                            padding: 8.all,
-                            decoration: BoxDecoration(
-                              color: AppColors.success,
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: Text(
-                              'مكتملة',
-                              style: AppTextStyles.textStyle14Bold.copyWith(
-                                color: AppColors.primary,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      8.h,
-                      Row(
-                        children: [
-                          Container(
-                            padding: 8.all,
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: Color(0x33E87A3E),
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: FittedBox(
-                              child: Icon(
-                                Icons.restaurant_sharp,
-                                color: AppColors.secondary,
-                              ),
-                            ),
-                          ),
-                          12.w,
-                          Text(
-                            '25 وجبة دجاج وبطاطس',
-                            style: TextStyle(
-                              color: const Color(0xFF101828),
-                              fontSize: 18,
-                              fontFamily: 'Cairo',
-                              fontWeight: FontWeight.w700,
-                              height: 1.25,
-                            ),
-                          ),
-                        ],
-                      ),
-                      12.h,
-                      Divider(thickness: 1.3, color: Colors.grey.shade300),
-                      8.h,
-                    ],
-                  ),
-                ),
-              ],
+            child: ListView.separated(
+              itemBuilder: (context, index) => TaskItem(),
+              separatorBuilder: (context, index) => 16.h,
+              itemCount: 10,
             ),
           ),
         ),
       ],
+    );
+  }
+}
+
+class TaskItem extends StatelessWidget {
+  const TaskItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomContainer(
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Text('مطعم البرنس', style: AppTextStyles.textStyle14Bold),
+              Spacer(),
+              Container(
+                padding: 8.all,
+                decoration: BoxDecoration(
+                  color: AppColors.success,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Text(
+                  'مكتملة',
+                  style: AppTextStyles.textStyle14Bold.copyWith(
+                    color: AppColors.primary,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          8.h,
+          Row(
+            children: [
+              Container(
+                padding: 8.all,
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: Color(0x33E87A3E),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: FittedBox(
+                  child: Icon(
+                    Icons.restaurant_sharp,
+                    color: AppColors.secondary,
+                  ),
+                ),
+              ),
+              12.w,
+              Text(
+                '25 وجبة دجاج وبطاطس',
+                style: TextStyle(
+                  color: const Color(0xFF101828),
+                  fontSize: 18,
+                  fontFamily: 'Cairo',
+                  fontWeight: FontWeight.w700,
+                  height: 1.25,
+                ),
+              ),
+            ],
+          ),
+          12.h,
+          Divider(thickness: 1.3, color: Colors.grey.shade300),
+          8.h,
+          Row(
+            children: [
+              Container(
+                padding: 8.all,
+
+                decoration: BoxDecoration(
+                  color: Color(0xffF3F4F6),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Row(
+                  children: [
+                    Icon(Icons.restaurant_menu),
+                    8.w,
+                    Text(
+                      'الكمية: 25 وجبة',
+                      style: AppTextStyles.textStyle14Bold,
+                    ),
+                  ],
+                ),
+              ),
+              Spacer(),
+              Text(
+                'التفاصيل',
+                style: AppTextStyles.textStyle14Bold.copyWith(
+                  color: AppColors.primary,
+                ),
+              ),
+              8.w,
+              Icon(Icons.arrow_forward_ios, size: 16, color: AppColors.primary),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
