@@ -80,37 +80,38 @@ class _VerifyCodeViaEmailViewBodyState
   Widget build(BuildContext context) {
     return Padding(
       padding: Constants.khorizontalPadding.horizontal,
-      child: Column(
-        children: [
-          Constants.ktopPadding.h,
-          AuthHeader(
-            title: S.of(context).confirmEmail,
-            subtitle:
-                "${S.of(context).verificationCodeSentTo}\n${widget.email.replaceRange(2, widget.email.length - 12, '******')}",
-          ),
-          40.h,
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Constants.ktopPadding.h,
+            AuthHeader(
+              title: S.of(context).confirmEmail,
+              subtitle:
+                  "${S.of(context).verificationCodeSentTo}\n${widget.email.replaceRange(2, widget.email.length - 12, '******')}",
+            ),
+            40.h,
 
-          OtpFieldsGroup(
-            otpControllers: otpControllers,
-            focusNodes: focusNodes,
-          ),
+            OtpFieldsGroup(
+              otpControllers: otpControllers,
+              focusNodes: focusNodes,
+            ),
 
-          24.h,
-          const ResendCodeTimer(),
-          const Spacer(),
-
-          CustomButton(
-            onTap: _submitCode,
-            child: Text(
-              S.of(context).confirm,
-              style: AppTextStyles.textStyle16.copyWith(
-                color: AppColors.background,
+            24.h,
+            const ResendCodeTimer(),
+            60.h,
+            CustomButton(
+              onTap: _submitCode,
+              child: Text(
+                S.of(context).confirm,
+                style: AppTextStyles.textStyle16.copyWith(
+                  color: AppColors.background,
+                ),
               ),
             ),
-          ),
 
-          Constants.kbottomPadding.h,
-        ],
+            Constants.kbottomPadding.h,
+          ],
+        ),
       ),
     );
   }

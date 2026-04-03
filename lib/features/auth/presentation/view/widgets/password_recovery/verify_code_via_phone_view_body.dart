@@ -82,37 +82,41 @@ class _VerifyCodeViaPhoneViewBodyState
   Widget build(BuildContext context) {
     return Padding(
       padding: Constants.khorizontalPadding.horizontal,
-      child: Column(
-        children: [
-          Constants.ktopPadding.h,
-          AuthHeader(
-            title: S.of(context).verifyPhoneNumber,
-            subtitle:
-                "${S.of(context).verificationCodeSentTo}\n${widget.phoneNumber.replaceRange(2, 9, '******')}",
-          ),
-          40.h,
-
-          OtpFieldsGroup(
-            otpControllers: otpControllers,
-            focusNodes: focusNodes,
-          ),
-
-          24.h,
-          const ResendCodeTimer(),
-          const Spacer(),
-
-          CustomButton(
-            onTap: _submitCode,
-            child: Text(
-              S.of(context).confirm,
-              style: AppTextStyles.textStyle16.copyWith(
-                color: AppColors.background,
+      child: SingleChildScrollView(
+        child: SimpleDialogOption(
+          child: Column(
+            children: [
+              Constants.ktopPadding.h,
+              AuthHeader(
+                title: S.of(context).verifyPhoneNumber,
+                subtitle:
+                    "${S.of(context).verificationCodeSentTo}\n${widget.phoneNumber.replaceRange(2, 9, '******')}",
               ),
-            ),
-          ),
+              40.h,
 
-          Constants.kbottomPadding.h,
-        ],
+              OtpFieldsGroup(
+                otpControllers: otpControllers,
+                focusNodes: focusNodes,
+              ),
+
+              24.h,
+              const ResendCodeTimer(),
+              60.h,
+
+              CustomButton(
+                onTap: _submitCode,
+                child: Text(
+                  S.of(context).confirm,
+                  style: AppTextStyles.textStyle16.copyWith(
+                    color: AppColors.background,
+                  ),
+                ),
+              ),
+
+              Constants.kbottomPadding.h,
+            ],
+          ),
+        ),
       ),
     );
   }
