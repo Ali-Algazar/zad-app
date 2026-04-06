@@ -39,6 +39,7 @@ class _LoginViewBodyState extends State<LoginViewBody> {
           setState(() {
             isLoading = false;
           });
+          print(state.message);
           showDialog(
             context: context,
             builder: (context) => CustomDialog(

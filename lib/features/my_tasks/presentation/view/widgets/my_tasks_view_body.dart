@@ -1,14 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zad/core/constants.dart';
 import 'package:zad/core/extensions/extensions.dart';
 import 'package:zad/core/utils/app_colors.dart';
 import 'package:zad/core/utils/app_text_styles.dart';
 import 'package:zad/core/widgets/custom_container.dart';
 import 'package:zad/features/my_donations/presentation/view/widgets/status_container.dart';
+import 'package:zad/features/my_tasks/data/models/task_model.dart';
+import 'package:zad/features/my_tasks/presentation/cubit/my_tasks_cubit.dart';
+import 'package:zad/features/my_tasks/presentation/cubit/my_tasks_state.dart';
 
-class MyTasksViewBody extends StatelessWidget {
+class MyTasksViewBody extends StatefulWidget {
   const MyTasksViewBody({super.key});
 
+  @override
+  State<MyTasksViewBody> createState() => _MyTasksViewBodyState();
+}
+
+class _MyTasksViewBodyState extends State<MyTasksViewBody> {
+  int index = 0;
+  List<TaskModel> tasks = [];
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -21,18 +32,50 @@ class MyTasksViewBody extends StatelessWidget {
               bottom: BorderSide(width: 1.3, color: Colors.grey.shade300),
             ),
           ),
-          child: MyTasksStatusRow(onStatusChanged: (int value) {}),
+          child: MyTasksStatusRow(
+            onStatusChanged: (int value) {
+              setState(() {
+                index = value;
+              });
+            },
+          ),
         ),
         16.h,
-        Expanded(
-          child: Padding(
-            padding: Constants.khorizontalPadding.horizontal,
-            child: ListView.separated(
-              itemBuilder: (context, index) => TaskItem(),
-              separatorBuilder: (context, index) => 16.h,
-              itemCount: 10,
-            ),
-          ),
+        BlocBuilder<MyTasksCubit, MyTasksState>(
+          builder: (context, state) {
+            if (state is MyTasksError) {
+              return Center(child: Text(state.message));
+            }
+            if (state is MyTasksLoading) {
+              return const Center(child: CircularProgressIndicator());
+            }
+            if (state is MyTasksLoaded && state.tasks.isEmpty) {
+              return Center(child: Text('لا يوجد مهام'));
+            }
+            if (state is MyTasksLoaded) {
+              if (index == 0) {
+                tasks = state.tasks
+                    .where((task) => task.status == 'Completed')
+                    .toList();
+              } else {
+                tasks = state.tasks
+                    .where((task) => task.status == 'OnTheWay')
+                    .toList();
+              }
+              return Expanded(
+                child: Padding(
+                  padding: Constants.khorizontalPadding.horizontal,
+                  child: ListView.separated(
+                    itemBuilder: (context, index) =>
+                        TaskItem(task: tasks[index]),
+                    separatorBuilder: (context, index) => 16.h,
+                    itemCount: tasks.length,
+                  ),
+                ),
+              );
+            }
+            return SizedBox();
+          },
         ),
       ],
     );
@@ -40,7 +83,8 @@ class MyTasksViewBody extends StatelessWidget {
 }
 
 class TaskItem extends StatelessWidget {
-  const TaskItem({super.key});
+  const TaskItem({super.key, required this.task});
+  final TaskModel task;
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +93,10 @@ class TaskItem extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text('مطعم البرنس', style: AppTextStyles.textStyle14Bold),
+              Text(
+                task.volunteer.fullName,
+                style: AppTextStyles.textStyle14Bold,
+              ),
               Spacer(),
               Container(
                 padding: 8.all,
@@ -58,7 +105,7 @@ class TaskItem extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Text(
-                  'مكتملة',
+                  getMealstatus(task.status),
                   style: AppTextStyles.textStyle14Bold.copyWith(
                     color: AppColors.primary,
                   ),
@@ -78,15 +125,12 @@ class TaskItem extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: FittedBox(
-                  child: Icon(
-                    Icons.restaurant_sharp,
-                    color: AppColors.secondary,
-                  ),
+                  child: Text(getMealCategory(task.donation.category)),
                 ),
               ),
               12.w,
               Text(
-                '25 وجبة دجاج وبطاطس',
+                task.donation.title,
                 style: TextStyle(
                   color: const Color(0xFF101828),
                   fontSize: 18,
@@ -114,7 +158,7 @@ class TaskItem extends StatelessWidget {
                     Icon(Icons.restaurant_menu),
                     8.w,
                     Text(
-                      'الكمية: 25 وجبة',
+                      'الكمية: ${task.donation.quantity} ${task.donation.unit}',
                       style: AppTextStyles.textStyle14Bold,
                     ),
                   ],
@@ -134,6 +178,32 @@ class TaskItem extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  String getMealstatus(String status) {
+    switch (status) {
+      case 'OnTheWay':
+        return 'قيد التوصيل';
+
+      default:
+        return 'مكتملة';
+    }
+  }
+
+  String getMealCategory(String category) {
+    switch (category) {
+      case 'ReadyMeals':
+        return '🥙';
+      case 'Bakery':
+        return '🍞';
+      case 'Dairy':
+        return '🥛';
+      case "Fruits":
+        return '🍎';
+
+      default:
+        return '🥕';
+    }
   }
 }
 

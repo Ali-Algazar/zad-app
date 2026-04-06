@@ -19,6 +19,9 @@ import 'package:zad/features/my_donations/data/datasources/my_donations_local_da
 import 'package:zad/features/my_donations/data/datasources/my_donations_remote_data_source.dart';
 import 'package:zad/features/my_donations/data/repositories/my_donations_repository.dart';
 import 'package:zad/features/my_donations/data/repositories/my_donations_repository_impl.dart';
+import 'package:zad/features/my_tasks/data/datasources/my_tasks_remote_data_source.dart';
+import 'package:zad/features/my_tasks/data/repositories/my_tasks_repository.dart';
+import 'package:zad/features/my_tasks/data/repositories/my_tasks_repository_impl.dart';
 import 'package:zad/features/notifications/data/datasources/notifications_remote_data_source.dart';
 import 'package:zad/features/notifications/data/repositories/notifications_repository.dart';
 import 'package:zad/features/notifications/data/repositories/notifications_repository_impl.dart';
@@ -105,5 +108,12 @@ void setupServiceLocator() {
       remoteDataSource: sl<HomeVolunteerRemoteDataSource>(),
       connectivity: sl<Connectivity>(),
     ),
+  );
+  sl.registerLazySingleton<MyTasksRemoteDataSource>(
+    () => MyTasksRemoteDataSourceImpl(apiHelper: sl<ApiHelper>()),
+  );
+  sl.registerLazySingleton<MyTasksRepository>(
+    () =>
+        MyTasksRepositoryImpl(remoteDataSource: sl<MyTasksRemoteDataSource>()),
   );
 }
