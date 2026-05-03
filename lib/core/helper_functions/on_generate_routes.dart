@@ -10,6 +10,7 @@ import 'package:zad/features/auth/presentation/view/recover_via_phone_view.dart'
 import 'package:zad/features/auth/presentation/view/reset_password_view.dart';
 import 'package:zad/features/auth/presentation/view/verify_code_via_email_view.dart';
 import 'package:zad/features/auth/presentation/view/verify_code_via_phone_view.dart';
+import 'package:zad/features/donation_details/presentation/view/donation_details_view.dart';
 import 'package:zad/features/donor_main/presentation/view/donor_main_view.dart';
 import 'package:zad/features/splash/presentation/view/splash_view.dart';
 import 'package:zad/features/onboarding/presentation/view/onboarding_view.dart';
@@ -77,6 +78,11 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     case AddNewDonationView.routeName:
       return MaterialPageRoute(
         builder: (_) => const AddNewDonationView(),
+        settings: settings,
+      );
+    case DonationDetailsView.routeName:
+      return MaterialPageRoute(
+        builder: (_) => const DonationDetailsView(),
         settings: settings,
       );
 
